@@ -10,4 +10,3 @@ abot...
 ## Useful links
 - https://playwright.dev/python/docs/intro
 - https://github.com/microsoft/playwright-python
-

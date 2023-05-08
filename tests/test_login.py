@@ -13,4 +13,3 @@ class TestLoginPassword:
         login_page.navigate()
         login_page.login(login, password)
         login_page.check_login(fio, user_organization, user_role)
-
