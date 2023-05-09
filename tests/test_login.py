@@ -1,6 +1,5 @@
 import allure
 from pytest import mark
-
 from data.function_parameters import login_data
 from pages.login_page import Login
 

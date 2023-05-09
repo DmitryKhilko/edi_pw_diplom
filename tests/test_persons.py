@@ -1,9 +1,4 @@
-import time
-
 import allure
-from pytest import mark
-
-from data.function_parameters import login_data
 from pages.login_page import Login
 from pages.persons_page import Persons
 
@@ -20,6 +15,3 @@ class TestAddPerson:
         person_page.opening_form_add_person()
         person_page.check_opening_form_add_person()
         person_page.add_person('123')
-        time.sleep(10)
-
-

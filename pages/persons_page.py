@@ -1,6 +1,5 @@
 import allure
 from playwright.sync_api import expect
-
 from data.constants import BASE_URL, PERSONS_PAGE_URL
 from pages.base_page import BasePage
 
@@ -28,7 +27,7 @@ class Persons(BasePage):
     def add_person(self, first_name):
         with allure.step(f'Ввести в поле "Имя" значение: {first_name}'):
             self.page.locator('//input[@name="first_name"]').fill(first_name)
-            # self.page.get_by_label('Телефон').fill(first_name)
+
 
 
 
