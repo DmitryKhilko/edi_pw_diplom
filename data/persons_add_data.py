@@ -10,7 +10,7 @@ FIRST_NAME = ('Имя', '//input[@name = "first_name"]')
 PATRONYMIC = ('Отчество', '//input[@name = "patronymic"]')
 LAST_NAME = ('Фамилия', '//input[@name = "last_name"]')
 BIRTHDAY = ('Дата рождения', '//input[@placeholder = "дд.мм.гггг"]')
-SEX = ('Пол', '//*[text() = "Мужской"]')
+SEX = ('Пол', '//*[text() = "Мужской"]', '//*[text() = "Женский"]')
 PHONE = ('Телефон', '//input[@name = "phone"]')
 EMAIL = ('E-mail', '//input[@name = "email"]')
 CARD_ID = ('Идентификатор ID карты', '//input[@name = "card_id"]')
@@ -19,8 +19,5 @@ BUTTON_SAVE = ('Сохранить', '//button[text() = "Сохранить"]')
 BUTTON_CANCEL = ('Отменить', '//button[text() = "Отменить"]')
 
 # Параметры для теста test_persons_add_by_aib, расположенного в файле tests/test_persons_add.py
-# login_parameters = (('smirnov', 'smirnovP@assw0rd', 'Смирнов Алексей Павлович', 'Администратор ИБ', 'УП \"ИВЦ \"Минфина\"'),
-#                     ('khilko', 'khilkoP@assw0rd3', 'Хилько Дмитрий Николаевич', 'Администратор ИС', 'УП \"ИВЦ \"Минфина\"'))
-
-
-# //*[@data-rowindex = 0]//*[contains(text(), "433@333.com")] - первая строка таблицы с физическими лицами
+person_parameters_aib = (('smirnov', 'smirnovP@assw0rd', 'Татьяна', 'Юрьевна', 'Хилько', '13.06.1974', 'Женский', '21067', '8833@333.com', '8921', '684'),
+                         ('smirnov', 'smirnovP@assw0rd', 'Сергей', 'Николаевич', 'Патрушев', '10.05.1981', 'Мужской', '569875', '7733@333.com', '653', '991'))

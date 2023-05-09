@@ -23,7 +23,7 @@ class Login(BasePage):
         self.goto_with_allure_step(BASE_URL + LOGIN_PAGE_URL)
         return self
 
-    def login(self, login: str, password: str):
+    def login(self, p01_login: str, p02_password: str):
         """
         Метод входа в приложение, содержащий allure.step
         для формирования детальных шагов в тест-кейсах Allure TestOps
@@ -35,8 +35,8 @@ class Login(BasePage):
         - LOGIN[0]: название метки соответствующего поля ввода
         - LOGIN[1]: xpath-локатор соответствующего поля ввода
         """
-        self.text_field_fill_with_allure_step(LOGIN[0], LOGIN[1], login)
-        self.text_field_fill_with_allure_step(PASSWORD[0], PASSWORD[1], password)
+        self.text_field_fill_with_allure_step(LOGIN[0], LOGIN[1], p01_login)
+        self.text_field_fill_with_allure_step(PASSWORD[0], PASSWORD[1], p02_password)
         self.button_click_with_allure_step(BUTTON_LOGIN[0], BUTTON_LOGIN[1])
         return self  # данная конструкция позволяет реализовать в тесте цепочку вызовов, когда один метод заканчивается, ставится точка и вызывается следующий
 
@@ -58,8 +58,7 @@ class Login(BasePage):
         return self  # данная конструкция позволяет реализовать в тесте цепочку вызовов, когда один метод заканчивается, ставится точка и вызывается следующий
 
     # TODO Сделать: в base_page сделать универсальную функцию expect_to_be_visible, локаторы заменить на xpath
-    @allure.step('Ожидаемый результат: вход в приложение')
-    def check_login(self, result1_fio: str, result2_user_role: str, result3_user_organization: str):
+    def check_login(self, result01_fio: str, result02_user_role: str, result03_user_organization: str):
         """
         Метод проверка ожидаемого результата после входа в приложение,
         содержащий только один allure.step. После входа на странице
@@ -67,11 +66,12 @@ class Login(BasePage):
 
         Parameters:
         ------------------------
-        - result1_fio: ожидаемое значение ФИО пользователя
-        - result2_user_role: ожидаемое значение роли пользователя
-        - result3_user_organization: ожидаемое значение организации пользователя
+        - result01_fio: ожидаемое значение ФИО пользователя
+        - result02_user_role: ожидаемое значение роли пользователя
+        - result03_user_organization: ожидаемое значение организации пользователя
         """
-        expect(self.page.get_by_text(result1_fio, exact=True)).to_be_visible()  # //*[text() = "Смирнов" and text() = "Алексей" and text() = "Павлович"]   fio.split(' ')[0] - это из ФИО выделяется фамилия
-        expect(self.page.get_by_role('button', name=result2_user_role)).to_be_visible()  # //*[contains(@class, "logo")]//*[text() = "Администратор ИБ"]
-        expect(self.page.get_by_role('paragraph').filter(has_text=result3_user_organization)).to_be_visible()  # //*[contains(@class, "logo")]//*[text() = 'УП "ИВЦ "Минфина"']
-        return self
+        with allure.step(f'Ожидаемое результат: вход в приложение и отображение на странице реквизитов пользователя "{result01_fio}"'):
+            expect(self.page.get_by_text(result01_fio, exact=True)).to_be_visible()  # //*[text() = "Смирнов" and text() = "Алексей" and text() = "Павлович"]   fio.split(' ')[0] - это из ФИО выделяется фамилия
+            expect(self.page.get_by_role('button', name=result02_user_role)).to_be_visible()  # //*[contains(@class, "logo")]//*[text() = "Администратор ИБ"]
+            expect(self.page.get_by_role('paragraph').filter(has_text=result03_user_organization)).to_be_visible()  # //*[contains(@class, "logo")]//*[text() = 'УП "ИВЦ "Минфина"']
+            return self
