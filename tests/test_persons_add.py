@@ -1,7 +1,11 @@
+import time
+
 import allure
 from pages.login_page import Login
-from pages.persons_page import Persons
+from pages.persons_add_page import Persons
 
+
+# уникальное значение email + card_id + key_id
 
 class TestAddPerson:
     @allure.title(f'Добавление физического лица под ролью АИБ')
@@ -13,4 +17,8 @@ class TestAddPerson:
         person_page.check_goto_persons()
         person_page.opening_form_add_person()
         person_page.check_opening_form_add_person()
-        person_page.add_person('123')
+        person_page.add_person('Павел', 'Иванович', 'Малашко', '11.02.1973', 'Женский', '21067', '733@333.com', '644', '755')
+        person_page.to_be_visible_add_person('733@333.com')
+
+        time.sleep(5)
+

@@ -1,78 +1,129 @@
 import allure
-from playwright.sync_api import Page
+from playwright.sync_api import Page, expect
 
 
 class BasePage:
     def __init__(self, page: Page):
         self.page = page
 
-    # TODO Продумать, как вынести сделать универсальным данный метод, чтобы любой локатор обрабатывал, чтобы в allure.step выводились названия меток, названий кнопок
+    # @staticmethod
+    # def locator_label_by_xpath(label: str):
+    #     """
+    #     Базовый метод создания xpath-локатора, производящего
+    #     поиск веб-элемента (как правило, текстового поля ввода)
+    #     по частичному совпадению названия метки текстового поля.
+    #     Этот метод работает на странице login
+    #       Parameters:
+    #      ------------------------
+    #      label: искомый в xpath текст
+    #     """
+    #     return f'//label[contains(text(), "{label}")]'
+    #
+    # @staticmethod
+    # def locator_input_by_xpath(name_value: str):
+    #     """
+    #     Базовый метод создания xpath-локатора, производящего
+    #     поиск веб-элемента (как правило, текстового поля ввода)
+    #     по имени текстового поля
+    #       Parameters:
+    #      ------------------------
+    #      name_value: значение атрибута name в xpath
+    #     """
+    #     return f'//input[@name = \"{name_value}\")]'
+    #
+    # @staticmethod
+    # def locator_button_by_xpath(label: str):
+    #     """
+    #     Базовый метод создания xpath-локатора, производящего
+    #     поиск веб-элемента (кнопки) по названию на кнопке
+    #        Parameters:
+    #       ------------------------
+    #       label: искомый в xpath текст
+    #     """
+    #     return f'//button[text() = "{label}"]'
 
-    """ 
-    Базовый метод создания xpath-локатора, производящего
-    поиск веб-элемента (как правило, текстового поля ввода) 
-    по частичному совпадению интерфейсного названия веб-элемента
-    """
-    @staticmethod
-    def locator_label_by_xpath(label: str):
-        return f'//label[contains(text(), "{label}")]'
-
-    """ 
-    Базовый метод создания xpath-локатора, производящего
-    поиск веб-элемента (кнопки) по интерфейсному названия 
-    веб-элемента
-    """
-    @staticmethod
-    def locator_button_by_xpath(label: str):
-        return f'//button[text() = "{label}"]'
-
-    """ 
-    Базовый метод перехода на указанную страницу приложения,
-    не содержащий allure.step
-    """
     def goto(self, url: str):
+        """
+        Базовый метод перехода на указанную страницу приложения,
+        не содержащий allure.step
+           Parameters:
+          ------------------------
+          url: адрес страницы
+        """
         self.page.goto(url)
 
-    """ 
-    Базовый метод перехода на указанную страницу приложения,
-    содержащий allure.step для формирования детальных шагов 
-    в тест-кейсах Allure TestOps
-    """
     def goto_with_allure_step(self, url: str):
+        """
+        Базовый метод перехода на указанную страницу приложения,
+        содержащий allure.step для формирования детальных шагов
+        в тест-кейсах Allure TestOps
+
+        Parameters:
+        ----
+        - url: адрес страницы
+        """
         with allure.step(f'Перейти на страницу: {url}'):
             self.page.goto(url)
 
-    """ 
-    Базовый метод заполнения текстового поля, 
-    не содержащий allure.step 
-    """
-    def text_field_fill(self, label: str, value: str):
-        self.page.locator(self.locator_label_by_xpath(label)).clear()
-        self.page.locator(self.locator_label_by_xpath(label)).fill(value)
+    def text_field_fill(self, locator: str, value: str):
+        """
+        Базовый метод заполнения текстового поля ввода,
+        не содержащий allure.step
 
-    """ 
-    Базовый метод заполнения текстового поля, содержащий allure.step 
-    для формирования детальных шагов в тест-кейсах Allure TestOps
-    """
-    def text_field_fill_with_allure_step(self, label: str, value: str):
+        Parameters:
+        ------------------------
+        - locator: xpath-локатор текстового поля ввода
+        - value: значение, вводимое в поле ввода
+        """
+        self.page.locator(locator).clear()
+        self.page.locator(locator).fill(value)
+
+    def text_field_fill_with_allure_step(self, label: str, locator: str, value: str):
+        """
+        Базовый метод заполнения текстового поля ввода, содержащий allure.step
+        для формирования детальных шагов в тест-кейсах Allure TestOps
+
+        Parameters:
+        ------------------------
+        - label: название метки текстового поля ввода для allure.step
+        - locator: xpath-локатор текстового поля ввода
+        - value: значение, вводимое в поле ввода
+        """
         with allure.step(f'Ввести в поле "{label}" значение: {value}'):
-            self.page.locator(self.locator_label_by_xpath(label)).clear()
-            self.page.locator(self.locator_label_by_xpath(label)).fill(value)
+            self.page.locator(locator).clear()
+            self.page.locator(locator).fill(value)
 
-    """ 
-    Базовый метод нажатия на кнопку, 
-    не содержащий allure.step 
-    """
-    def button_click(self, label: str):
-        self.page.locator(self.locator_button_by_xpath(label)).click()
+    def button_click(self, locator: str):
+        """
+        Базовый метод нажатия на кнопку,
+        не содержащий allure.step
 
-    """ 
-    Базовый метод нажатия на кнопку, содержащий allure.step 
-    для формирования детальных шагов в тест-кейсах Allure TestOps
-    """
-    def button_click_with_allure_step(self, label: str):
-        with allure.step(f'Нажать кнопку "{label}"'):
-            self.page.locator(self.locator_button_by_xpath(label)).click()
+        Parameters:
+        ------------------------
+        - locator: xpath-локатор кнопки
+        """
+        self.page.locator(locator).click()
 
-    def expect_to_be_visible(self):
-        pass
+    def button_click_with_allure_step(self, text: str, locator: str):
+        """
+        Базовый метод нажатия на кнопку, содержащий allure.step
+        для формирования детальных шагов в тест-кейсах Allure TestOps
+
+        Parameters:
+        ------------------------
+        - text: название кнопки
+        - locator: xpath-локатор кнопки
+        """
+        with allure.step(f'Нажать кнопку "{text}"'):
+            self.page.locator(locator).click()
+
+    # TODO Продумать, как в данном методе обрабатывать любой локатор (//*[contains(@class, "logo")]//*[text() = "Администратор ИБ"])
+    # def expect_to_be_visible(self, label: str):
+    #     """
+    #     Базовый метод проверки отображения на странице названия веб-элемента
+    #
+    #     Parameters:
+    #     ------------------------
+    #     - label: название ожидаемого значения
+    #     """
+    #     expect(self.page.locator(self.locator_button_by_xpath(label))).to_be_visible()

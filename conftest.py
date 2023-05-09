@@ -8,8 +8,9 @@ from playwright.sync_api import sync_playwright
 def web_app():
     with sync_playwright() as playwright:
         with allure.step(f'Открыть браузер'):
-            browser = playwright.chromium.launch(headless=True)
-            context = browser.new_context(viewport={'width': 1920, 'height': 1080})
+            browser = playwright.chromium.launch(headless=False)
+            # context = browser.new_context(viewport={'width': 1920, 'height': 1080})
+            context = browser.new_context()
             page = context.new_page()
 
             yield page
@@ -27,5 +28,6 @@ def connection_db():
         user="eform_user_lok281",
         password="pAs_SworD_lok281",
         host="172.20.1.109",
-        port="15432")
+        port="15432"
+    )
     return connection
