@@ -16,9 +16,16 @@ class Login(BasePage):
         self.text_field_fill_with_allure_step(LOGIN_PASSWORD_LABEL_NAME, password)
         self.button_click_with_allure_step(LOGIN_BUTTON_LOGIN_NAME)
 
-    # TODO Сделать: сделать еще один метод login для входа в приложение с целью проведения иных проверок. В этом методе не расписывать шаги - будет один шаг - войти в приложение.
-    def login_fast(self):
-        pass
+    """
+    Метод для входа в приложение, содержащий только один allure.step,
+    для использования в проверках функциях, отличных от логина 
+    """
+    @allure.step('Войти в приложение')
+    def login_fast(self, login: str, password: str):
+        self.navigate()
+        self.text_field_fill(LOGIN_LOGIN_LABEL_NAME, login)
+        self.text_field_fill(LOGIN_PASSWORD_LABEL_NAME, password)
+        self.button_click(LOGIN_BUTTON_LOGIN_NAME)
 
     # TODO Сделать: в base_page сделать универсальную функцию expect_to_be_visible, локаторы заменить на xpath
     @allure.step('Ожидаемый результат: вход в приложение')
