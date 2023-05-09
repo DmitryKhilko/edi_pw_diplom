@@ -1,19 +1,20 @@
 import allure
 from playwright.sync_api import expect
 
-from data.constants import BASE_URL, LOGIN_PAGE_URL
 from pages.base_page import BasePage
+from data.url_data import BASE_URL, LOGIN_PAGE_URL
+from data.login_data import *
 
 
 class Login(BasePage):
 
     def navigate(self):
-        self.goto(BASE_URL + LOGIN_PAGE_URL)
+        self.goto_with_allure_step(BASE_URL + LOGIN_PAGE_URL)
 
     def login(self, login: str, password: str):
-        self.text_field_fill('Логин', login)
-        self.text_field_fill('Пароль', password)
-        self.button_click('Войти')
+        self.text_field_fill_with_allure_step(LOGIN_LOGIN_LABEL_NAME, login)
+        self.text_field_fill_with_allure_step(LOGIN_PASSWORD_LABEL_NAME, password)
+        self.button_click_with_allure_step(LOGIN_BUTTON_LOGIN_NAME)
 
     # TODO Сделать: сделать еще один метод login для входа в приложение с целью проведения иных проверок. В этом методе не расписывать шаги - будет один шаг - войти в приложение.
     def login_fast(self):

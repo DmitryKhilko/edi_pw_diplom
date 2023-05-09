@@ -1,6 +1,6 @@
 import allure
 from playwright.sync_api import expect
-from data.constants import BASE_URL, PERSONS_PAGE_URL
+from data.url_data import BASE_URL, PERSONS_PAGE_URL
 from pages.base_page import BasePage
 
 
