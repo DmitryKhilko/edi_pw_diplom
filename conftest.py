@@ -8,7 +8,7 @@ from playwright.sync_api import sync_playwright
 def web_app():
     with sync_playwright() as playwright:
         with allure.step(f'Открыть браузер'):
-            browser = playwright.chromium.launch(headless=False)
+            browser = playwright.chromium.launch(headless=True)
             context = browser.new_context(viewport={'width': 1920, 'height': 1080})
             page = context.new_page()
 
