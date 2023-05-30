@@ -7,6 +7,12 @@ load_dotenv(find_dotenv())
 
 BASE_URL = os.environ.get('BASE_URL')
 
+DATABASE = os.environ.get('DATABASE')
+DB_USER = os.environ.get('DB_USER')
+DB_PASSWORD = os.environ.get('DB_PASSWORD')
+DB_HOST = os.environ.get('DB_HOST')
+DB_PORT = os.environ.get('DB_PORT')
+
 LOGIN_AIB = os.environ.get('LOGIN_AIB')
 PASSWORD_AIB = os.environ.get('PASSWORD_AIB')
 EMAIL_ACCOUNT_AIB = os.environ.get('EMAIL_ACCOUNT_AIB')
