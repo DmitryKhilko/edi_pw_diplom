@@ -1,89 +1,1310 @@
-04.06.2023 20:38:48 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начало теста "api_Вход в приложение под всеми ролями" под ролью "Администратор ИБ"
-04.06.2023 20:38:48 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:48 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
-04.06.2023 20:38:48 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:49 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
-04.06.2023 20:38:49 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончание теста "api_Вход в приложение под всеми ролями" под ролью "Администратор ИБ"
-04.06.2023 20:38:49 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начало теста "api_Вход в приложение под всеми ролями" под ролью "Администратор ИС"
-04.06.2023 20:38:49 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:49 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
-04.06.2023 20:38:49 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:50 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 8370
-04.06.2023 20:38:50 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончание теста "api_Вход в приложение под всеми ролями" под ролью "Администратор ИС"
-04.06.2023 20:38:50 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начало теста "api_Вход в приложение под всеми ролями" под ролью "Администратор СХ"
-04.06.2023 20:38:50 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:50 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
-04.06.2023 20:38:50 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:50 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6184
-04.06.2023 20:38:50 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончание теста "api_Вход в приложение под всеми ролями" под ролью "Администратор СХ"
-04.06.2023 20:38:50 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начало теста "api_Вход в приложение под всеми ролями" под ролью "Пользователь СХ"
-04.06.2023 20:38:50 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:50 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
-04.06.2023 20:38:50 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:51 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6099
-04.06.2023 20:38:51 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончание теста "api_Вход в приложение под всеми ролями" под ролью "Пользователь СХ"
-04.06.2023 20:38:51 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начало теста "api_Вход в приложение под всеми ролями" под ролью "Администратор МНС"
-04.06.2023 20:38:51 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:51 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
-04.06.2023 20:38:51 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:52 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 5622
-04.06.2023 20:38:52 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончание теста "api_Вход в приложение под всеми ролями" под ролью "Администратор МНС"
-04.06.2023 20:38:52 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начало теста "api_Вход в приложение под всеми ролями" под ролью "Областной администратор МНС"
-04.06.2023 20:38:52 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:52 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
-04.06.2023 20:38:52 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:53 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 5856
-04.06.2023 20:38:53 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончание теста "api_Вход в приложение под всеми ролями" под ролью "Областной администратор МНС"
-04.06.2023 20:38:53 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начало теста "api_Вход в приложение под всеми ролями" под ролью "Районный администратор МНС"
-04.06.2023 20:38:53 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:53 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
-04.06.2023 20:38:53 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:53 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 5889
-04.06.2023 20:38:53 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончание теста "api_Вход в приложение под всеми ролями" под ролью "Районный администратор МНС"
-04.06.2023 20:38:54 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начало теста "api_Вход в приложение под всеми ролями" под ролью "Пользователь МНС"
-04.06.2023 20:38:54 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:54 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
-04.06.2023 20:38:54 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:54 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 117
-04.06.2023 20:38:54 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начало теста "api_Вход в приложение под всеми ролями" под ролью "Администратор ГТК"
-04.06.2023 20:38:54 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:54 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
-04.06.2023 20:38:54 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:55 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 117
-04.06.2023 20:38:55 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начало теста "api_Вход в приложение под всеми ролями" под ролью "Пользователь ГТК"
-04.06.2023 20:38:55 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:55 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
-04.06.2023 20:38:55 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:56 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 117
-04.06.2023 20:38:56 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:56 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
-04.06.2023 20:38:56 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:57 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 117
-04.06.2023 20:38:57 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:57 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
-04.06.2023 20:38:57 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:57 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 55
-04.06.2023 20:38:57 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:57 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
-04.06.2023 20:38:57 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:57 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 117
-04.06.2023 20:38:58 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:58 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
-04.06.2023 20:38:58 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:58 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 55
-04.06.2023 20:38:58 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:58 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
-04.06.2023 20:38:58 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:58 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 117
-04.06.2023 20:38:58 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:58 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
-04.06.2023 20:38:58 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:59 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 55
-04.06.2023 20:38:59 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:59 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
-04.06.2023 20:38:59 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:59 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 55
-04.06.2023 20:38:59 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:59 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
-04.06.2023 20:38:59 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
-04.06.2023 20:38:59 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 55
+04.06.2023 22:36:57 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начать тест "api_Вход в приложение под всеми ролями" под ролью "Администратор ИБ"
+04.06.2023 22:36:57 - DEBUG [login_service.login_by_role: 61] - Приступить к созданию CSRF-токена
+04.06.2023 22:36:57 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:36:57 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:36:57 - DEBUG [login_service.login_by_role: 64] - Отобразить успешно созданный CSRF-токен "UpmSe99s4sc3bVg1FrjTinsX45W2YKvt"
+04.06.2023 22:36:57 - DEBUG [login_service.login_by_role: 67] - Приступить к авторизации
+04.06.2023 22:36:57 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:36:58 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:36:58 - DEBUG [login_service.login_by_role: 80] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:36:58 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончить тест "api_Вход в приложение под всеми ролями" под ролью "Администратор ИБ"
+04.06.2023 22:36:58 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начать тест "api_Вход в приложение под всеми ролями" под ролью "Администратор ИС"
+04.06.2023 22:36:58 - DEBUG [login_service.login_by_role: 61] - Приступить к созданию CSRF-токена
+04.06.2023 22:36:58 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:36:58 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:36:58 - DEBUG [login_service.login_by_role: 64] - Отобразить успешно созданный CSRF-токен "0L5IDdjgGz4hmfEURGeMPAv9h5zue7aq"
+04.06.2023 22:36:58 - DEBUG [login_service.login_by_role: 67] - Приступить к авторизации
+04.06.2023 22:36:58 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:36:59 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 8370
+04.06.2023 22:36:59 - DEBUG [login_service.login_by_role: 80] - Успешно авторизовались под логином "admin_is_1"
+04.06.2023 22:36:59 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончить тест "api_Вход в приложение под всеми ролями" под ролью "Администратор ИС"
+04.06.2023 22:36:59 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начать тест "api_Вход в приложение под всеми ролями" под ролью "Администратор СХ"
+04.06.2023 22:36:59 - DEBUG [login_service.login_by_role: 61] - Приступить к созданию CSRF-токена
+04.06.2023 22:36:59 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:36:59 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:36:59 - DEBUG [login_service.login_by_role: 64] - Отобразить успешно созданный CSRF-токен "7P25GletMu2qNT5aQwqSRz58SPd8NZFq"
+04.06.2023 22:36:59 - DEBUG [login_service.login_by_role: 67] - Приступить к авторизации
+04.06.2023 22:36:59 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:00 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6184
+04.06.2023 22:37:00 - DEBUG [login_service.login_by_role: 80] - Успешно авторизовались под логином "admin_sh"
+04.06.2023 22:37:00 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончить тест "api_Вход в приложение под всеми ролями" под ролью "Администратор СХ"
+04.06.2023 22:37:00 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начать тест "api_Вход в приложение под всеми ролями" под ролью "Пользователь СХ"
+04.06.2023 22:37:00 - DEBUG [login_service.login_by_role: 61] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:00 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:00 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:00 - DEBUG [login_service.login_by_role: 64] - Отобразить успешно созданный CSRF-токен "GNV9tKFkFdZ0rkG4ddppCUsWdVKr9zxk"
+04.06.2023 22:37:00 - DEBUG [login_service.login_by_role: 67] - Приступить к авторизации
+04.06.2023 22:37:00 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:01 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6099
+04.06.2023 22:37:01 - DEBUG [login_service.login_by_role: 80] - Успешно авторизовались под логином "user_sh_pl"
+04.06.2023 22:37:01 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончить тест "api_Вход в приложение под всеми ролями" под ролью "Пользователь СХ"
+04.06.2023 22:37:01 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начать тест "api_Вход в приложение под всеми ролями" под ролью "Администратор МНС"
+04.06.2023 22:37:01 - DEBUG [login_service.login_by_role: 61] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:01 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:01 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:01 - DEBUG [login_service.login_by_role: 64] - Отобразить успешно созданный CSRF-токен "lyj1bqlHAJTW5GJRYfACsbo5GpjzVJWb"
+04.06.2023 22:37:01 - DEBUG [login_service.login_by_role: 67] - Приступить к авторизации
+04.06.2023 22:37:01 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:01 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 5622
+04.06.2023 22:37:01 - DEBUG [login_service.login_by_role: 80] - Успешно авторизовались под логином "admin_mns"
+04.06.2023 22:37:01 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончить тест "api_Вход в приложение под всеми ролями" под ролью "Администратор МНС"
+04.06.2023 22:37:01 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начать тест "api_Вход в приложение под всеми ролями" под ролью "Областной администратор МНС"
+04.06.2023 22:37:01 - DEBUG [login_service.login_by_role: 61] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:01 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:01 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:01 - DEBUG [login_service.login_by_role: 64] - Отобразить успешно созданный CSRF-токен "MBaPpcXFFXQzNT0MW0DMxXH9Zhk5PSKi"
+04.06.2023 22:37:01 - DEBUG [login_service.login_by_role: 67] - Приступить к авторизации
+04.06.2023 22:37:01 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:02 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 5856
+04.06.2023 22:37:02 - DEBUG [login_service.login_by_role: 80] - Успешно авторизовались под логином "obladmin_mns"
+04.06.2023 22:37:02 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончить тест "api_Вход в приложение под всеми ролями" под ролью "Областной администратор МНС"
+04.06.2023 22:37:02 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начать тест "api_Вход в приложение под всеми ролями" под ролью "Районный администратор МНС"
+04.06.2023 22:37:02 - DEBUG [login_service.login_by_role: 61] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:02 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:02 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:02 - DEBUG [login_service.login_by_role: 64] - Отобразить успешно созданный CSRF-токен "bUhrYG1ZugRD334M6ijWYPEryxrua7XR"
+04.06.2023 22:37:02 - DEBUG [login_service.login_by_role: 67] - Приступить к авторизации
+04.06.2023 22:37:02 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:03 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 5889
+04.06.2023 22:37:03 - DEBUG [login_service.login_by_role: 80] - Успешно авторизовались под логином "rayadmin_mns"
+04.06.2023 22:37:03 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончить тест "api_Вход в приложение под всеми ролями" под ролью "Районный администратор МНС"
+04.06.2023 22:37:03 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начать тест "api_Вход в приложение под всеми ролями" под ролью "Пользователь МНС"
+04.06.2023 22:37:03 - DEBUG [login_service.login_by_role: 61] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:03 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:03 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:03 - DEBUG [login_service.login_by_role: 64] - Отобразить успешно созданный CSRF-токен "Ri825YnLqtEQjniL7CuV6tJGLIs9mdB2"
+04.06.2023 22:37:03 - DEBUG [login_service.login_by_role: 67] - Приступить к авторизации
+04.06.2023 22:37:03 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:04 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 117
+04.06.2023 22:37:04 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начать тест "api_Вход в приложение под всеми ролями" под ролью "Администратор ГТК"
+04.06.2023 22:37:04 - DEBUG [login_service.login_by_role: 61] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:04 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:04 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:04 - DEBUG [login_service.login_by_role: 64] - Отобразить успешно созданный CSRF-токен "yt2fP5Y815qG9S3zcWxBnuvcOUGVpGxi"
+04.06.2023 22:37:04 - DEBUG [login_service.login_by_role: 67] - Приступить к авторизации
+04.06.2023 22:37:04 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:05 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 117
+04.06.2023 22:37:05 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начать тест "api_Вход в приложение под всеми ролями" под ролью "Пользователь ГТК"
+04.06.2023 22:37:05 - DEBUG [login_service.login_by_role: 61] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:05 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:05 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:05 - DEBUG [login_service.login_by_role: 64] - Отобразить успешно созданный CSRF-токен "OFq9qZUqMypw0fyh4E38TjZ0io6Gwu6k"
+04.06.2023 22:37:05 - DEBUG [login_service.login_by_role: 67] - Приступить к авторизации
+04.06.2023 22:37:05 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:05 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 117
+04.06.2023 22:37:05 - DEBUG [test_api_login.test_api_can_not_login: 37] - Начать теста "api_Отказ на вход в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+04.06.2023 22:37:05 - DEBUG [login_service.can_not_login: 102] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:05 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:05 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:05 - DEBUG [login_service.can_not_login: 105] - Отобразить успешно созданный CSRF-токен "V4tFfS9WmStS5HnwQ52YM4XMYzqtsCFe"
+04.06.2023 22:37:05 - DEBUG [login_service.can_not_login: 108] - Приступить к авторизации
+04.06.2023 22:37:05 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:06 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 117
+04.06.2023 22:37:06 - DEBUG [login_service.can_not_login: 119] - Авторизация не произведена под логином "smirnov" и паролем "invalid_password"
+04.06.2023 22:37:06 - DEBUG [test_api_login.test_api_can_not_login: 40] - Окончить теста "api_Отказ на вход в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+04.06.2023 22:37:06 - DEBUG [test_api_login.test_api_can_not_login: 37] - Начать теста "api_Отказ на вход в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+04.06.2023 22:37:06 - DEBUG [login_service.can_not_login: 102] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:06 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:06 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:06 - DEBUG [login_service.can_not_login: 105] - Отобразить успешно созданный CSRF-токен "q9u9crcZp1wjG2YQDq6wvbInv2M4WISh"
+04.06.2023 22:37:06 - DEBUG [login_service.can_not_login: 108] - Приступить к авторизации
+04.06.2023 22:37:06 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:06 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 55
+04.06.2023 22:37:06 - DEBUG [login_service.can_not_login: 119] - Авторизация не произведена под логином "smirnov" и паролем ""
+04.06.2023 22:37:06 - DEBUG [test_api_login.test_api_can_not_login: 40] - Окончить теста "api_Отказ на вход в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+04.06.2023 22:37:06 - DEBUG [test_api_login.test_api_can_not_login: 37] - Начать теста "api_Отказ на вход в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+04.06.2023 22:37:06 - DEBUG [login_service.can_not_login: 102] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:06 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:06 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:06 - DEBUG [login_service.can_not_login: 105] - Отобразить успешно созданный CSRF-токен "DZh8devSspjI47Yr7SNwTGwlV2yVtEVp"
+04.06.2023 22:37:06 - DEBUG [login_service.can_not_login: 108] - Приступить к авторизации
+04.06.2023 22:37:06 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:07 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 117
+04.06.2023 22:37:07 - DEBUG [login_service.can_not_login: 119] - Авторизация не произведена под логином "invalid_login" и паролем "invalid_password"
+04.06.2023 22:37:07 - DEBUG [test_api_login.test_api_can_not_login: 40] - Окончить теста "api_Отказ на вход в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+04.06.2023 22:37:07 - DEBUG [test_api_login.test_api_can_not_login: 37] - Начать теста "api_Отказ на вход в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+04.06.2023 22:37:07 - DEBUG [login_service.can_not_login: 102] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:07 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:07 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:07 - DEBUG [login_service.can_not_login: 105] - Отобразить успешно созданный CSRF-токен "MBmTN2QfE5nD8qDLn0TfKrE6BN6imJXR"
+04.06.2023 22:37:07 - DEBUG [login_service.can_not_login: 108] - Приступить к авторизации
+04.06.2023 22:37:07 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:07 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 55
+04.06.2023 22:37:07 - DEBUG [login_service.can_not_login: 119] - Авторизация не произведена под логином "invalid_login" и паролем ""
+04.06.2023 22:37:07 - DEBUG [test_api_login.test_api_can_not_login: 40] - Окончить теста "api_Отказ на вход в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+04.06.2023 22:37:07 - DEBUG [test_api_login.test_api_can_not_login: 37] - Начать теста "api_Отказ на вход в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+04.06.2023 22:37:07 - DEBUG [login_service.can_not_login: 102] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:07 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:07 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:07 - DEBUG [login_service.can_not_login: 105] - Отобразить успешно созданный CSRF-токен "xY6k5aq1qFfbFXWdwfHhITJQ5fG8QsO6"
+04.06.2023 22:37:07 - DEBUG [login_service.can_not_login: 108] - Приступить к авторизации
+04.06.2023 22:37:07 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:08 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 117
+04.06.2023 22:37:08 - DEBUG [login_service.can_not_login: 119] - Авторизация не произведена под логином "invalid_login" и паролем "smirnovP@assw0rd"
+04.06.2023 22:37:08 - DEBUG [test_api_login.test_api_can_not_login: 40] - Окончить теста "api_Отказ на вход в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+04.06.2023 22:37:08 - DEBUG [test_api_login.test_api_can_not_login: 37] - Начать теста "api_Отказ на вход в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+04.06.2023 22:37:08 - DEBUG [login_service.can_not_login: 102] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:08 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:08 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:08 - DEBUG [login_service.can_not_login: 105] - Отобразить успешно созданный CSRF-токен "PKV3PQ2gmic8WJ5621BTGCNWc42PyMRZ"
+04.06.2023 22:37:08 - DEBUG [login_service.can_not_login: 108] - Приступить к авторизации
+04.06.2023 22:37:08 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:08 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 55
+04.06.2023 22:37:08 - DEBUG [login_service.can_not_login: 119] - Авторизация не произведена под логином "" и паролем ""
+04.06.2023 22:37:08 - DEBUG [test_api_login.test_api_can_not_login: 40] - Окончить теста "api_Отказ на вход в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+04.06.2023 22:37:08 - DEBUG [test_api_login.test_api_can_not_login: 37] - Начать теста "api_Отказ на вход в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+04.06.2023 22:37:08 - DEBUG [login_service.can_not_login: 102] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:08 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:08 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:08 - DEBUG [login_service.can_not_login: 105] - Отобразить успешно созданный CSRF-токен "fH8uvQrIrZNvzlg4lUajP51fcqf4r3Fl"
+04.06.2023 22:37:08 - DEBUG [login_service.can_not_login: 108] - Приступить к авторизации
+04.06.2023 22:37:08 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:08 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 55
+04.06.2023 22:37:08 - DEBUG [login_service.can_not_login: 119] - Авторизация не произведена под логином "" и паролем "smirnovP@assw0rd"
+04.06.2023 22:37:08 - DEBUG [test_api_login.test_api_can_not_login: 40] - Окончить теста "api_Отказ на вход в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+04.06.2023 22:37:08 - DEBUG [test_api_login.test_api_can_not_login: 37] - Начать теста "api_Отказ на вход в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+04.06.2023 22:37:08 - DEBUG [login_service.can_not_login: 102] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:08 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:08 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:08 - DEBUG [login_service.can_not_login: 105] - Отобразить успешно созданный CSRF-токен "VsRs5I7FuPHujeQ4oBY1nlHkb0eWj6NU"
+04.06.2023 22:37:08 - DEBUG [login_service.can_not_login: 108] - Приступить к авторизации
+04.06.2023 22:37:08 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:08 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 55
+04.06.2023 22:37:08 - DEBUG [login_service.can_not_login: 119] - Авторизация не произведена под логином "" и паролем "invalid_password"
+04.06.2023 22:37:08 - DEBUG [test_api_login.test_api_can_not_login: 40] - Окончить теста "api_Отказ на вход в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+04.06.2023 22:37:08 - DEBUG [test_api_persons.test_api_can_qet_persons: 29] - Начать тест "api_Получение списка физ.лиц (у роли есть права)" под ролью "Администратор ИБ"
+04.06.2023 22:37:08 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:08 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:08 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:08 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "G0fP2d5Ne5Qq97H2AToIUJSb2mkMKWBe"
+04.06.2023 22:37:08 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:08 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:09 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:09 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:09 - DEBUG [persons_service.can_get_persons: 27] - Приступить к получению списка физических лиц
+04.06.2023 22:37:09 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:09 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/persons?offset=0&limit=1 HTTP/1.1" 200 329
+04.06.2023 22:37:09 - DEBUG [persons_service.can_get_persons: 36] - Список физических лиц успешно получен
+04.06.2023 22:37:09 - DEBUG [test_api_persons.test_api_can_qet_persons: 32] - Окончить тест "api_Получение списка физ.лиц (у роли есть права)" под ролью "Администратор ИБ"
+04.06.2023 22:37:09 - DEBUG [test_api_persons.test_api_can_qet_persons: 29] - Начать тест "api_Получение списка физ.лиц (у роли есть права)" под ролью "Администратор ИС"
+04.06.2023 22:37:09 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:09 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:09 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:09 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "DAmNgjQChVBzZxfBn1E0BZhGv69JpsZr"
+04.06.2023 22:37:09 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:09 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:10 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 8370
+04.06.2023 22:37:10 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "admin_is_1"
+04.06.2023 22:37:10 - DEBUG [persons_service.can_get_persons: 27] - Приступить к получению списка физических лиц
+04.06.2023 22:37:10 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:10 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/persons?offset=0&limit=1 HTTP/1.1" 200 329
+04.06.2023 22:37:10 - DEBUG [persons_service.can_get_persons: 36] - Список физических лиц успешно получен
+04.06.2023 22:37:10 - DEBUG [test_api_persons.test_api_can_qet_persons: 32] - Окончить тест "api_Получение списка физ.лиц (у роли есть права)" под ролью "Администратор ИС"
+04.06.2023 22:37:10 - DEBUG [test_api_persons.test_api_can_not_qet_persons: 42] - Начать тест "api_Отказ в получении списка физ.лиц (у роли нет прав)" под ролью "Администратор СХ"
+04.06.2023 22:37:10 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:10 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:10 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:10 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "N6JGKNOM9v9qTiJGBGxzb4HycGoFOZHM"
+04.06.2023 22:37:10 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:10 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:11 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6184
+04.06.2023 22:37:11 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "admin_sh"
+04.06.2023 22:37:11 - DEBUG [persons_service.can_not_get_persons: 54] - Приступить к получению списка физических лиц
+04.06.2023 22:37:11 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:11 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/persons?offset=0&limit=1 HTTP/1.1" 200 329
+04.06.2023 22:37:11 - DEBUG [test_api_persons.test_api_can_not_qet_persons: 42] - Начать тест "api_Отказ в получении списка физ.лиц (у роли нет прав)" под ролью "Пользователь СХ"
+04.06.2023 22:37:11 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:11 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:11 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:11 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "obFld3Pl5MZyVB1bDUJ8lHOfQkd3du8d"
+04.06.2023 22:37:11 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:11 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:12 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6099
+04.06.2023 22:37:12 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "user_sh_pl"
+04.06.2023 22:37:12 - DEBUG [persons_service.can_not_get_persons: 54] - Приступить к получению списка физических лиц
+04.06.2023 22:37:12 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:12 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/persons?offset=0&limit=1 HTTP/1.1" 403 117
+04.06.2023 22:37:12 - DEBUG [persons_service.can_not_get_persons: 64] - Список физических лиц не получен
+04.06.2023 22:37:12 - DEBUG [test_api_persons.test_api_can_not_qet_persons: 45] - Окончить тест "api_Отказ в получении списка физ.лиц (у роли нет прав)" под ролью "Пользователь СХ"
+04.06.2023 22:37:12 - DEBUG [test_api_persons.test_api_can_not_qet_persons: 42] - Начать тест "api_Отказ в получении списка физ.лиц (у роли нет прав)" под ролью "Администратор МНС"
+04.06.2023 22:37:12 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:12 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:12 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:12 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "bJ9hI5awT05oKQL0L2VDjpF4rkAq4WJZ"
+04.06.2023 22:37:12 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:12 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:13 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 5622
+04.06.2023 22:37:13 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "admin_mns"
+04.06.2023 22:37:13 - DEBUG [persons_service.can_not_get_persons: 54] - Приступить к получению списка физических лиц
+04.06.2023 22:37:13 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:13 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/persons?offset=0&limit=1 HTTP/1.1" 200 329
+04.06.2023 22:37:13 - DEBUG [test_api_persons.test_api_can_not_qet_persons: 42] - Начать тест "api_Отказ в получении списка физ.лиц (у роли нет прав)" под ролью "Областной администратор МНС"
+04.06.2023 22:37:13 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:13 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:13 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:13 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "hMOQJX0FZ7MIgaQefJp5ZmGAPcnpgpO7"
+04.06.2023 22:37:13 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:13 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:13 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 5856
+04.06.2023 22:37:13 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "obladmin_mns"
+04.06.2023 22:37:13 - DEBUG [persons_service.can_not_get_persons: 54] - Приступить к получению списка физических лиц
+04.06.2023 22:37:13 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:14 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/persons?offset=0&limit=1 HTTP/1.1" 200 329
+04.06.2023 22:37:14 - DEBUG [test_api_persons.test_api_can_not_qet_persons: 42] - Начать тест "api_Отказ в получении списка физ.лиц (у роли нет прав)" под ролью "Районный администратор МНС"
+04.06.2023 22:37:14 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:14 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:14 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:14 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "nAcAKNdsE6Q9Lv6xQdRhR3uLHcIj74go"
+04.06.2023 22:37:14 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:14 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:14 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 5889
+04.06.2023 22:37:14 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "rayadmin_mns"
+04.06.2023 22:37:14 - DEBUG [persons_service.can_not_get_persons: 54] - Приступить к получению списка физических лиц
+04.06.2023 22:37:14 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:14 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/persons?offset=0&limit=1 HTTP/1.1" 200 329
+04.06.2023 22:37:15 - DEBUG [test_api_persons.test_api_can_not_qet_persons: 42] - Начать тест "api_Отказ в получении списка физ.лиц (у роли нет прав)" под ролью "Пользователь МНС"
+04.06.2023 22:37:15 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:15 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:15 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:15 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "K9SX14PDujkE8tCqPsCHGamDwPTGR7Dr"
+04.06.2023 22:37:15 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:15 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:15 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 117
+04.06.2023 22:37:15 - DEBUG [test_api_persons.test_api_can_not_qet_persons: 42] - Начать тест "api_Отказ в получении списка физ.лиц (у роли нет прав)" под ролью "Администратор ГТК"
+04.06.2023 22:37:15 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:15 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:15 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:15 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "Pk59ODdBIqK8eGwVCDkDao8NCzlec4BL"
+04.06.2023 22:37:15 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:15 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:16 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 117
+04.06.2023 22:37:16 - DEBUG [test_api_persons.test_api_can_not_qet_persons: 42] - Начать тест "api_Отказ в получении списка физ.лиц (у роли нет прав)" под ролью "Пользователь ГТК"
+04.06.2023 22:37:16 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:16 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:16 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:16 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "jXFJJid2m8ksDyFgBlJFWcaKiOdXJ4dY"
+04.06.2023 22:37:16 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:16 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:17 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 117
+04.06.2023 22:37:17 - DEBUG [test_api_persons.test_api_can_add_person_valid_param_inside_limits: 65] - Начать тест "api_Создание физ.лица (у роли есть права; валидные значения параметров внутри границ)" под ролью "Администратор ИБ"
+04.06.2023 22:37:17 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:17 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:17 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:17 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "qZYpKDPp9ckcydOu2b6NSwphHTfUiuQJ"
+04.06.2023 22:37:17 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:17 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:17 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:17 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:17 - DEBUG [persons_service.can_add_person_valid_param: 82] - Приступить к добавлению физ. лица с валидными параметрами
+04.06.2023 22:37:17 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:18 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 201 417
+04.06.2023 22:37:18 - DEBUG [base_service.add_person: 111] - Приступить к записи id физ.лица в файл
+04.06.2023 22:37:18 - DEBUG [base_service.add_person: 113] - id физ.лица успешно записан в файл
+04.06.2023 22:37:18 - DEBUG [persons_service.can_add_person_valid_param: 96] - Физическое лицо "тпэнЙТЖрЧ- ы-тФцКщйо ШрНфЭък-А" успешно создано
+04.06.2023 22:37:18 - DEBUG [persons_service.can_add_person_valid_param: 99] - Приступить к поиску добавленного физ. лица в БД
+04.06.2023 22:37:18 - DEBUG [persons_service.can_add_person_valid_param: 106] - Физическое лицо "тпэнЙТЖрЧ- ы-тФцКщйо ШрНфЭък-А" успешно добавлено в БД
+04.06.2023 22:37:18 - DEBUG [test_api_persons.test_api_can_add_person_valid_param_inside_limits: 69] - Окончить тест "api_Создание физ.лица (у роли есть права; валидные значения параметров внутри границ)" под ролью "Администратор ИБ"
+04.06.2023 22:37:18 - DEBUG [sql.db_delete_row: 64] - Приступить к удалению физ.лица из БД
+04.06.2023 22:37:18 - DEBUG [sql.db_delete_row: 72] - Физ. лицо удалено из БД
+04.06.2023 22:37:18 - DEBUG [sql.db_delete_row: 75] - Приступить к удалению файла "api_person_id.txt"
+04.06.2023 22:37:18 - DEBUG [sql.db_delete_row: 77] - Файл "api_person_id.txt" удален
+04.06.2023 22:37:18 - DEBUG [test_api_persons.test_api_can_add_person_valid_param_inside_limits: 65] - Начать тест "api_Создание физ.лица (у роли есть права; валидные значения параметров внутри границ)" под ролью "Администратор ИС"
+04.06.2023 22:37:18 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:18 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:18 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:18 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "pmuHnu9wX7GOKxbSp3D4WNc3FGHbewV1"
+04.06.2023 22:37:18 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:18 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:18 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 8370
+04.06.2023 22:37:18 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "admin_is_1"
+04.06.2023 22:37:18 - DEBUG [persons_service.can_add_person_valid_param: 82] - Приступить к добавлению физ. лица с валидными параметрами
+04.06.2023 22:37:18 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:19 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 201 417
+04.06.2023 22:37:19 - DEBUG [base_service.add_person: 111] - Приступить к записи id физ.лица в файл
+04.06.2023 22:37:19 - DEBUG [base_service.add_person: 113] - id физ.лица успешно записан в файл
+04.06.2023 22:37:19 - DEBUG [persons_service.can_add_person_valid_param: 96] - Физическое лицо "жОеУр-шяюЩ ЗьФфГШ-ЬП Рвя-гюЙэж" успешно создано
+04.06.2023 22:37:19 - DEBUG [persons_service.can_add_person_valid_param: 99] - Приступить к поиску добавленного физ. лица в БД
+04.06.2023 22:37:19 - DEBUG [persons_service.can_add_person_valid_param: 106] - Физическое лицо "жОеУр-шяюЩ ЗьФфГШ-ЬП Рвя-гюЙэж" успешно добавлено в БД
+04.06.2023 22:37:19 - DEBUG [test_api_persons.test_api_can_add_person_valid_param_inside_limits: 69] - Окончить тест "api_Создание физ.лица (у роли есть права; валидные значения параметров внутри границ)" под ролью "Администратор ИС"
+04.06.2023 22:37:19 - DEBUG [sql.db_delete_row: 64] - Приступить к удалению физ.лица из БД
+04.06.2023 22:37:19 - DEBUG [sql.db_delete_row: 72] - Физ. лицо удалено из БД
+04.06.2023 22:37:19 - DEBUG [sql.db_delete_row: 75] - Приступить к удалению файла "api_person_id.txt"
+04.06.2023 22:37:19 - DEBUG [sql.db_delete_row: 77] - Файл "api_person_id.txt" удален
+04.06.2023 22:37:19 - DEBUG [test_api_persons.test_api_can_add_person_valid_param_at_limits: 82] - Начать тест "api_Создание физ.лица (у роли есть права; валидные значения параметров на границах)" под ролью "Администратор ИБ"
+04.06.2023 22:37:19 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:19 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:19 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:19 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "iKUik54aRpn5iOHovpQTMClMriimF9sb"
+04.06.2023 22:37:19 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:19 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:20 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:20 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:20 - DEBUG [persons_service.can_add_person_valid_param: 82] - Приступить к добавлению физ. лица с валидными параметрами
+04.06.2023 22:37:20 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:20 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 201 285
+04.06.2023 22:37:20 - DEBUG [base_service.add_person: 111] - Приступить к записи id физ.лица в файл
+04.06.2023 22:37:20 - DEBUG [base_service.add_person: 113] - id физ.лица успешно записан в файл
+04.06.2023 22:37:20 - DEBUG [persons_service.can_add_person_valid_param: 96] - Физическое лицо "-ц и- " успешно создано
+04.06.2023 22:37:20 - DEBUG [persons_service.can_add_person_valid_param: 99] - Приступить к поиску добавленного физ. лица в БД
+04.06.2023 22:37:20 - DEBUG [persons_service.can_add_person_valid_param: 106] - Физическое лицо "-ц и- " успешно добавлено в БД
+04.06.2023 22:37:20 - DEBUG [test_api_persons.test_api_can_add_person_valid_param_at_limits: 86] - Окончить тест "api_Создание физ.лица (у роли есть права; валидные значения параметров на границах)" под ролью "Администратор ИБ"
+04.06.2023 22:37:20 - DEBUG [sql.db_delete_row: 64] - Приступить к удалению физ.лица из БД
+04.06.2023 22:37:20 - DEBUG [sql.db_delete_row: 72] - Физ. лицо удалено из БД
+04.06.2023 22:37:20 - DEBUG [sql.db_delete_row: 75] - Приступить к удалению файла "api_person_id.txt"
+04.06.2023 22:37:20 - DEBUG [sql.db_delete_row: 77] - Файл "api_person_id.txt" удален
+04.06.2023 22:37:20 - DEBUG [test_api_persons.test_api_can_add_person_valid_param_at_limits: 82] - Начать тест "api_Создание физ.лица (у роли есть права; валидные значения параметров на границах)" под ролью "Администратор ИБ"
+04.06.2023 22:37:20 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:20 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:20 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:20 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "KN5CBZ8KyIkB3qg1z990W1EBB60qSxkS"
+04.06.2023 22:37:20 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:20 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:21 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:21 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:21 - DEBUG [persons_service.can_add_person_valid_param: 82] - Приступить к добавлению физ. лица с валидными параметрами
+04.06.2023 22:37:21 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:21 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 201 304
+04.06.2023 22:37:21 - DEBUG [base_service.add_person: 111] - Приступить к записи id физ.лица в файл
+04.06.2023 22:37:21 - DEBUG [base_service.add_person: 113] - id физ.лица успешно записан в файл
+04.06.2023 22:37:21 - DEBUG [persons_service.can_add_person_valid_param: 96] - Физическое лицо "-ЬН ф- ь" успешно создано
+04.06.2023 22:37:21 - DEBUG [persons_service.can_add_person_valid_param: 99] - Приступить к поиску добавленного физ. лица в БД
+04.06.2023 22:37:21 - DEBUG [persons_service.can_add_person_valid_param: 106] - Физическое лицо "-ЬН ф- ь" успешно добавлено в БД
+04.06.2023 22:37:21 - DEBUG [test_api_persons.test_api_can_add_person_valid_param_at_limits: 86] - Окончить тест "api_Создание физ.лица (у роли есть права; валидные значения параметров на границах)" под ролью "Администратор ИБ"
+04.06.2023 22:37:21 - DEBUG [sql.db_delete_row: 64] - Приступить к удалению физ.лица из БД
+04.06.2023 22:37:21 - DEBUG [sql.db_delete_row: 72] - Физ. лицо удалено из БД
+04.06.2023 22:37:21 - DEBUG [sql.db_delete_row: 75] - Приступить к удалению файла "api_person_id.txt"
+04.06.2023 22:37:21 - DEBUG [sql.db_delete_row: 77] - Файл "api_person_id.txt" удален
+04.06.2023 22:37:21 - DEBUG [test_api_persons.test_api_can_add_person_valid_param_at_limits: 82] - Начать тест "api_Создание физ.лица (у роли есть права; валидные значения параметров на границах)" под ролью "Администратор ИБ"
+04.06.2023 22:37:21 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:21 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:21 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:21 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "9B9NPDDQnFV0qvbkDbGiznppav7FyjBO"
+04.06.2023 22:37:21 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:21 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:22 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:22 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:22 - DEBUG [persons_service.can_add_person_valid_param: 82] - Приступить к добавлению физ. лица с валидными параметрами
+04.06.2023 22:37:22 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:22 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 201 1178
+04.06.2023 22:37:22 - DEBUG [base_service.add_person: 111] - Приступить к записи id физ.лица в файл
+04.06.2023 22:37:22 - DEBUG [base_service.add_person: 113] - id физ.лица успешно записан в файл
+04.06.2023 22:37:22 - DEBUG [persons_service.can_add_person_valid_param: 96] - Физическое лицо "жЖтРФыинеэЗчу-ЦцювсрпгмЯлХПйфТСкОБадяЪАНшКзщГЮДИЙ пЮщеэШЕынЛвЗАйЫзахОоГЯКХСБДЬъЦНЙ-рВПфРИюкбшдличг дчТцШфъЛозИ-ЬСпюБнАЫПщРЭЗЖеляНьшМвэОЕГВсДгЮЙЩтби" успешно создано
+04.06.2023 22:37:22 - DEBUG [persons_service.can_add_person_valid_param: 99] - Приступить к поиску добавленного физ. лица в БД
+04.06.2023 22:37:22 - DEBUG [persons_service.can_add_person_valid_param: 106] - Физическое лицо "жЖтРФыинеэЗчу-ЦцювсрпгмЯлХПйфТСкОБадяЪАНшКзщГЮДИЙ пЮщеэШЕынЛвЗАйЫзахОоГЯКХСБДЬъЦНЙ-рВПфРИюкбшдличг дчТцШфъЛозИ-ЬСпюБнАЫПщРЭЗЖеляНьшМвэОЕГВсДгЮЙЩтби" успешно добавлено в БД
+04.06.2023 22:37:22 - DEBUG [test_api_persons.test_api_can_add_person_valid_param_at_limits: 86] - Окончить тест "api_Создание физ.лица (у роли есть права; валидные значения параметров на границах)" под ролью "Администратор ИБ"
+04.06.2023 22:37:22 - DEBUG [sql.db_delete_row: 64] - Приступить к удалению физ.лица из БД
+04.06.2023 22:37:22 - DEBUG [sql.db_delete_row: 72] - Физ. лицо удалено из БД
+04.06.2023 22:37:22 - DEBUG [sql.db_delete_row: 75] - Приступить к удалению файла "api_person_id.txt"
+04.06.2023 22:37:22 - DEBUG [sql.db_delete_row: 77] - Файл "api_person_id.txt" удален
+04.06.2023 22:37:22 - DEBUG [test_api_persons.test_api_can_add_person_valid_param_at_limits: 82] - Начать тест "api_Создание физ.лица (у роли есть права; валидные значения параметров на границах)" под ролью "Администратор ИБ"
+04.06.2023 22:37:22 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:22 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:22 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:22 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "EHhR1ModQ7xkGNwBxGO39farZPN7awCO"
+04.06.2023 22:37:22 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:22 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:23 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:23 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:23 - DEBUG [persons_service.can_add_person_valid_param: 82] - Приступить к добавлению физ. лица с валидными параметрами
+04.06.2023 22:37:23 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:23 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 201 1194
+04.06.2023 22:37:23 - DEBUG [base_service.add_person: 111] - Приступить к записи id физ.лица в файл
+04.06.2023 22:37:23 - DEBUG [base_service.add_person: 113] - id физ.лица успешно записан в файл
+04.06.2023 22:37:23 - DEBUG [persons_service.can_add_person_valid_param: 96] - Физическое лицо "дЕБеГяфщыноФТЙИхсЧбцЖтХПРьДъаЛСЪШЫМУВмЮЩю-клужэйЯш ЯъдймлШОАЕН-ДшжПячрЬуВЛапЦИТУХбщЩхфБЙеЫКЖызМюкФнц ЩЮЧШАдЯнЦсПЫЙСЖУкгюойРКЕФялшЛЗВъДжЬзэМуЪь-ывцщТфГ" успешно создано
+04.06.2023 22:37:23 - DEBUG [persons_service.can_add_person_valid_param: 99] - Приступить к поиску добавленного физ. лица в БД
+04.06.2023 22:37:23 - DEBUG [persons_service.can_add_person_valid_param: 106] - Физическое лицо "дЕБеГяфщыноФТЙИхсЧбцЖтХПРьДъаЛСЪШЫМУВмЮЩю-клужэйЯш ЯъдймлШОАЕН-ДшжПячрЬуВЛапЦИТУХбщЩхфБЙеЫКЖызМюкФнц ЩЮЧШАдЯнЦсПЫЙСЖУкгюойРКЕФялшЛЗВъДжЬзэМуЪь-ывцщТфГ" успешно добавлено в БД
+04.06.2023 22:37:23 - DEBUG [test_api_persons.test_api_can_add_person_valid_param_at_limits: 86] - Окончить тест "api_Создание физ.лица (у роли есть права; валидные значения параметров на границах)" под ролью "Администратор ИБ"
+04.06.2023 22:37:23 - DEBUG [sql.db_delete_row: 64] - Приступить к удалению физ.лица из БД
+04.06.2023 22:37:23 - DEBUG [sql.db_delete_row: 72] - Физ. лицо удалено из БД
+04.06.2023 22:37:23 - DEBUG [sql.db_delete_row: 75] - Приступить к удалению файла "api_person_id.txt"
+04.06.2023 22:37:23 - DEBUG [sql.db_delete_row: 77] - Файл "api_person_id.txt" удален
+04.06.2023 22:37:23 - DEBUG [test_api_persons.test_api_can_not_add_person_valid_param_inside_limits: 99] - Начать тест "api_Отказ в создании физ.лица (у роли нет прав; валидные значения параметров внутри границ)" под ролью "Администратор СХ"
+04.06.2023 22:37:23 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:23 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:23 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:23 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "9RPHazh9SOHkFh0v003yh7rcDj83niqO"
+04.06.2023 22:37:23 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:23 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:24 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6184
+04.06.2023 22:37:24 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "admin_sh"
+04.06.2023 22:37:24 - DEBUG [persons_service.can_not_add_person_valid_param: 124] - Приступить к добавлению физ. лица с валидными параметрами
+04.06.2023 22:37:24 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:24 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 403 117
+04.06.2023 22:37:24 - DEBUG [persons_service.can_not_add_person_valid_param: 135] - Физическое лицо не создано, так как недостаточно прав для создания физического лица
+04.06.2023 22:37:24 - DEBUG [test_api_persons.test_api_can_not_add_person_valid_param_inside_limits: 103] - Окончить тест "api_Отказ в создании физ.лица (у роли нет прав; валидные значения параметров внутри границ)" под ролью "Администратор СХ"
+04.06.2023 22:37:24 - DEBUG [test_api_persons.test_api_can_not_add_person_valid_param_inside_limits: 99] - Начать тест "api_Отказ в создании физ.лица (у роли нет прав; валидные значения параметров внутри границ)" под ролью "Пользователь СХ"
+04.06.2023 22:37:24 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:24 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:24 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:24 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "DZciiBqGmPSIfNdGbVNaQBB23BmBG1ny"
+04.06.2023 22:37:24 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:24 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:25 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6099
+04.06.2023 22:37:25 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "user_sh_pl"
+04.06.2023 22:37:25 - DEBUG [persons_service.can_not_add_person_valid_param: 124] - Приступить к добавлению физ. лица с валидными параметрами
+04.06.2023 22:37:25 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:25 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 403 117
+04.06.2023 22:37:25 - DEBUG [persons_service.can_not_add_person_valid_param: 135] - Физическое лицо не создано, так как недостаточно прав для создания физического лица
+04.06.2023 22:37:25 - DEBUG [test_api_persons.test_api_can_not_add_person_valid_param_inside_limits: 103] - Окончить тест "api_Отказ в создании физ.лица (у роли нет прав; валидные значения параметров внутри границ)" под ролью "Пользователь СХ"
+04.06.2023 22:37:25 - DEBUG [test_api_persons.test_api_can_not_add_person_valid_param_inside_limits: 99] - Начать тест "api_Отказ в создании физ.лица (у роли нет прав; валидные значения параметров внутри границ)" под ролью "Администратор МНС"
+04.06.2023 22:37:25 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:25 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:25 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:25 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "QfyOOxTMrqzwon2wHm5GCGBWwyYSo1ax"
+04.06.2023 22:37:25 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:25 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:26 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 5622
+04.06.2023 22:37:26 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "admin_mns"
+04.06.2023 22:37:26 - DEBUG [persons_service.can_not_add_person_valid_param: 124] - Приступить к добавлению физ. лица с валидными параметрами
+04.06.2023 22:37:26 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:26 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 403 117
+04.06.2023 22:37:26 - DEBUG [persons_service.can_not_add_person_valid_param: 135] - Физическое лицо не создано, так как недостаточно прав для создания физического лица
+04.06.2023 22:37:26 - DEBUG [test_api_persons.test_api_can_not_add_person_valid_param_inside_limits: 103] - Окончить тест "api_Отказ в создании физ.лица (у роли нет прав; валидные значения параметров внутри границ)" под ролью "Администратор МНС"
+04.06.2023 22:37:26 - DEBUG [test_api_persons.test_api_can_not_add_person_valid_param_inside_limits: 99] - Начать тест "api_Отказ в создании физ.лица (у роли нет прав; валидные значения параметров внутри границ)" под ролью "Областной администратор МНС"
+04.06.2023 22:37:26 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:26 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:26 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:26 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "op029n7PSB28MiInJl81ynEHJ7A1fszC"
+04.06.2023 22:37:26 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:26 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:27 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 5856
+04.06.2023 22:37:27 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "obladmin_mns"
+04.06.2023 22:37:27 - DEBUG [persons_service.can_not_add_person_valid_param: 124] - Приступить к добавлению физ. лица с валидными параметрами
+04.06.2023 22:37:27 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:27 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 403 117
+04.06.2023 22:37:27 - DEBUG [persons_service.can_not_add_person_valid_param: 135] - Физическое лицо не создано, так как недостаточно прав для создания физического лица
+04.06.2023 22:37:27 - DEBUG [test_api_persons.test_api_can_not_add_person_valid_param_inside_limits: 103] - Окончить тест "api_Отказ в создании физ.лица (у роли нет прав; валидные значения параметров внутри границ)" под ролью "Областной администратор МНС"
+04.06.2023 22:37:27 - DEBUG [test_api_persons.test_api_can_not_add_person_valid_param_inside_limits: 99] - Начать тест "api_Отказ в создании физ.лица (у роли нет прав; валидные значения параметров внутри границ)" под ролью "Районный администратор МНС"
+04.06.2023 22:37:27 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:27 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:27 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:27 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "RJGqEK80wLp83Au4Zg4PFCpyhTxHC41G"
+04.06.2023 22:37:27 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:27 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:28 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 5889
+04.06.2023 22:37:28 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "rayadmin_mns"
+04.06.2023 22:37:28 - DEBUG [persons_service.can_not_add_person_valid_param: 124] - Приступить к добавлению физ. лица с валидными параметрами
+04.06.2023 22:37:28 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:28 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 403 117
+04.06.2023 22:37:28 - DEBUG [persons_service.can_not_add_person_valid_param: 135] - Физическое лицо не создано, так как недостаточно прав для создания физического лица
+04.06.2023 22:37:28 - DEBUG [test_api_persons.test_api_can_not_add_person_valid_param_inside_limits: 103] - Окончить тест "api_Отказ в создании физ.лица (у роли нет прав; валидные значения параметров внутри границ)" под ролью "Районный администратор МНС"
+04.06.2023 22:37:28 - DEBUG [test_api_persons.test_api_can_not_add_person_valid_param_inside_limits: 99] - Начать тест "api_Отказ в создании физ.лица (у роли нет прав; валидные значения параметров внутри границ)" под ролью "Пользователь МНС"
+04.06.2023 22:37:28 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:28 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:28 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:28 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "wf7L3Ue3tpKKqdCrtqpdf7s0d7pWQgZv"
+04.06.2023 22:37:28 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:28 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:28 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 400 157
+04.06.2023 22:37:28 - DEBUG [test_api_persons.test_api_can_not_add_person_valid_param_inside_limits: 99] - Начать тест "api_Отказ в создании физ.лица (у роли нет прав; валидные значения параметров внутри границ)" под ролью "Администратор ГТК"
+04.06.2023 22:37:28 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:28 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:28 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:28 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "MTMFBz3q2BDyd53FQblBJd72maqkjCTK"
+04.06.2023 22:37:28 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:28 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:28 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 400 157
+04.06.2023 22:37:28 - DEBUG [test_api_persons.test_api_can_not_add_person_valid_param_inside_limits: 99] - Начать тест "api_Отказ в создании физ.лица (у роли нет прав; валидные значения параметров внутри границ)" под ролью "Пользователь ГТК"
+04.06.2023 22:37:28 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:28 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:28 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:28 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "kUyLVgLDynqYATbk2bvfOruGzdQJDD48"
+04.06.2023 22:37:28 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:28 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:28 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 400 157
+04.06.2023 22:37:28 - DEBUG [test_api_persons.test_api_can_not_add_person_empty_param_required_aib: 114] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; пустые значения обязательных параметров)"
+04.06.2023 22:37:28 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:28 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:28 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:28 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "kfqEKgOLnNW7sXbC6c69LqW9CkXcbwtt"
+04.06.2023 22:37:28 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:28 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:29 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:29 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:29 - DEBUG [persons_service.can_not_add_person_empty_param_required: 154] - Приступить к добавлению физ. лица с пустыми параметрами
+04.06.2023 22:37:29 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:29 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 73
+04.06.2023 22:37:29 - DEBUG [persons_service.can_not_add_person_empty_param_required: 165] - Физическое лицо не создано из-за пустых обязательных параметров
+04.06.2023 22:37:29 - DEBUG [test_api_persons.test_api_can_not_add_person_empty_param_required_aib: 118] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; пустые значения обязательных параметров)"
+04.06.2023 22:37:29 - DEBUG [test_api_persons.test_api_can_not_add_person_empty_param_required_aib: 114] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; пустые значения обязательных параметров)"
+04.06.2023 22:37:29 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:29 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:29 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:29 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "oh9ar8fbIbyodSEzFFdHnhdXNDFA6pMo"
+04.06.2023 22:37:29 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:29 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:30 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:30 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:30 - DEBUG [persons_service.can_not_add_person_empty_param_required: 154] - Приступить к добавлению физ. лица с пустыми параметрами
+04.06.2023 22:37:30 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:30 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 72
+04.06.2023 22:37:30 - DEBUG [persons_service.can_not_add_person_empty_param_required: 165] - Физическое лицо не создано из-за пустых обязательных параметров
+04.06.2023 22:37:30 - DEBUG [test_api_persons.test_api_can_not_add_person_empty_param_required_aib: 118] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; пустые значения обязательных параметров)"
+04.06.2023 22:37:30 - DEBUG [test_api_persons.test_api_can_not_add_person_empty_param_required_aib: 114] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; пустые значения обязательных параметров)"
+04.06.2023 22:37:30 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:30 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:30 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:30 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "obQ1Zx8kGI4fnrnQIP8Xoel3l0PLjSMW"
+04.06.2023 22:37:30 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:30 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:31 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:31 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:31 - DEBUG [persons_service.can_not_add_person_empty_param_required: 154] - Приступить к добавлению физ. лица с пустыми параметрами
+04.06.2023 22:37:31 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:31 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 104
+04.06.2023 22:37:31 - DEBUG [persons_service.can_not_add_person_empty_param_required: 165] - Физическое лицо не создано из-за пустых обязательных параметров
+04.06.2023 22:37:31 - DEBUG [test_api_persons.test_api_can_not_add_person_empty_param_required_aib: 118] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; пустые значения обязательных параметров)"
+04.06.2023 22:37:31 - DEBUG [test_api_persons.test_api_can_not_add_person_empty_param_required_aib: 114] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; пустые значения обязательных параметров)"
+04.06.2023 22:37:31 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:31 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:31 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:31 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "YZBQi32wyYIelR79adpQX2OQ9tMGpIgN"
+04.06.2023 22:37:31 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:31 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:32 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:32 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:32 - DEBUG [persons_service.can_not_add_person_empty_param_required: 154] - Приступить к добавлению физ. лица с пустыми параметрами
+04.06.2023 22:37:32 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:32 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 247
+04.06.2023 22:37:32 - DEBUG [persons_service.can_not_add_person_empty_param_required: 165] - Физическое лицо не создано из-за пустых обязательных параметров
+04.06.2023 22:37:32 - DEBUG [test_api_persons.test_api_can_not_add_person_empty_param_required_aib: 118] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; пустые значения обязательных параметров)"
+04.06.2023 22:37:32 - DEBUG [test_api_persons.test_api_can_not_add_person_empty_param_required_aib: 114] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; пустые значения обязательных параметров)"
+04.06.2023 22:37:32 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:32 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:32 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:32 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "N460QV0ydsAIHBlMo8SesYl2Cg7fGLte"
+04.06.2023 22:37:32 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:32 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:33 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:33 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:33 - DEBUG [persons_service.can_not_add_person_empty_param_required: 154] - Приступить к добавлению физ. лица с пустыми параметрами
+04.06.2023 22:37:33 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:33 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 144
+04.06.2023 22:37:33 - DEBUG [persons_service.can_not_add_person_empty_param_required: 165] - Физическое лицо не создано из-за пустых обязательных параметров
+04.06.2023 22:37:33 - DEBUG [test_api_persons.test_api_can_not_add_person_empty_param_required_aib: 118] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; пустые значения обязательных параметров)"
+04.06.2023 22:37:33 - DEBUG [test_api_persons.test_api_can_not_add_person_empty_param_required_aib: 114] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; пустые значения обязательных параметров)"
+04.06.2023 22:37:33 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:33 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:33 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:33 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "LlqcBLLeSqkrPUQ9NWVxxIevR2KLp3kt"
+04.06.2023 22:37:33 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:33 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:34 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:34 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:34 - DEBUG [persons_service.can_not_add_person_empty_param_required: 154] - Приступить к добавлению физ. лица с пустыми параметрами
+04.06.2023 22:37:34 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:34 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 175
+04.06.2023 22:37:34 - DEBUG [persons_service.can_not_add_person_empty_param_required: 165] - Физическое лицо не создано из-за пустых обязательных параметров
+04.06.2023 22:37:34 - DEBUG [test_api_persons.test_api_can_not_add_person_empty_param_required_aib: 118] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; пустые значения обязательных параметров)"
+04.06.2023 22:37:34 - DEBUG [test_api_persons.test_api_can_not_add_person_empty_param_required_aib: 114] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; пустые значения обязательных параметров)"
+04.06.2023 22:37:34 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:34 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:34 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:34 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "ivjda6HSmdr5jbpqwPrY76fGZHVSeQRj"
+04.06.2023 22:37:34 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:34 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:34 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:34 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:34 - DEBUG [persons_service.can_not_add_person_empty_param_required: 154] - Приступить к добавлению физ. лица с пустыми параметрами
+04.06.2023 22:37:34 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:35 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 176
+04.06.2023 22:37:35 - DEBUG [persons_service.can_not_add_person_empty_param_required: 165] - Физическое лицо не создано из-за пустых обязательных параметров
+04.06.2023 22:37:35 - DEBUG [test_api_persons.test_api_can_not_add_person_empty_param_required_aib: 118] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; пустые значения обязательных параметров)"
+04.06.2023 22:37:35 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 130] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:35 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:35 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:35 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:35 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "FWom2gXXx0wimEeLIfNTsXUkcJ3JKNio"
+04.06.2023 22:37:35 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:35 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:35 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:35 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:35 - DEBUG [persons_service.can_not_add_person_invalid_param: 183] - Приступить к добавлению физ. лица с невалидными параметрами
+04.06.2023 22:37:35 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:35 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 144
+04.06.2023 22:37:35 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 130] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:35 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:35 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:35 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:35 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "omWZ6JnLzI7NVpUVEr9yXzcwswi1pRI6"
+04.06.2023 22:37:35 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:35 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:36 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:36 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:36 - DEBUG [persons_service.can_not_add_person_invalid_param: 183] - Приступить к добавлению физ. лица с невалидными параметрами
+04.06.2023 22:37:36 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:36 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 97
+04.06.2023 22:37:36 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 130] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:36 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:36 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:36 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:36 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "vLT3eDXOsaiiCSZWMCGoP0wUDKNdPkoX"
+04.06.2023 22:37:36 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:36 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:37 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:37 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:37 - DEBUG [persons_service.can_not_add_person_invalid_param: 183] - Приступить к добавлению физ. лица с невалидными параметрами
+04.06.2023 22:37:37 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:37 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 143
+04.06.2023 22:37:37 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 130] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:37 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:37 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:37 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:37 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "NdqWUyNPxTvthgciKvxFJyXJkmhbgbyO"
+04.06.2023 22:37:37 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:37 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:38 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:38 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:38 - DEBUG [persons_service.can_not_add_person_invalid_param: 183] - Приступить к добавлению физ. лица с невалидными параметрами
+04.06.2023 22:37:38 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:38 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 201 472
+04.06.2023 22:37:38 - DEBUG [base_service.add_person: 111] - Приступить к записи id физ.лица в файл
+04.06.2023 22:37:38 - DEBUG [base_service.add_person: 113] - id физ.лица успешно записан в файл
+04.06.2023 22:37:38 - DEBUG [sql.db_delete_row: 64] - Приступить к удалению физ.лица из БД
+04.06.2023 22:37:38 - DEBUG [sql.db_delete_row: 72] - Физ. лицо удалено из БД
+04.06.2023 22:37:38 - DEBUG [sql.db_delete_row: 75] - Приступить к удалению файла "api_person_id.txt"
+04.06.2023 22:37:38 - DEBUG [sql.db_delete_row: 77] - Файл "api_person_id.txt" удален
+04.06.2023 22:37:38 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 130] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:38 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:38 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:38 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:38 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "2ut3nj94GLizMTljsttEFHouxOKjkYiQ"
+04.06.2023 22:37:38 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:38 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:39 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:39 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:39 - DEBUG [persons_service.can_not_add_person_invalid_param: 183] - Приступить к добавлению физ. лица с невалидными параметрами
+04.06.2023 22:37:39 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:39 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 102
+04.06.2023 22:37:39 - DEBUG [persons_service.can_not_add_person_invalid_param: 194] - Физическое лицо не создано из-за невалидных значений параметров
+04.06.2023 22:37:39 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 133] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:39 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 130] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:39 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:39 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:39 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:39 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "K4CTm4bFGOYMIA3MB1Jx4bHevuUnpVEb"
+04.06.2023 22:37:39 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:39 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:40 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:40 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:40 - DEBUG [persons_service.can_not_add_person_invalid_param: 183] - Приступить к добавлению физ. лица с невалидными параметрами
+04.06.2023 22:37:40 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:40 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 90
+04.06.2023 22:37:40 - DEBUG [persons_service.can_not_add_person_invalid_param: 194] - Физическое лицо не создано из-за невалидных значений параметров
+04.06.2023 22:37:40 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 133] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:40 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 130] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:40 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:40 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:40 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:40 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "oEaMpf9iELThur3z2vZyQ2jGWBK0ZWHr"
+04.06.2023 22:37:40 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:40 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:41 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:41 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:41 - DEBUG [persons_service.can_not_add_person_invalid_param: 183] - Приступить к добавлению физ. лица с невалидными параметрами
+04.06.2023 22:37:41 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:41 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 89
+04.06.2023 22:37:41 - DEBUG [persons_service.can_not_add_person_invalid_param: 194] - Физическое лицо не создано из-за невалидных значений параметров
+04.06.2023 22:37:41 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 133] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:41 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 130] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:41 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:41 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:41 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:41 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "6OhRMRDpboblLtNBHGFcQjLilbaNK2cQ"
+04.06.2023 22:37:41 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:41 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:42 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:42 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:42 - DEBUG [persons_service.can_not_add_person_invalid_param: 183] - Приступить к добавлению физ. лица с невалидными параметрами
+04.06.2023 22:37:42 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:42 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 66
+04.06.2023 22:37:42 - DEBUG [persons_service.can_not_add_person_invalid_param: 194] - Физическое лицо не создано из-за невалидных значений параметров
+04.06.2023 22:37:42 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 133] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:42 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 130] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:42 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:42 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:42 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:42 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "uAxCvMF2ASGzXIlmmzfUvAZTj6ITj55i"
+04.06.2023 22:37:42 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:42 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:42 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:42 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:42 - DEBUG [persons_service.can_not_add_person_invalid_param: 183] - Приступить к добавлению физ. лица с невалидными параметрами
+04.06.2023 22:37:42 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:42 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 150
+04.06.2023 22:37:42 - DEBUG [persons_service.can_not_add_person_invalid_param: 194] - Физическое лицо не создано из-за невалидных значений параметров
+04.06.2023 22:37:42 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 133] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:43 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 130] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:43 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:43 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:43 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:43 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "mEvzWlfVZVSjIacrlnQVeQyPF8R0J7vi"
+04.06.2023 22:37:43 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:43 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:43 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:43 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:43 - DEBUG [persons_service.can_not_add_person_invalid_param: 183] - Приступить к добавлению физ. лица с невалидными параметрами
+04.06.2023 22:37:43 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:43 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 150
+04.06.2023 22:37:43 - DEBUG [persons_service.can_not_add_person_invalid_param: 194] - Физическое лицо не создано из-за невалидных значений параметров
+04.06.2023 22:37:43 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 133] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:43 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 130] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:43 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:43 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:43 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:43 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "tP17DXmBMmo3ldnvfGJJJWgbp2DyeSYQ"
+04.06.2023 22:37:43 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:43 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:44 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:44 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:44 - DEBUG [persons_service.can_not_add_person_invalid_param: 183] - Приступить к добавлению физ. лица с невалидными параметрами
+04.06.2023 22:37:44 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:44 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 150
+04.06.2023 22:37:44 - DEBUG [persons_service.can_not_add_person_invalid_param: 194] - Физическое лицо не создано из-за невалидных значений параметров
+04.06.2023 22:37:44 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 133] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:44 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 130] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:44 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:44 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:44 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:44 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "ZlAQpgoLIuBDPW4KbrB543uiVmYjw1fa"
+04.06.2023 22:37:44 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:44 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:45 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:45 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:45 - DEBUG [persons_service.can_not_add_person_invalid_param: 183] - Приступить к добавлению физ. лица с невалидными параметрами
+04.06.2023 22:37:45 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:45 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 150
+04.06.2023 22:37:45 - DEBUG [persons_service.can_not_add_person_invalid_param: 194] - Физическое лицо не создано из-за невалидных значений параметров
+04.06.2023 22:37:45 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 133] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:45 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 130] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:45 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:45 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:45 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:45 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "2uGlVW2v3XkCwBsjZSkYshdax30R41UC"
+04.06.2023 22:37:45 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:45 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:46 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:46 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:46 - DEBUG [persons_service.can_not_add_person_invalid_param: 183] - Приступить к добавлению физ. лица с невалидными параметрами
+04.06.2023 22:37:46 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:46 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 150
+04.06.2023 22:37:46 - DEBUG [persons_service.can_not_add_person_invalid_param: 194] - Физическое лицо не создано из-за невалидных значений параметров
+04.06.2023 22:37:46 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 133] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:46 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 130] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:46 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:46 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:46 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:46 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "Sw1U8xEuvllMOEjMB9wrkUiYXLkaGPOz"
+04.06.2023 22:37:46 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:46 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:47 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:47 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:47 - DEBUG [persons_service.can_not_add_person_invalid_param: 183] - Приступить к добавлению физ. лица с невалидными параметрами
+04.06.2023 22:37:47 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:47 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 150
+04.06.2023 22:37:47 - DEBUG [persons_service.can_not_add_person_invalid_param: 194] - Физическое лицо не создано из-за невалидных значений параметров
+04.06.2023 22:37:47 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 133] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:47 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 130] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:47 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:47 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:47 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:47 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "XKJnKH3NYsYGIgHU2XPqH98jhJKrjKny"
+04.06.2023 22:37:47 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:47 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:48 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:48 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:48 - DEBUG [persons_service.can_not_add_person_invalid_param: 183] - Приступить к добавлению физ. лица с невалидными параметрами
+04.06.2023 22:37:48 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:48 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 150
+04.06.2023 22:37:48 - DEBUG [persons_service.can_not_add_person_invalid_param: 194] - Физическое лицо не создано из-за невалидных значений параметров
+04.06.2023 22:37:48 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 133] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:48 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 130] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:48 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:48 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:48 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:48 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "sIYUsJI4cagLP4PKDRyaKAye4gxOsS5L"
+04.06.2023 22:37:48 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:48 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:49 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:49 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:49 - DEBUG [persons_service.can_not_add_person_invalid_param: 183] - Приступить к добавлению физ. лица с невалидными параметрами
+04.06.2023 22:37:49 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:49 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 150
+04.06.2023 22:37:49 - DEBUG [persons_service.can_not_add_person_invalid_param: 194] - Физическое лицо не создано из-за невалидных значений параметров
+04.06.2023 22:37:49 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 133] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:49 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 130] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:49 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:49 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:49 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:49 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "m2mlJMx9IEZBC5g9OO1MIxTcioQBnV7e"
+04.06.2023 22:37:49 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:49 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:49 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:49 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:49 - DEBUG [persons_service.can_not_add_person_invalid_param: 183] - Приступить к добавлению физ. лица с невалидными параметрами
+04.06.2023 22:37:49 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:50 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 150
+04.06.2023 22:37:50 - DEBUG [persons_service.can_not_add_person_invalid_param: 194] - Физическое лицо не создано из-за невалидных значений параметров
+04.06.2023 22:37:50 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 133] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:50 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 130] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:50 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:50 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:50 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:50 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "ziLO36KreYEM4mSVXPjaFFsOoRqyDxCL"
+04.06.2023 22:37:50 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:50 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:50 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:50 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:50 - DEBUG [persons_service.can_not_add_person_invalid_param: 183] - Приступить к добавлению физ. лица с невалидными параметрами
+04.06.2023 22:37:50 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:50 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 150
+04.06.2023 22:37:50 - DEBUG [persons_service.can_not_add_person_invalid_param: 194] - Физическое лицо не создано из-за невалидных значений параметров
+04.06.2023 22:37:50 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 133] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:50 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 130] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:50 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:50 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:51 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:51 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "8kRNjqfNMCOGJXpbAZKpf9KwJVe7yGka"
+04.06.2023 22:37:51 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:51 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:51 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:51 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:51 - DEBUG [persons_service.can_not_add_person_invalid_param: 183] - Приступить к добавлению физ. лица с невалидными параметрами
+04.06.2023 22:37:51 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:51 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 150
+04.06.2023 22:37:51 - DEBUG [persons_service.can_not_add_person_invalid_param: 194] - Физическое лицо не создано из-за невалидных значений параметров
+04.06.2023 22:37:51 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 133] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:51 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 130] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:51 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:51 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:51 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:51 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "Puk1sVJKGEUCV7vn7z7oqWnVSfaOesQY"
+04.06.2023 22:37:51 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:51 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:52 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:52 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:52 - DEBUG [persons_service.can_not_add_person_invalid_param: 183] - Приступить к добавлению физ. лица с невалидными параметрами
+04.06.2023 22:37:52 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:52 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 150
+04.06.2023 22:37:52 - DEBUG [persons_service.can_not_add_person_invalid_param: 194] - Физическое лицо не создано из-за невалидных значений параметров
+04.06.2023 22:37:52 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 133] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:52 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 130] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:52 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:52 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:52 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:52 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "9Dmjm76IQiPEZCPIrkFN42W6YgzYFyNd"
+04.06.2023 22:37:52 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:52 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:53 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:53 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:53 - DEBUG [persons_service.can_not_add_person_invalid_param: 183] - Приступить к добавлению физ. лица с невалидными параметрами
+04.06.2023 22:37:53 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:53 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 150
+04.06.2023 22:37:53 - DEBUG [persons_service.can_not_add_person_invalid_param: 194] - Физическое лицо не создано из-за невалидных значений параметров
+04.06.2023 22:37:53 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 133] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:53 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 130] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:53 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:53 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:53 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:53 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "y9fPpUfgyte8nWGTmj8d7jR05eNDZZsl"
+04.06.2023 22:37:53 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:53 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:54 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:54 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:54 - DEBUG [persons_service.can_not_add_person_invalid_param: 183] - Приступить к добавлению физ. лица с невалидными параметрами
+04.06.2023 22:37:54 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:54 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 150
+04.06.2023 22:37:54 - DEBUG [persons_service.can_not_add_person_invalid_param: 194] - Физическое лицо не создано из-за невалидных значений параметров
+04.06.2023 22:37:54 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 133] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:54 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 130] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:54 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:54 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:54 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:54 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "hO0qnshFdhzWoPQ7XFYYUsnV7rc4iivv"
+04.06.2023 22:37:54 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:54 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:55 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:55 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:55 - DEBUG [persons_service.can_not_add_person_invalid_param: 183] - Приступить к добавлению физ. лица с невалидными параметрами
+04.06.2023 22:37:55 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:55 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 201 485
+04.06.2023 22:37:55 - DEBUG [base_service.add_person: 111] - Приступить к записи id физ.лица в файл
+04.06.2023 22:37:55 - DEBUG [base_service.add_person: 113] - id физ.лица успешно записан в файл
+04.06.2023 22:37:55 - DEBUG [sql.db_delete_row: 64] - Приступить к удалению физ.лица из БД
+04.06.2023 22:37:55 - DEBUG [sql.db_delete_row: 72] - Физ. лицо удалено из БД
+04.06.2023 22:37:55 - DEBUG [sql.db_delete_row: 75] - Приступить к удалению файла "api_person_id.txt"
+04.06.2023 22:37:55 - DEBUG [sql.db_delete_row: 77] - Файл "api_person_id.txt" удален
+04.06.2023 22:37:55 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 130] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:55 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:55 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:55 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:55 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "bvZ4euWDBkW4zvr6ARkcKa0Uew995sHB"
+04.06.2023 22:37:55 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:55 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:56 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:56 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:56 - DEBUG [persons_service.can_not_add_person_invalid_param: 183] - Приступить к добавлению физ. лица с невалидными параметрами
+04.06.2023 22:37:56 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:56 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 95
+04.06.2023 22:37:56 - DEBUG [persons_service.can_not_add_person_invalid_param: 194] - Физическое лицо не создано из-за невалидных значений параметров
+04.06.2023 22:37:56 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 133] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:56 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 130] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:56 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:56 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:56 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:56 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "nUJjTQrFklImMsHvKk5N6GCgFnamrznp"
+04.06.2023 22:37:56 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:56 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:57 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:57 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:57 - DEBUG [persons_service.can_not_add_person_invalid_param: 183] - Приступить к добавлению физ. лица с невалидными параметрами
+04.06.2023 22:37:57 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:57 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 201 505
+04.06.2023 22:37:57 - DEBUG [base_service.add_person: 111] - Приступить к записи id физ.лица в файл
+04.06.2023 22:37:57 - DEBUG [base_service.add_person: 113] - id физ.лица успешно записан в файл
+04.06.2023 22:37:57 - DEBUG [sql.db_delete_row: 64] - Приступить к удалению физ.лица из БД
+04.06.2023 22:37:57 - DEBUG [sql.db_delete_row: 72] - Физ. лицо удалено из БД
+04.06.2023 22:37:57 - DEBUG [sql.db_delete_row: 75] - Приступить к удалению файла "api_person_id.txt"
+04.06.2023 22:37:57 - DEBUG [sql.db_delete_row: 77] - Файл "api_person_id.txt" удален
+04.06.2023 22:37:57 - DEBUG [test_api_persons.test_api_can_not_add_person_invalid_param_aib: 130] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)"
+04.06.2023 22:37:57 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:57 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:57 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:57 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "an8ja1mlJ6YbnOTLtWUvVeCjRDBlxwIB"
+04.06.2023 22:37:57 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:57 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:58 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:58 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:58 - DEBUG [persons_service.can_not_add_person_invalid_param: 183] - Приступить к добавлению физ. лица с невалидными параметрами
+04.06.2023 22:37:58 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:58 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 201 506
+04.06.2023 22:37:58 - DEBUG [base_service.add_person: 111] - Приступить к записи id физ.лица в файл
+04.06.2023 22:37:58 - DEBUG [base_service.add_person: 113] - id физ.лица успешно записан в файл
+04.06.2023 22:37:58 - DEBUG [sql.db_delete_row: 64] - Приступить к удалению физ.лица из БД
+04.06.2023 22:37:58 - DEBUG [sql.db_delete_row: 72] - Физ. лицо удалено из БД
+04.06.2023 22:37:58 - DEBUG [sql.db_delete_row: 75] - Приступить к удалению файла "api_person_id.txt"
+04.06.2023 22:37:58 - DEBUG [sql.db_delete_row: 77] - Файл "api_person_id.txt" удален
+04.06.2023 22:37:58 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 144] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:37:58 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:58 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:58 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:58 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "1aVWmDljLdWbLAJmIIvdMMLbZnqRcbFM"
+04.06.2023 22:37:58 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:58 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:59 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:37:59 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:37:59 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 213] - Приступить к добавлению физ. лица с параметрами, вышедшими по длине за допустимые границы
+04.06.2023 22:37:59 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:59 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 201 380
+04.06.2023 22:37:59 - DEBUG [base_service.add_person: 111] - Приступить к записи id физ.лица в файл
+04.06.2023 22:37:59 - DEBUG [base_service.add_person: 113] - id физ.лица успешно записан в файл
+04.06.2023 22:37:59 - DEBUG [sql.db_delete_row: 64] - Приступить к удалению физ.лица из БД
+04.06.2023 22:37:59 - DEBUG [sql.db_delete_row: 72] - Физ. лицо удалено из БД
+04.06.2023 22:37:59 - DEBUG [sql.db_delete_row: 75] - Приступить к удалению файла "api_person_id.txt"
+04.06.2023 22:37:59 - DEBUG [sql.db_delete_row: 77] - Файл "api_person_id.txt" удален
+04.06.2023 22:37:59 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 144] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:37:59 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:37:59 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:37:59 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:37:59 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "VrVnivsOhHtDepXQYsjsfjQoso5JnS0A"
+04.06.2023 22:37:59 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:37:59 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:00 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:38:00 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:38:00 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 213] - Приступить к добавлению физ. лица с параметрами, вышедшими по длине за допустимые границы
+04.06.2023 22:38:00 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:00 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 144
+04.06.2023 22:38:00 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 144] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:38:00 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:38:00 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:00 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:38:00 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "NUobee0no9RY6DQyXHZJv6ho7uQW2Z6L"
+04.06.2023 22:38:00 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:38:00 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:01 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:38:01 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:38:01 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 213] - Приступить к добавлению физ. лица с параметрами, вышедшими по длине за допустимые границы
+04.06.2023 22:38:01 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:01 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 201 574
+04.06.2023 22:38:01 - DEBUG [base_service.add_person: 111] - Приступить к записи id физ.лица в файл
+04.06.2023 22:38:01 - DEBUG [base_service.add_person: 113] - id физ.лица успешно записан в файл
+04.06.2023 22:38:01 - DEBUG [sql.db_delete_row: 64] - Приступить к удалению физ.лица из БД
+04.06.2023 22:38:01 - DEBUG [sql.db_delete_row: 72] - Физ. лицо удалено из БД
+04.06.2023 22:38:01 - DEBUG [sql.db_delete_row: 75] - Приступить к удалению файла "api_person_id.txt"
+04.06.2023 22:38:01 - DEBUG [sql.db_delete_row: 77] - Файл "api_person_id.txt" удален
+04.06.2023 22:38:01 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 144] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:38:01 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:38:01 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:01 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:38:01 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "o8PkD8WO8TxdOmXRGpznKMziwNR0uluN"
+04.06.2023 22:38:01 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:38:01 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:02 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:38:02 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:38:02 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 213] - Приступить к добавлению физ. лица с параметрами, вышедшими по длине за допустимые границы
+04.06.2023 22:38:02 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:02 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 251
+04.06.2023 22:38:02 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 144] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:38:02 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:38:02 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:02 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:38:02 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "TZN3NJgVhNNgaBAlWJ2DXhyUkCsQKL2M"
+04.06.2023 22:38:02 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:38:02 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:02 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:38:02 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:38:02 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 213] - Приступить к добавлению физ. лица с параметрами, вышедшими по длине за допустимые границы
+04.06.2023 22:38:02 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:03 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 201 376
+04.06.2023 22:38:03 - DEBUG [base_service.add_person: 111] - Приступить к записи id физ.лица в файл
+04.06.2023 22:38:03 - DEBUG [base_service.add_person: 113] - id физ.лица успешно записан в файл
+04.06.2023 22:38:03 - DEBUG [sql.db_delete_row: 64] - Приступить к удалению физ.лица из БД
+04.06.2023 22:38:03 - DEBUG [sql.db_delete_row: 72] - Физ. лицо удалено из БД
+04.06.2023 22:38:03 - DEBUG [sql.db_delete_row: 75] - Приступить к удалению файла "api_person_id.txt"
+04.06.2023 22:38:03 - DEBUG [sql.db_delete_row: 77] - Файл "api_person_id.txt" удален
+04.06.2023 22:38:03 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 144] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:38:03 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:38:03 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:03 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:38:03 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "L0tnXXlyx1fdXOqo0lzusK2U8iRc6sCk"
+04.06.2023 22:38:03 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:38:03 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:03 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:38:03 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:38:03 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 213] - Приступить к добавлению физ. лица с параметрами, вышедшими по длине за допустимые границы
+04.06.2023 22:38:03 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:04 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 143
+04.06.2023 22:38:04 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 144] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:38:04 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:38:04 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:04 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:38:04 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "ndcz4je7BaPwtlttZiIseCfaQa8NmZy4"
+04.06.2023 22:38:04 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:38:04 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:04 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:38:04 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:38:04 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 213] - Приступить к добавлению физ. лица с параметрами, вышедшими по длине за допустимые границы
+04.06.2023 22:38:04 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:04 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 122
+04.06.2023 22:38:04 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 225] - Физическое лицо не создано из-за из-за значений параметров, вышедших по длине за допустимые границы
+04.06.2023 22:38:04 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 147] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:38:04 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 144] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:38:05 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:38:05 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:05 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:38:05 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "7OCBzCJ5EeJrW9lpye5q9U8S9lI6qtTz"
+04.06.2023 22:38:05 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:38:05 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:05 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:38:05 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:38:05 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 213] - Приступить к добавлению физ. лица с параметрами, вышедшими по длине за допустимые границы
+04.06.2023 22:38:05 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:05 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 204
+04.06.2023 22:38:05 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 144] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:38:05 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:38:05 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:06 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:38:06 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "pRbEo9ViaJ66ltivjmIWK8L2b1mybsji"
+04.06.2023 22:38:06 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:38:06 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:06 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:38:06 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:38:06 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 213] - Приступить к добавлению физ. лица с параметрами, вышедшими по длине за допустимые границы
+04.06.2023 22:38:06 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:06 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 143
+04.06.2023 22:38:06 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 144] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:38:06 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:38:06 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:06 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:38:06 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "XHFo7ymn95HInqxiJasotBwET1hzi2OE"
+04.06.2023 22:38:06 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:38:06 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:07 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:38:07 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:38:07 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 213] - Приступить к добавлению физ. лица с параметрами, вышедшими по длине за допустимые границы
+04.06.2023 22:38:07 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:07 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 201 574
+04.06.2023 22:38:07 - DEBUG [base_service.add_person: 111] - Приступить к записи id физ.лица в файл
+04.06.2023 22:38:07 - DEBUG [base_service.add_person: 113] - id физ.лица успешно записан в файл
+04.06.2023 22:38:07 - DEBUG [sql.db_delete_row: 64] - Приступить к удалению физ.лица из БД
+04.06.2023 22:38:08 - DEBUG [sql.db_delete_row: 72] - Физ. лицо удалено из БД
+04.06.2023 22:38:08 - DEBUG [sql.db_delete_row: 75] - Приступить к удалению файла "api_person_id.txt"
+04.06.2023 22:38:08 - DEBUG [sql.db_delete_row: 77] - Файл "api_person_id.txt" удален
+04.06.2023 22:38:08 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 144] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:38:08 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:38:08 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:08 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:38:08 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "StnGmm6ZIeh6FFI6rTNmTpB26VKb8ixU"
+04.06.2023 22:38:08 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:38:08 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:08 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:38:08 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:38:08 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 213] - Приступить к добавлению физ. лица с параметрами, вышедшими по длине за допустимые границы
+04.06.2023 22:38:08 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:08 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 123
+04.06.2023 22:38:08 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 144] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:38:08 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:38:08 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:09 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:38:09 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "KLJWqaEy1NziObsdSJH5DKYp76tdFdOv"
+04.06.2023 22:38:09 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:38:09 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:09 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:38:09 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:38:09 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 213] - Приступить к добавлению физ. лица с параметрами, вышедшими по длине за допустимые границы
+04.06.2023 22:38:09 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:09 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 118
+04.06.2023 22:38:09 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 225] - Физическое лицо не создано из-за из-за значений параметров, вышедших по длине за допустимые границы
+04.06.2023 22:38:09 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 147] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:38:09 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 144] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:38:09 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:38:09 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:09 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:38:09 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "qCUULBQbHus4Yrjr4zU1AjRIFtz2RXEd"
+04.06.2023 22:38:09 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:38:09 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:10 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:38:10 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:38:10 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 213] - Приступить к добавлению физ. лица с параметрами, вышедшими по длине за допустимые границы
+04.06.2023 22:38:10 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:10 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 118
+04.06.2023 22:38:10 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 144] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:38:10 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:38:10 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:10 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:38:10 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "GX3mh698kPd2GR6T03H1zC038c2AvJZy"
+04.06.2023 22:38:10 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:38:10 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:11 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:38:11 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:38:11 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 213] - Приступить к добавлению физ. лица с параметрами, вышедшими по длине за допустимые границы
+04.06.2023 22:38:11 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:11 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 119
+04.06.2023 22:38:11 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 225] - Физическое лицо не создано из-за из-за значений параметров, вышедших по длине за допустимые границы
+04.06.2023 22:38:11 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 147] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:38:11 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 144] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:38:11 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:38:11 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:11 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:38:11 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "bRaxygDOxvSFIf2JxixoJKXUfiUK7n0a"
+04.06.2023 22:38:11 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:38:11 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:12 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:38:12 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:38:12 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 213] - Приступить к добавлению физ. лица с параметрами, вышедшими по длине за допустимые границы
+04.06.2023 22:38:12 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:12 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 203
+04.06.2023 22:38:12 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 225] - Физическое лицо не создано из-за из-за значений параметров, вышедших по длине за допустимые границы
+04.06.2023 22:38:12 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 147] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:38:12 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 144] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:38:12 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:38:12 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:12 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:38:12 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "2pUcITVorvZF7CrtS4Gy88lOhotJXBPf"
+04.06.2023 22:38:12 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:38:12 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:13 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:38:13 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:38:13 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 213] - Приступить к добавлению физ. лица с параметрами, вышедшими по длине за допустимые границы
+04.06.2023 22:38:13 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:13 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 119
+04.06.2023 22:38:13 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 225] - Физическое лицо не создано из-за из-за значений параметров, вышедших по длине за допустимые границы
+04.06.2023 22:38:13 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 147] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:38:13 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 144] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:38:13 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:38:13 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:13 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:38:13 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "7E9AFZbYHNJrZ3VtZi2kyInoJ7yBzX39"
+04.06.2023 22:38:13 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:38:13 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:14 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:38:14 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:38:14 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 213] - Приступить к добавлению физ. лица с параметрами, вышедшими по длине за допустимые границы
+04.06.2023 22:38:14 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:14 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 119
+04.06.2023 22:38:14 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 144] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:38:14 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:38:14 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:14 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:38:14 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "dVLxcVWVGu35YDs5do0dibUSjYq6xPM1"
+04.06.2023 22:38:14 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:38:14 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:15 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:38:15 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:38:15 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 213] - Приступить к добавлению физ. лица с параметрами, вышедшими по длине за допустимые границы
+04.06.2023 22:38:15 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:15 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 120
+04.06.2023 22:38:15 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 225] - Физическое лицо не создано из-за из-за значений параметров, вышедших по длине за допустимые границы
+04.06.2023 22:38:15 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 147] - Окончить тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:38:15 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 144] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:38:15 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:38:15 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:15 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:38:15 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "VX2Mn1l3eL4Wna4WjV7dH4KCfnYvhiva"
+04.06.2023 22:38:15 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:38:15 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:15 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:38:15 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:38:15 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 213] - Приступить к добавлению физ. лица с параметрами, вышедшими по длине за допустимые границы
+04.06.2023 22:38:15 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:16 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 120
+04.06.2023 22:38:16 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 144] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:38:16 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:38:16 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:16 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:38:16 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "W6zTfzOq0By5LUz9mnqUlsqQzWXlRdp2"
+04.06.2023 22:38:16 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:38:16 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:16 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:38:16 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:38:16 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 213] - Приступить к добавлению физ. лица с параметрами, вышедшими по длине за допустимые границы
+04.06.2023 22:38:16 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:16 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 473
+04.06.2023 22:38:17 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 144] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:38:17 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:38:17 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:17 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:38:17 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "flKIdAKpiIrdViTYZJcdDqVsAlugJtHN"
+04.06.2023 22:38:17 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:38:17 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:17 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:38:17 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:38:17 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 213] - Приступить к добавлению физ. лица с параметрами, вышедшими по длине за допустимые границы
+04.06.2023 22:38:17 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:17 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 758
+04.06.2023 22:38:17 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 144] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:38:17 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:38:17 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:17 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:38:17 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "RRLL7pGDOtcu9rIdfI5NEeYJnNz4k8PK"
+04.06.2023 22:38:17 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:38:17 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:18 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:38:18 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:38:18 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 213] - Приступить к добавлению физ. лица с параметрами, вышедшими по длине за допустимые границы
+04.06.2023 22:38:18 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:18 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 594
+04.06.2023 22:38:18 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 144] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:38:18 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:38:18 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:18 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:38:18 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "rwULnN9CoF59KhYK0aAgfrP5YQXMMKzq"
+04.06.2023 22:38:18 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:38:18 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:19 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:38:19 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:38:19 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 213] - Приступить к добавлению физ. лица с параметрами, вышедшими по длине за допустимые границы
+04.06.2023 22:38:19 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:19 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 1132
+04.06.2023 22:38:19 - DEBUG [test_api_persons.test_api_can_not_add_person_param_out_of_limits_aib: 144] - Начать тест "api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)"
+04.06.2023 22:38:19 - DEBUG [login_service.login: 29] - Приступить к созданию CSRF-токена
+04.06.2023 22:38:19 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:19 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 22:38:19 - DEBUG [login_service.login: 32] - Отобразить успешно созданный CSRF-токен "qqfEzWUK9ySC5O5IlsVShtsLH9jSEZwl"
+04.06.2023 22:38:19 - DEBUG [login_service.login: 35] - Приступить к авторизации
+04.06.2023 22:38:19 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:20 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 22:38:20 - DEBUG [login_service.login: 39] - Успешно авторизовались под логином "smirnov"
+04.06.2023 22:38:20 - DEBUG [persons_service.can_not_add_person_param_out_of_limits: 213] - Приступить к добавлению физ. лица с параметрами, вышедшими по длине за допустимые границы
+04.06.2023 22:38:20 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 22:38:20 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/persons HTTP/1.1" 400 1132
