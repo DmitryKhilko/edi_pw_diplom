@@ -1,11 +1,12 @@
 import allure
 from pytest import mark
 
-from conftest import login_service, persons_service
 from data.persons_data_api import test_data_can_get_persons, test_data_can_not_get_persons, \
     test_data_can_add_person_valid_param_inside_limits, test_data_can_not_add_person_valid_param_inside_limits, \
     test_data_can_not_add_person_empty_param_required_aib, test_data_can_add_person_valid_param_at_limits, \
     test_data_can_not_add_person_invalid_param_aib, test_data_can_add_person_param_out_of_limits_aib
+from services.login_service import LoginService
+from services.persons_service import PersonsService
 
 
 @allure.label('owner', 'khilko')
@@ -23,8 +24,8 @@ class TestAPIGetPersons:
     @allure.id("1362")
     @allure.title('api_Получение списка физ.лиц (у роли есть права)')
     def test_api_can_qet_persons(self, user, message):
-        csrftoken, sessionid = login_service.login(user, user[0])
-        persons_service.can_get_persons(csrftoken, sessionid, message)
+        csrftoken, sessionid = LoginService.login(user, user[0])
+        PersonsService.can_get_persons(csrftoken, sessionid, message)
 
     @mark.parametrize('user, message', test_data_can_not_get_persons)
     @allure.description(
@@ -34,8 +35,8 @@ class TestAPIGetPersons:
     @allure.id("1355")
     @allure.title('api_Отказ в получении списка физ.лиц (у роли нет прав)')
     def test_api_can_not_qet_persons(self, user, message):
-        csrftoken, sessionid = login_service.login(user, user[0])
-        persons_service.can_not_get_persons(csrftoken, sessionid, message)
+        csrftoken, sessionid = LoginService.login(user, user[0])
+        PersonsService.can_not_get_persons(csrftoken, sessionid, message)
 
 
 @allure.label('owner', 'khilko')
@@ -55,8 +56,8 @@ class TestAPICreatePerson:
     @allure.id("1361")
     @allure.title('api_Создание физ.лица (у роли есть права; валидные значения параметров внутри границ)')
     def test_api_can_add_person_valid_param_inside_limits(self, user, data, message, sql_delete_person):
-        csrftoken, sessionid = login_service.login(user, user[0])
-        persons_service.can_add_person_valid_param(csrftoken, sessionid, data, message)
+        csrftoken, sessionid = LoginService.login(user, user[0])
+        PersonsService.can_add_person_valid_param(csrftoken, sessionid, data, message)
 
     @mark.parametrize('user, data, message', test_data_can_add_person_valid_param_at_limits)
     @allure.description(
@@ -68,8 +69,8 @@ class TestAPICreatePerson:
     @allure.id("1367")
     @allure.title('api_Создание физ.лица (у роли есть права; валидные значения параметров на границах)')
     def test_api_can_add_person_valid_param_at_limits(self, user, data, message, sql_delete_person):
-        csrftoken, sessionid = login_service.login(user, user[0])
-        persons_service.can_add_person_valid_param(csrftoken, sessionid, data, message)
+        csrftoken, sessionid = LoginService.login(user, user[0])
+        PersonsService.can_add_person_valid_param(csrftoken, sessionid, data, message)
 
     @mark.parametrize('user, data, message', test_data_can_not_add_person_valid_param_inside_limits)
     @allure.description(
@@ -81,8 +82,8 @@ class TestAPICreatePerson:
     @allure.id("1356")
     @allure.title('api_Отказ в создании физ.лица (у роли нет прав; валидные значения параметров внутри границ)')
     def test_api_can_not_add_person_valid_param_inside_limits(self, user, data, message, sql_delete_person):
-        csrftoken, sessionid = login_service.login(user, user[0])
-        persons_service.can_not_add_person_valid_param(csrftoken, sessionid, data, message)
+        csrftoken, sessionid = LoginService.login(user, user[0])
+        PersonsService.can_not_add_person_valid_param(csrftoken, sessionid, data, message)
 
     @mark.parametrize('user, data, message', test_data_can_not_add_person_empty_param_required_aib)
     @allure.description(
@@ -92,8 +93,8 @@ class TestAPICreatePerson:
     @allure.id("1363")
     @allure.title('api_Отказ в создании физ.лица (роль АИБ; пустые значения обязательных параметров)')
     def test_api_can_not_add_person_empty_param_required_aib(self, user, data, message, sql_delete_person):
-        csrftoken, sessionid = login_service.login(user, user[0])
-        persons_service.can_not_add_person_empty_param_required(csrftoken, sessionid, data, message)
+        csrftoken, sessionid = LoginService.login(user, user[0])
+        PersonsService.can_not_add_person_empty_param_required(csrftoken, sessionid, data, message)
 
     @mark.parametrize('user, data, message', test_data_can_not_add_person_invalid_param_aib)
     @allure.description(
@@ -104,8 +105,8 @@ class TestAPICreatePerson:
     @allure.id("1368")
     @allure.title('api_Отказ в создании физ.лица (роль АИБ; не валидные значения параметров)')
     def test_api_can_not_add_person_invalid_param_aib(self, user, data, message, sql_delete_person):
-        csrftoken, sessionid = login_service.login(user, user[0])
-        persons_service.can_not_add_person_invalid_param(csrftoken, sessionid, data, message)
+        csrftoken, sessionid = LoginService.login(user, user[0])
+        PersonsService.can_not_add_person_invalid_param(csrftoken, sessionid, data, message)
 
     @mark.parametrize('user, data, message', test_data_can_add_person_param_out_of_limits_aib)
     @allure.description(
@@ -116,5 +117,5 @@ class TestAPICreatePerson:
     @allure.id("1369")
     @allure.title('api_Отказ в создании физ.лица (роль АИБ; значения параметров вне границ)')
     def test_api_can_not_add_person_param_out_of_limits_aib(self, user, data, message, sql_delete_person):
-        csrftoken, sessionid = login_service.login(user, user[0])
-        persons_service.can_not_add_person_param_out_of_limits(csrftoken, sessionid, data, message)
+        csrftoken, sessionid = LoginService.login(user, user[0])
+        PersonsService.can_not_add_person_param_out_of_limits(csrftoken, sessionid, data, message)

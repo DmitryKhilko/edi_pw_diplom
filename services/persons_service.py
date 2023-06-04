@@ -7,7 +7,6 @@ from sql_requests.sql import SQLRequests
 class PersonsService(BaseService):
 
     @staticmethod
-    @allure.step('Получить список физических лиц')
     def can_get_persons(csrftoken: str, sessionid: str, message: tuple):
 
         """
@@ -22,7 +21,8 @@ class PersonsService(BaseService):
             - message: ожидаемый ответ сервера
         """
 
-        status_code, reason, result = BaseService.get_persons(csrftoken, sessionid)
+        with allure.step('Получить список физических лиц'):
+            status_code, reason, result = BaseService.get_persons(csrftoken, sessionid)
 
         with allure.step('Ожидаемый результат: получен список физических лиц'):
             print(f"Ожидаемый status_code: '{message[0]}', '{message[1]}'")
@@ -32,7 +32,6 @@ class PersonsService(BaseService):
             assert result['count'] >= 1, 'Фактическое и ожидаемое количество записей физических лиц не совпали'
 
     @staticmethod
-    @allure.step('Получить список физических лиц')
     def can_not_get_persons(csrftoken: str, sessionid: str, message: tuple):
 
         """
@@ -47,19 +46,18 @@ class PersonsService(BaseService):
             - message: ожидаемый ответ сервера
         """
 
-        status_code, reason, result = BaseService.get_persons(csrftoken, sessionid)
+        with allure.step('Получить список физических лиц'):
+            status_code, reason, result = BaseService.get_persons(csrftoken, sessionid)
 
         with allure.step('Ожидаемый результат: недостаточно прав для получения списка физических лиц'):
             print(f"Ожидаемый status_code: '{message[0]}', '{message[1]}'")
             print(f"Фактический status_code: '{status_code}', '{reason}'")
             print(f"Фактический response.json(): {result}'")
-
             assert status_code == message[0], 'Возможно есть доступ к списку физических лиц ' \
                                               'для недопустимой роли'
             assert result == message[2], 'Сообщение не соответствует ожидаемому'
 
     @staticmethod
-    @allure.step('Создать физическое лицо')
     def can_add_person_valid_param(csrftoken: str, sessionid: str, data: tuple, message: tuple):
 
         """
@@ -74,7 +72,8 @@ class PersonsService(BaseService):
             - message: ожидаемый ответ сервера
         """
 
-        status_code, reason, result = BaseService.add_person(csrftoken, sessionid, data)
+        with allure.step('Создать физическое лицо'):
+            status_code, reason, result = BaseService.add_person(csrftoken, sessionid, data)
 
         with allure.step('Ожидаемый результат: создано физическое лицо'):
             print(f"Ожидаемый status_code: '{message[0]}', '{message[1]}'")
@@ -97,8 +96,8 @@ class PersonsService(BaseService):
                                                         'не совпали'
 
     @staticmethod
-    @allure.step('Создать физическое лицо')
     def can_not_add_person_valid_param(csrftoken: str, sessionid: str, data: tuple, message: tuple):
+
         """
             Метод создания с помощью post-запроса физического лица для
             ролей приложения, которым запрещено создание физического лица.
@@ -111,7 +110,8 @@ class PersonsService(BaseService):
             - message: ожидаемый ответ сервера
         """
 
-        status_code, reason, result = BaseService.add_person(csrftoken, sessionid, data)
+        with allure.step('Создать физическое лицо'):
+            status_code, reason, result = BaseService.add_person(csrftoken, sessionid, data)
 
         with allure.step('Ожидаемый результат: недостаточно прав для создания физического лица'):
             print(f"Ожидаемый status_code: '{message[0]}', '{message[1]}'")
@@ -123,8 +123,8 @@ class PersonsService(BaseService):
             assert result == message[2], 'Сообщение не соответствует ожидаемому'
 
     @staticmethod
-    @allure.step('Создать физическое лицо')
     def can_not_add_person_empty_param_required(csrftoken: str, sessionid: str, data: tuple, message: tuple):
+
         """
             Метод проверки невозможности создания с помощью post-запроса
             физического лица под ролью АИБ с незаполненными обязательными
@@ -138,7 +138,8 @@ class PersonsService(BaseService):
             - message: ожидаемый ответ сервера
         """
 
-        status_code, reason, result = BaseService.add_person(csrftoken, sessionid, data)
+        with allure.step('Создать физическое лицо'):
+            status_code, reason, result = BaseService.add_person(csrftoken, sessionid, data)
 
         with allure.step('Ожидаемый результат: не создано физическое лицо из-за пустых обязательных параметров'):
             print(f"Ожидаемый status_code: '{message[0]}', '{message[1]}'")
@@ -150,8 +151,8 @@ class PersonsService(BaseService):
             assert result == message[2], 'Сообщение не соответствует ожидаемому'
 
     @staticmethod
-    @allure.step('Создать физическое лицо')
     def can_not_add_person_invalid_param(csrftoken: str, sessionid: str, data: tuple, message: tuple):
+
         """
             Метод проверки невозможности создания с помощью post-запроса
             физического лица под ролью АИБ с невалидными значениями параметров
@@ -164,7 +165,8 @@ class PersonsService(BaseService):
             - message: ожидаемый ответ сервера
         """
 
-        status_code, reason, result = BaseService.add_person(csrftoken, sessionid, data)
+        with allure.step('Создать физическое лицо'):
+            status_code, reason, result = BaseService.add_person(csrftoken, sessionid, data)
 
         with allure.step('Ожидаемый результат: не создано физическое лицо из-за невалидных значений параметров'):
             print(f"Ожидаемый status_code: '{message[0]}', '{message[1]}'")
@@ -176,8 +178,8 @@ class PersonsService(BaseService):
             assert result == message[2], 'Сообщение не соответствует ожидаемому'
 
     @staticmethod
-    @allure.step('Создать физическое лицо')
     def can_not_add_person_param_out_of_limits(csrftoken: str, sessionid: str, data: tuple, message: tuple):
+
         """
             Метод проверки невозможности создания с помощью post-запроса
             физического лица под ролью АИБ со значениями параметров, вышедших
@@ -191,7 +193,8 @@ class PersonsService(BaseService):
             - message: ожидаемый ответ сервера
         """
 
-        status_code, reason, result = BaseService.add_person(csrftoken, sessionid, data)
+        with allure.step('Создать физическое лицо'):
+            status_code, reason, result = BaseService.add_person(csrftoken, sessionid, data)
 
         with allure.step('Ожидаемый результат: не создано физическое лицо из-за значений параметров, '
                          'вышедших по длине за допустимые границы'):
@@ -199,7 +202,6 @@ class PersonsService(BaseService):
             print(f"Фактический status_code: '{status_code}', '{reason}'")
             print(f"Ожидаемый response.json(): {message[2]}'")
             print(f"Фактический response.json(): {result}'")
-
             assert status_code == message[0], 'Возможно физическое лицо добавлено в базу данных при ' \
                                               'наличии значений параметров, вышедших по длине за допустимые границы'
             assert result == message[2], 'Сообщение не соответствует ожидаемому'

@@ -1,16 +1,23 @@
+import logging
+
 import allure
 from playwright.sync_api import sync_playwright
 from pytest import fixture
 
 from data.file_name_data import FILENAME_API_PERSON_ID
-from services.login_service import LoginService
-from services.persons_service import PersonsService
 from sql_requests.sql import SQLRequests
 
-# # Инициализация экземпляров классов, описанных в пакетах pages и services,
-# # с которыми мы будем работать в тестах
-login_service = LoginService()
-persons_service = PersonsService()
+"""
+Настройка вывода логов
+"""
+logging.basicConfig(
+    level=logging.DEBUG,
+    filename="./helper/mylog.log",
+    filemode="w",
+    encoding="utf8",
+    format="%(asctime)s - %(levelname)s [%(module)s.%(funcName)s: %(lineno)d] - %(message)s",
+    datefmt='%d.%m.%Y %H:%M:%S',
+)
 
 
 @fixture(scope='function', autouse=False)

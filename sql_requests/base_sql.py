@@ -31,6 +31,3 @@ class BaseSQL:
             к БД приложения
         """
         connection.close()
-
-
-

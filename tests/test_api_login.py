@@ -1,8 +1,10 @@
+import logging
+
 import allure
 from pytest import mark
 
-from conftest import login_service
 from data.login_data_api import test_data_can_login, test_data_can_not_login
+from services.login_service import LoginService
 
 
 @allure.label('owner', 'khilko')
@@ -20,7 +22,9 @@ class TestAPILogin:
     @allure.id("1371")
     @allure.title('api_Вход в приложение под всеми ролями')
     def test_api_can_login_by_role(self, user, message):
-        login_service.login_by_role(user, message, user[0])
+        logging.debug(f'Начало теста "api_Вход в приложение под всеми ролями" под ролью "{user[0]}"')
+        LoginService.login_by_role(user, message, user[0])
+        logging.debug(f'Окончание теста "api_Вход в приложение под всеми ролями" под ролью "{user[0]}"')
 
     @mark.parametrize('user, message', test_data_can_not_login)
     @allure.description(
@@ -30,4 +34,4 @@ class TestAPILogin:
     @allure.id("1373")
     @allure.title('api_Отказ на вход в приложение (невалидные значения логина и пароля)')
     def test_api_can_not_login(self, user, message):
-        login_service.can_not_login(user, message, user[0])
+        LoginService.can_not_login(user, message, user[0])

@@ -1,0 +1,89 @@
+04.06.2023 20:38:48 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начало теста "api_Вход в приложение под всеми ролями" под ролью "Администратор ИБ"
+04.06.2023 20:38:48 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:48 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 20:38:48 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:49 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+04.06.2023 20:38:49 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончание теста "api_Вход в приложение под всеми ролями" под ролью "Администратор ИБ"
+04.06.2023 20:38:49 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начало теста "api_Вход в приложение под всеми ролями" под ролью "Администратор ИС"
+04.06.2023 20:38:49 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:49 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 20:38:49 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:50 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 8370
+04.06.2023 20:38:50 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончание теста "api_Вход в приложение под всеми ролями" под ролью "Администратор ИС"
+04.06.2023 20:38:50 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начало теста "api_Вход в приложение под всеми ролями" под ролью "Администратор СХ"
+04.06.2023 20:38:50 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:50 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 20:38:50 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:50 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6184
+04.06.2023 20:38:50 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончание теста "api_Вход в приложение под всеми ролями" под ролью "Администратор СХ"
+04.06.2023 20:38:50 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начало теста "api_Вход в приложение под всеми ролями" под ролью "Пользователь СХ"
+04.06.2023 20:38:50 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:50 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 20:38:50 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:51 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6099
+04.06.2023 20:38:51 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончание теста "api_Вход в приложение под всеми ролями" под ролью "Пользователь СХ"
+04.06.2023 20:38:51 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начало теста "api_Вход в приложение под всеми ролями" под ролью "Администратор МНС"
+04.06.2023 20:38:51 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:51 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 20:38:51 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:52 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 5622
+04.06.2023 20:38:52 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончание теста "api_Вход в приложение под всеми ролями" под ролью "Администратор МНС"
+04.06.2023 20:38:52 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начало теста "api_Вход в приложение под всеми ролями" под ролью "Областной администратор МНС"
+04.06.2023 20:38:52 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:52 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 20:38:52 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:53 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 5856
+04.06.2023 20:38:53 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончание теста "api_Вход в приложение под всеми ролями" под ролью "Областной администратор МНС"
+04.06.2023 20:38:53 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начало теста "api_Вход в приложение под всеми ролями" под ролью "Районный администратор МНС"
+04.06.2023 20:38:53 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:53 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 20:38:53 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:53 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 5889
+04.06.2023 20:38:53 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончание теста "api_Вход в приложение под всеми ролями" под ролью "Районный администратор МНС"
+04.06.2023 20:38:54 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начало теста "api_Вход в приложение под всеми ролями" под ролью "Пользователь МНС"
+04.06.2023 20:38:54 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:54 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 20:38:54 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:54 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 117
+04.06.2023 20:38:54 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начало теста "api_Вход в приложение под всеми ролями" под ролью "Администратор ГТК"
+04.06.2023 20:38:54 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:54 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 20:38:54 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:55 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 117
+04.06.2023 20:38:55 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начало теста "api_Вход в приложение под всеми ролями" под ролью "Пользователь ГТК"
+04.06.2023 20:38:55 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:55 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 20:38:55 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:56 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 117
+04.06.2023 20:38:56 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:56 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 20:38:56 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:57 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 117
+04.06.2023 20:38:57 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:57 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 20:38:57 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:57 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 55
+04.06.2023 20:38:57 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:57 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 20:38:57 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:57 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 117
+04.06.2023 20:38:58 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:58 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 20:38:58 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:58 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 55
+04.06.2023 20:38:58 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:58 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 20:38:58 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:58 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 117
+04.06.2023 20:38:58 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:58 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 20:38:58 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:59 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 55
+04.06.2023 20:38:59 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:59 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 20:38:59 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:59 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 55
+04.06.2023 20:38:59 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:59 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+04.06.2023 20:38:59 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+04.06.2023 20:38:59 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 55
