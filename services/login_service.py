@@ -116,4 +116,4 @@ class LoginService(BaseService):
             assert status_code == message[0], 'Возможно авторизация прошла успешно при использовании ' \
                                               'невалидных логина и пароля'
             assert result == message[2], 'Сообщение не соответствует ожидаемому'
-            logging.debug(f'Успешно авторизовались под логином "{user[1]}"')
+            logging.debug(f'Авторизация не произведена под логином "{user[1]}" и паролем "{user[2]}"')
