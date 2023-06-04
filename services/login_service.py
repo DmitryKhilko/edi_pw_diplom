@@ -1,3 +1,5 @@
+import logging
+
 import allure
 
 from services.base_service import BaseService
@@ -5,7 +7,6 @@ from services.base_service import BaseService
 
 class LoginService(BaseService):
     @staticmethod
-    @allure.step('Войти в приложении под ролью {user_role}')
     def login(user: tuple, user_role: str, expected_set_csrf_code=200, expected_login_code=200):
         """
             Метод авторизации: с помощью get-запроса создается CSRF-токен,
@@ -23,15 +24,20 @@ class LoginService(BaseService):
             - expected_login_code: ожидаемый код ответа при успешном входе в приложение
         """
 
-        with allure.step(f'Создать CSRF-токен'):
-            csrftoken, status_code = BaseService.get_csrftoken()
-            assert status_code == expected_set_csrf_code, 'CSRF куки не установлен'
+        with allure.step(f'Войти в приложении под ролью "{user_role}"'):
+            with allure.step(f'Создать CSRF-токен'):
+                logging.debug(f'Приступить к созданию CSRF-токена')
+                csrftoken, status_code = BaseService.get_csrftoken()
+                assert status_code == expected_set_csrf_code, 'CSRF куки не установлен'
+                logging.debug(f'Отобразить успешно созданный CSRF-токен "{csrftoken}"')
 
-        with allure.step(f'Авторизоваться с помощью логина и пароля'):
-            csrftoken, sessionid, status_code, reason, result = BaseService.authorization(csrftoken, user)
-            assert status_code == expected_login_code, 'Авторизация с помощью логина и пароля неуспешна'
-            assert result['user']['email'] == user[3], 'Фактический и ожидаемый email учетной записи не совпали'
-            return csrftoken, sessionid
+            with allure.step(f'Авторизоваться с помощью логина и пароля'):
+                logging.debug(f'Приступить к авторизации')
+                csrftoken, sessionid, status_code, reason, result = BaseService.authorization(csrftoken, user)
+                assert status_code == expected_login_code, 'Авторизация с помощью логина и пароля неуспешна'
+                assert result['user']['email'] == user[3], 'Фактический и ожидаемый email учетной записи не совпали'
+                logging.debug(f'Успешно авторизовались под логином "{user[1]}"')
+                return csrftoken, sessionid
 
     @staticmethod
     def login_by_role(user: tuple, message: tuple, user_role: str, expected_set_csrf_code=200):
@@ -52,11 +58,15 @@ class LoginService(BaseService):
 
         with allure.step(f'Войти в приложении под ролью "{user_role}"'):
             with allure.step(f'Создать CSRF-токен'):
+                logging.debug(f'Приступить к созданию CSRF-токена')
                 csrftoken, status_code = BaseService.get_csrftoken()
                 assert status_code == expected_set_csrf_code, 'CSRF куки не установлен'
+                logging.debug(f'Отобразить успешно созданный CSRF-токен "{csrftoken}"')
 
             with allure.step(f'Авторизоваться с помощью логина и пароля'):
+                logging.debug(f'Приступить к авторизации')
                 csrftoken, sessionid, status_code, reason, result = BaseService.authorization(csrftoken, user)
+
         with allure.step('Ожидаемый результат: пользователь успешно вошёл в приложение'):
             print(f"Ожидаемый status_code: '{message[0]}', '{message[1]}'")
             print(f"Фактический status_code: '{status_code}', '{reason}'")
@@ -67,6 +77,7 @@ class LoginService(BaseService):
             assert status_code == message[0], 'Авторизация с помощью логина и пароля неуспешна'
             assert result['user']['role']['name'] == user[0], 'Фактическая и ожидаемая роль учетной записи не совпали'
             assert result['user']['email'] == user[3], 'Фактический и ожидаемый email учетной записи не совпали'
+            logging.debug(f'Успешно авторизовались под логином "{user[1]}"')
 
     @staticmethod
     def can_not_login(user: tuple, message: tuple, user_role: str, expected_set_csrf_code=200):
@@ -88,11 +99,15 @@ class LoginService(BaseService):
 
         with allure.step(f'Войти в приложении под ролью "{user_role}"'):
             with allure.step(f'Создать CSRF-токен'):
+                logging.debug(f'Приступить к созданию CSRF-токена')
                 csrftoken, status_code = BaseService.get_csrftoken()
                 assert status_code == expected_set_csrf_code, 'CSRF куки не установлен'
+                logging.debug(f'Отобразить успешно созданный CSRF-токен "{csrftoken}"')
 
             with allure.step(f'Авторизоваться с помощью логина и пароля'):
+                logging.debug(f'Приступить к авторизации')
                 csrftoken, sessionid, status_code, reason, result = BaseService.authorization(csrftoken, user)
+
         with allure.step('Ожидаемый результат: пользователь не смог войти в приложение'):
             print(f"Ожидаемый status_code: '{message[0]}', '{message[1]}'")
             print(f"Фактический status_code: '{status_code}', '{reason}'")
@@ -101,3 +116,4 @@ class LoginService(BaseService):
             assert status_code == message[0], 'Возможно авторизация прошла успешно при использовании ' \
                                               'невалидных логина и пароля'
             assert result == message[2], 'Сообщение не соответствует ожидаемому'
+            logging.debug(f'Успешно авторизовались под логином "{user[1]}"')

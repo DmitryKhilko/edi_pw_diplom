@@ -22,9 +22,9 @@ class TestAPILogin:
     @allure.id("1371")
     @allure.title('api_Вход в приложение под всеми ролями')
     def test_api_can_login_by_role(self, user, message):
-        logging.debug(f'Начало теста "api_Вход в приложение под всеми ролями" под ролью "{user[0]}"')
+        logging.debug(f'Начать тест "api_Вход в приложение под всеми ролями" под ролью "{user[0]}"')
         LoginService.login_by_role(user, message, user[0])
-        logging.debug(f'Окончание теста "api_Вход в приложение под всеми ролями" под ролью "{user[0]}"')
+        logging.debug(f'Окончить тест "api_Вход в приложение под всеми ролями" под ролью "{user[0]}"')
 
     @mark.parametrize('user, message', test_data_can_not_login)
     @allure.description(
@@ -34,4 +34,8 @@ class TestAPILogin:
     @allure.id("1373")
     @allure.title('api_Отказ на вход в приложение (невалидные значения логина и пароля)')
     def test_api_can_not_login(self, user, message):
+        logging.debug(f'Начать теста "api_Отказ на вход в приложение (невалидные значения логина и пароля)" '
+                      f'под ролью "{user[0]}"')
         LoginService.can_not_login(user, message, user[0])
+        logging.debug(f'Окончить теста "api_Отказ на вход в приложение (невалидные значения логина и пароля)" '
+                      f'под ролью "{user[0]}"')
