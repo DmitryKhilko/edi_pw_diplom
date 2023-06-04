@@ -1,3 +1,4 @@
+import logging
 import os
 
 from helper.files import FilesWork
@@ -60,6 +61,7 @@ class SQLRequests(BaseSQL):
         """
 
         if os.path.isfile(f'./{file_name}'):  # операции проводить только если файл существует
+            logging.debug(f'Приступить к удалению физ.лица из БД')
 
             person_id = FilesWork.read_file(file_name)
 
@@ -67,6 +69,9 @@ class SQLRequests(BaseSQL):
             cursor = connection.cursor()
             cursor.execute('DELETE FROM person WHERE person_id = %s', (person_id.strip(),))
             connection.commit()
+            logging.debug(f'Физ. лицо удалено из БД')
             BaseSQL.db_disconnection(connection)
 
+            logging.debug(f'Приступить к удалению файла "{file_name}"')
             FilesWork.delete_file(file_name)
+            logging.debug(f'Файл "{file_name}" удален')

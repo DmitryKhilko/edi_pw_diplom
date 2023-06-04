@@ -1,4 +1,5 @@
 import json
+import logging
 
 import requests
 
@@ -107,7 +108,9 @@ class BaseService:
         # Если создалась запись физического лица в базе данных, записываем personal_id в файл
         # для последующего удаления физического лица из БД
         if status_code == 201:
+            logging.debug(f'Приступить к записи id физ.лица в файл')
             FilesWork.write_file(FILENAME_API_PERSON_ID, result['person_id'])
+            logging.debug(f'id физ.лица успешно записан в файл')
 
         return status_code, reason, result
 
