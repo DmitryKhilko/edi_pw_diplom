@@ -66,22 +66,24 @@ class TestAPICreatePerson:
         logging.debug(f'Окончить тест "Создание физ.лица (у роли есть права; валидные значения параметров)" '
                       f'под ролью "{user[0]}"')
 
-    @mark.parametrize('user, data, message', test_data_can_not_add_person_valid_param_inside_limits)
+    @mark.parametrize('user, parameter_description, data, expected_result',
+                      test_data_api_can_not_create_person_valid_param)
     @allure.description(
         'Проверка отказа в создании физического лица с помощью API-запроса (POST) для пользователей '
         'с ролями, которым запрещено создание физического лица. Для попытки создания физического лица '
-        'используются комбинации валидных значений параметров, которые по длине находятся внутри нижней и '
-        'верхней границы значений параметра'
+        'используются комбинации валидных значений параметров'
     )
     @allure.id("1356")
-    @allure.title('api_Отказ в создании физ.лица (у роли нет прав; валидные значения параметров внутри границ)')
-    def test_api_can_not_add_person_valid_param_inside_limits(self, user, data, message, sql_delete_person):
-        logging.debug(f'Начать тест "api_Отказ в создании физ.лица (у роли нет прав; валидные значения параметров '
-                      f'внутри границ)" под ролью "{user[0]}"')
+    @allure.title('Отказ в создании физ.лица (у роли нет прав; валидные значения параметров)')
+    def test_api_can_not_create_person_valid_param(self, user, parameter_description, data, expected_result,
+                                                   sql_delete_person):
+        logging.debug(f'Начать тест "Отказ в создании физ.лица (у роли нет прав; валидные значения параметров)" '
+                      f'под ролью "{user[0]}"')
         csrftoken, sessionid = LoginService.login(user, user[0])
-        PersonsService.can_not_add_person_valid_param(csrftoken, sessionid, data, message)
-        logging.debug(f'Окончить тест "api_Отказ в создании физ.лица (у роли нет прав; валидные значения параметров '
-                      f'внутри границ)" под ролью "{user[0]}"')
+        PersonsService.can_not_create_person_valid_param(csrftoken, sessionid, parameter_description, data,
+                                                         expected_result)
+        logging.debug(f'Окончить тест "api_Отказ в создании физ.лица (у роли нет прав; валидные значения параметров)" '
+                      f'под ролью "{user[0]}"')
 
 
 

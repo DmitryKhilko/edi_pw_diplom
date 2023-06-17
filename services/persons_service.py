@@ -71,8 +71,8 @@ class PersonsService(BaseService):
 
         :param csrftoken: CSRF-токен, передаваемый в запрос
         :param sessionid: сгенерированный идентификатор сессии
-        :param data: набор значений параметров для создания физического лица
         :param parameter_description: описание набора параметров из набора тестовых данных
+        :param data: набор значений параметров для создания физического лица
         :param expected_result: ожидаемый ответ сервера
         """
 
@@ -105,7 +105,8 @@ class PersonsService(BaseService):
             logging.debug(f'Физическое лицо "{fio}" успешно добавлено в БД')
 
     @staticmethod
-    def can_not_create_person_valid_param(csrftoken: str, sessionid: str, data: tuple, expected_result: tuple):
+    def can_not_create_person_valid_param(csrftoken: str, sessionid: str, parameter_description: str, data: tuple,
+                                          expected_result: tuple):
 
         """
         Метод проверки невозможности создания с помощью post-запроса
@@ -114,11 +115,12 @@ class PersonsService(BaseService):
 
         :param csrftoken: CSRF-токен, передаваемый в запрос
         :param sessionid: сгенерированный идентификатор сессии
+        :param parameter_description: описание набора параметров из набора тестовых данных
         :param data: набор значений параметров для создания физического лица
         :param expected_result: ожидаемый ответ сервера
         """
 
-        with allure.step('Создать физическое лицо'):
+        with allure.step(f'{parameter_description}'):  # создать физическое лицо с валидными значениями параметров
             logging.debug(f'Приступить к добавлению физ. лица с валидными значениями параметров')
             status_code, reason, result = BaseService.add_person(csrftoken, sessionid, data)
 
