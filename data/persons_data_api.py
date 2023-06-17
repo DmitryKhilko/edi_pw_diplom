@@ -64,8 +64,8 @@ test_data_api_can_not_read_persons = (
 Данные предназначены для проверки создания физического лица под ролями, которым разрешено создание физического лица.
 Для создания физического лица используются комбинации валидных значений параметров. 
 Структура кортежа: 
-user (учетные данные пользователя), parameter_description (значение allure.step), data (значения параметров физ.лица), 
-expected_result (ожидаемый ответ сервера).
+user (учетные данные пользователя), parameter_description (описание набора параметров для allure.step), 
+data (значения параметров физ.лица), expected_result (ожидаемый ответ сервера).
 """
 test_data_api_can_create_person_valid_param = (
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
@@ -208,6 +208,129 @@ test_data_api_can_create_person_valid_param = (
                  (201, 'Created'),
                  marks=pytest.mark.critical_path),
 )
+
+"""
+Тестовые данные для параметризованных api-тестов. 
+Данные предназначены для проверки отказа в создании физического лица под ролями, которым запрещено создание физического 
+лица. Для создания физического лица используются комбинации валидных значений параметров. 
+Структура кортежа: 
+user (учетные данные пользователя), parameter_description (описание набора параметров для allure.step), 
+data (значения параметров физ.лица), expected_result (ожидаемый ответ сервера).
+"""
+test_data_api_can_not_create_person_valid_param = (
+    pytest.param((ROLE_NAME_ASH, LOGIN_ASH, PASSWORD_ASH, EMAIL_ACCOUNT_ASH),
+                 'Создать физическое лицо с валидными значениями параметров (внутри границ)',
+                 (f.text('*person_first_name', 'n', 'valid'),
+                  f.text('*person_last_name', 'n', 'valid'),
+                  f.text('person_patronymic', 'n', 'valid'),
+                  f.drop_down_list('person_sex', 'n', 'valid'),
+                  f.date('person_birthday', 'n', 'valid'),
+                  f.text('person_phone', 'n', 'valid'),
+                  f.text('*person_email', 'n', 'valid'),
+                  f.text('person_key_id', 'n', 'valid'),
+                  f.text('person_card_id', 'n', 'valid')),
+                 (403, 'Forbidden', {'detail': 'У вас недостаточно прав для выполнения данного действия.'}),
+                 marks=pytest.mark.critical_path),
+
+    pytest.param((ROLE_NAME_PSH, LOGIN_PSH, PASSWORD_PSH, EMAIL_ACCOUNT_PSH),
+                 'Создать физическое лицо с валидными значениями параметров (внутри границ)',
+                 (f.text('*person_first_name', 'n', 'valid'),
+                  f.text('*person_last_name', 'n', 'valid'),
+                  f.text('person_patronymic', 'n', 'valid'),
+                  f.drop_down_list('person_sex', 'n', 'valid'),
+                  f.date('person_birthday', 'n', 'valid'),
+                  f.text('person_phone', 'n', 'valid'),
+                  f.text('*person_email', 'n', 'valid'),
+                  f.text('person_key_id', 'n', 'valid'),
+                  f.text('person_card_id', 'n', 'valid')),
+                 (403, 'Forbidden', {'detail': 'У вас недостаточно прав для выполнения данного действия.'}),
+                 marks=pytest.mark.critical_path),
+
+    pytest.param((ROLE_NAME_AMNS, LOGIN_AMNS, PASSWORD_AMNS, EMAIL_ACCOUNT_AMNS),
+                 'Создать физическое лицо с валидными значениями параметров (внутри границ)',
+                 (f.text('*person_first_name', 'n', 'valid'),
+                  f.text('*person_last_name', 'n', 'valid'),
+                  f.text('person_patronymic', 'n', 'valid'),
+                  f.drop_down_list('person_sex', 'n', 'valid'),
+                  f.date('person_birthday', 'n', 'valid'),
+                  f.text('person_phone', 'n', 'valid'),
+                  f.text('*person_email', 'n', 'valid'),
+                  f.text('person_key_id', 'n', 'valid'),
+                  f.text('person_card_id', 'n', 'valid')),
+                 (403, 'Forbidden', {'detail': 'У вас недостаточно прав для выполнения данного действия.'}),
+                 marks=pytest.mark.critical_path),
+
+    pytest.param((ROLE_NAME_OAMNS, LOGIN_OAMNS, PASSWORD_OAMNS, EMAIL_ACCOUNT_OAMNS),
+                 'Создать физическое лицо с валидными значениями параметров (внутри границ)',
+                 (f.text('*person_first_name', 'n', 'valid'),
+                  f.text('*person_last_name', 'n', 'valid'),
+                  f.text('person_patronymic', 'n', 'valid'),
+                  f.drop_down_list('person_sex', 'n', 'valid'),
+                  f.date('person_birthday', 'n', 'valid'),
+                  f.text('person_phone', 'n', 'valid'),
+                  f.text('*person_email', 'n', 'valid'),
+                  f.text('person_key_id', 'n', 'valid'),
+                  f.text('person_card_id', 'n', 'valid')),
+                 (403, 'Forbidden', {'detail': 'У вас недостаточно прав для выполнения данного действия.'}),
+                 marks=pytest.mark.critical_path),
+
+    pytest.param((ROLE_NAME_RAMNS, LOGIN_RAMNS, PASSWORD_RAMNS, EMAIL_ACCOUNT_RAMNS),
+                 'Создать физическое лицо с валидными значениями параметров (внутри границ)',
+                 (f.text('*person_first_name', 'n', 'valid'),
+                  f.text('*person_last_name', 'n', 'valid'),
+                  f.text('person_patronymic', 'n', 'valid'),
+                  f.drop_down_list('person_sex', 'n', 'valid'),
+                  f.date('person_birthday', 'n', 'valid'),
+                  f.text('person_phone', 'n', 'valid'),
+                  f.text('*person_email', 'n', 'valid'),
+                  f.text('person_key_id', 'n', 'valid'),
+                  f.text('person_card_id', 'n', 'valid')),
+                 (403, 'Forbidden', {'detail': 'У вас недостаточно прав для выполнения данного действия.'}),
+                 marks=pytest.mark.critical_path),
+
+    pytest.param((ROLE_NAME_PMNS, LOGIN_PMNS, PASSWORD_PMNS, EMAIL_ACCOUNT_PMNS),
+                 'Создать физическое лицо с валидными значениями параметров (внутри границ)',
+                 (f.text('*person_first_name', 'n', 'valid'),
+                  f.text('*person_last_name', 'n', 'valid'),
+                  f.text('person_patronymic', 'n', 'valid'),
+                  f.drop_down_list('person_sex', 'n', 'valid'),
+                  f.date('person_birthday', 'n', 'valid'),
+                  f.text('person_phone', 'n', 'valid'),
+                  f.text('*person_email', 'n', 'valid'),
+                  f.text('person_key_id', 'n', 'valid'),
+                  f.text('person_card_id', 'n', 'valid')),
+                 (403, 'Forbidden', {'detail': 'У вас недостаточно прав для выполнения данного действия.'}),
+                 marks=pytest.mark.critical_path),
+
+    pytest.param((ROLE_NAME_AGTK, LOGIN_AGTK, PASSWORD_AGTK, EMAIL_ACCOUNT_AGTK),
+                 'Создать физическое лицо с валидными значениями параметров (внутри границ)',
+                 (f.text('*person_first_name', 'n', 'valid'),
+                  f.text('*person_last_name', 'n', 'valid'),
+                  f.text('person_patronymic', 'n', 'valid'),
+                  f.drop_down_list('person_sex', 'n', 'valid'),
+                  f.date('person_birthday', 'n', 'valid'),
+                  f.text('person_phone', 'n', 'valid'),
+                  f.text('*person_email', 'n', 'valid'),
+                  f.text('person_key_id', 'n', 'valid'),
+                  f.text('person_card_id', 'n', 'valid')),
+                 (403, 'Forbidden', {'detail': 'У вас недостаточно прав для выполнения данного действия.'}),
+                 marks=pytest.mark.critical_path),
+
+    pytest.param((ROLE_NAME_PGTK, LOGIN_PGTK, PASSWORD_PGTK, EMAIL_ACCOUNT_PGTK),
+                 'Создать физическое лицо с валидными значениями параметров (внутри границ)',
+                 (f.text('*person_first_name', 'n', 'valid'),
+                  f.text('*person_last_name', 'n', 'valid'),
+                  f.text('person_patronymic', 'n', 'valid'),
+                  f.drop_down_list('person_sex', 'n', 'valid'),
+                  f.date('person_birthday', 'n', 'valid'),
+                  f.text('person_phone', 'n', 'valid'),
+                  f.text('*person_email', 'n', 'valid'),
+                  f.text('person_key_id', 'n', 'valid'),
+                  f.text('person_card_id', 'n', 'valid')),
+                 (403, 'Forbidden', {'detail': 'У вас недостаточно прав для выполнения данного действия.'}),
+                 marks=pytest.mark.critical_path),
+)
+
 
 # Данные предназначены для параметризованных api-тестов по созданию физического лица для ролей
 # пользователей, которым разрешено создание физического лица с помощью API-запроса. Для создания

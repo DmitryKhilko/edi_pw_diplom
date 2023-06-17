@@ -319,9 +319,8 @@ class Fake:
                 valid_set_1 = 'йцукенгшщзхъфывапролджэячсмитьбю'
                 valid_set_2 = 'ЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ'
                 valid_set_3 = '-'
-                #TODO Восстановить пробел, сейчас баг - отклонение от требований - не допускает пробела
+                # TODO Пробел в имени, отчестве вызывает ошибку. Это отклонение от требований
                 valid_set_4 = ' '
-                # valid_set_4 = ''
                 invalid_set_1 = 'qwertyuiopasdfghjklzxcvbnm'
                 invalid_set_2 = 'QWERTYUIOPASDFGHJKLZXCVBNM'
                 invalid_set_3 = '`~!@#$%^&*()_+{}|”:?><=[]\’;/.,'
@@ -1122,7 +1121,7 @@ class Fake:
 
                     if validation == 'valid':
                         result_key_id = ''.join(random.choice(valid_set_1 + valid_set_2 + valid_set_3)
-                                                 for i in range(length))
+                                                for i in range(length))
 
                     if validation == 'invalid':
                         if length <= 2:
@@ -1136,7 +1135,7 @@ class Fake:
                             index = random.randint(1, len(result_key_id))
                             # Добавление внутрь результирующей строки пробела
                             result_key_id = result_key_id[:(len(result_key_id) - index)] + invalid_set_5 + \
-                                             result_key_id[(len(result_key_id) - index):]
+                                            result_key_id[(len(result_key_id) - index):]
 
                     return result_key_id
 
