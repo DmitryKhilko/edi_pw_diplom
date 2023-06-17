@@ -155,8 +155,8 @@ class TestAPICreatePerson:
         logging.debug(f'Начать тест "Отказ в создании физ.лица (у роли есть права; не валидные значения параметров '
                       f'вне границ)" под ролью "{user[0]}"')
         csrftoken, sessionid = LoginService.login(user, user[0])
-        PersonsService.can_not_create_person_invalid_param_out_of_limits(csrftoken, sessionid, data,
-                                                                         parameter_description, expected_result)
+        PersonsService.can_not_create_person_invalid_param_out_of_limits(csrftoken, sessionid, parameter_description,
+                                                                         data, expected_result)
         logging.debug(f'Окончить тест "Отказ в создании физ.лица (у роли есть права; не валидные значения параметров '
                       f'вне границ)" под ролью "{user[0]}"')
 
