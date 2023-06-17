@@ -5,7 +5,7 @@ PERSONS_PAGE_URL = '/persons'
 # API urls
 CSRF_END_POINT = '/api/v1/set-csrf'
 LOGIN_END_POINT = '/api/v1/auth/login'
-PERSONS_GET_END_POINT = '/api/v1/persons?offset=0&limit=1'
+PERSONS_GET_END_POINT = '/api/v1/persons?offset=0&limit=1'  # выводим только одну запись
 PERSON_CREATE_END_POINT = '/api/v1/persons'
 
 

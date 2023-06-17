@@ -9,45 +9,40 @@ from sql_requests.sql import SQLRequests
 class PersonsService(BaseService):
 
     @staticmethod
-    def can_get_persons(csrftoken: str, sessionid: str, message: tuple):
+    def can_get_persons(csrftoken: str, sessionid: str, expected_result: tuple):
 
         """
-            Метод получения с помощью get-запроса списка
-            физических лиц для ролей, имеющих права
-            просматривать данный список: АИБ, АИС.
+        Метод получения с помощью get-запроса списка физических лиц
+        для ролей, имеющих права получать и просматривать данный список
 
-            Parameters:
-            ------------------------
-            - csrftoken: CSRF-токен, передаваемый в запрос
-            - sessionid: сгенерированный идентификатор сессии
-            - message: ожидаемый ответ сервера
-        """
+        :param csrftoken: CSRF-токен, передаваемый в запрос
+        :param sessionid: сгенерированный идентификатор сессии
+        :param expected_result: ожидаемый ответ сервера
+       """
 
         with allure.step('Получить список физических лиц'):
             logging.debug(f'Приступить к получению списка физических лиц')
             status_code, reason, result = BaseService.get_persons(csrftoken, sessionid)
 
         with allure.step('Ожидаемый результат: получен список физических лиц'):
-            print(f"Ожидаемый status_code: '{message[0]}', '{message[1]}'")
+            print(f"Ожидаемый status_code: '{expected_result[0]}', '{expected_result[1]}'")
             print(f"Фактический status_code: '{status_code}', '{reason}'")
             print(f"Фактический response.json(): {result}'")
-            assert status_code == message[0], 'Не получен список физических лиц под допустимой ролью'
+            assert status_code == expected_result[0], 'Не получен список физических лиц под допустимой ролью'
             assert result['count'] >= 1, 'Фактическое и ожидаемое количество записей физических лиц не совпали'
             logging.debug(f'Список физических лиц успешно получен')
 
     @staticmethod
-    def can_not_get_persons(csrftoken: str, sessionid: str, message: tuple):
+    def can_not_get_persons(csrftoken: str, sessionid: str, expected_result: tuple):
 
         """
-            Метод, подтверждающий невозможность получения списка физических
-            лиц с помощью get-запроса для ролей, не имеющих права
-            просматривать данный список: все роли, кроме АИБ, АИС.
+        Метод, подтверждающий невозможность получения списка физических
+        лиц с помощью get-запроса для ролей, не имеющих права получать и
+        просматривать данный список
 
-            Parameters:
-            ------------------------
-            - csrftoken: CSRF-токен, передаваемый в запрос
-            - sessionid: сгенерированный идентификатор сессии
-            - message: ожидаемый ответ сервера
+        :param csrftoken: CSRF-токен, передаваемый в запрос
+        :param sessionid: сгенерированный идентификатор сессии
+        :param expected_result: ожидаемый ответ сервера
         """
 
         with allure.step('Получить список физических лиц'):
@@ -55,12 +50,12 @@ class PersonsService(BaseService):
             status_code, reason, result = BaseService.get_persons(csrftoken, sessionid)
 
         with allure.step('Ожидаемый результат: недостаточно прав для получения списка физических лиц'):
-            print(f"Ожидаемый status_code: '{message[0]}', '{message[1]}'")
+            print(f"Ожидаемый status_code: '{expected_result[0]}', '{expected_result[1]}'")
             print(f"Фактический status_code: '{status_code}', '{reason}'")
             print(f"Фактический response.json(): {result}'")
-            assert status_code == message[0], 'Возможно есть доступ к списку физических лиц ' \
-                                              'для недопустимой роли'
-            assert result == message[2], 'Сообщение не соответствует ожидаемому'
+            assert status_code == expected_result[0], 'Возможно есть доступ к списку физических лиц ' \
+                                                      'для недопустимой роли'
+            assert result == expected_result[2], 'Сообщение не соответствует ожидаемому'
             logging.debug(f'Список физических лиц не получен')
 
     @staticmethod
@@ -68,7 +63,7 @@ class PersonsService(BaseService):
 
         """
             Метод создания с помощью post-запроса физического лица для
-            ролей приложения, которым разрешено создание физического лица.
+            ролей приложения, которым разрешено создание физического лица
 
             Parameters:
             ------------------------
@@ -98,11 +93,12 @@ class PersonsService(BaseService):
         with allure.step('Ожидаемый результат: физическое лицо добавлено в БД'):
             logging.debug(f'Приступить к поиску добавленного физ. лица в БД')
             db_rowcount, db_fio, db_email = SQLRequests.db_select_row(result['person_id'])
+            print(f"Фактическое ФИО из БД: '{db_fio}'")
+            print(f"Фактический email из БД: '{db_email}'")
             assert db_rowcount == 1, 'Физическое лицо в базу данных не добавлено'
             # Привожу к нижнему регистру, так как при записи в БД система только первые буквы делает большими
             assert db_fio.lower() == fio.lower(), 'Фактическое из БД и ожидаемое ФИО физического лица не совпали'
-            assert db_email.strip() == data[6].strip(), 'Фактический из БД и ожидаемый email физического лица ' \
-                                                        'не совпали'
+            assert db_email == data[6].lower(), 'Фактический из БД и ожидаемый email физического лица не совпали'
             logging.debug(f'Физическое лицо "{fio}" успешно добавлено в БД')
 
     @staticmethod

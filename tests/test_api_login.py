@@ -3,7 +3,7 @@ import logging
 import allure
 from pytest import mark
 
-from data.login_data_api import test_data_can_login_api, test_data_can_not_login_api
+from data.login_data_api import *
 from services.login_service import LoginService
 
 
@@ -20,11 +20,11 @@ class TestAPILogin:
         'под всеми ролями приложения с валидными значениями логина и пароля'
     )
     @allure.id("1371")
-    @allure.title('api_Вход в приложение')
+    @allure.title('Вход в приложение')
     def test_api_can_login_by_role(self, user, expected_result):
-        logging.debug(f'Начать тест "api_Вход в приложение" для роли "{user[0]}"')
+        logging.debug(f'Начать тест "Вход в приложение" для роли "{user[0]}"')
         LoginService.login_by_role(user, expected_result, user[0])
-        logging.debug(f'Окончить тест "api_Вход в приложение" для роли "{user[0]}"')
+        logging.debug(f'Окончить тест "Вход в приложение" для роли "{user[0]}"')
 
     @mark.parametrize('user, expected_result', test_data_can_not_login_api)
     @allure.description(
@@ -32,10 +32,10 @@ class TestAPILogin:
         'в случае использования комбинаций не валидных (пустых) значений логина и (или) пароля'
     )
     @allure.id("1373")
-    @allure.title('api_Невозможность входа в приложение (невалидные значения логина и пароля)')
+    @allure.title('Невозможность входа в приложение (невалидные значения логина и пароля)')
     def test_api_can_not_login(self, user, expected_result):
-        logging.debug(f'Начать теста "api_Невозможность входа в приложение (невалидные значения логина и пароля)" '
+        logging.debug(f'Начать теста "Невозможность входа в приложение (невалидные значения логина и пароля)" '
                       f'под ролью "{user[0]}"')
         LoginService.can_not_login(user, expected_result, user[0])
-        logging.debug(f'Окончить теста "api_Невозможность входа в приложение (невалидные значения логина и пароля)" '
+        logging.debug(f'Окончить теста "Невозможность входа в приложение (невалидные значения логина и пароля)" '
                       f'под ролью "{user[0]}"')
