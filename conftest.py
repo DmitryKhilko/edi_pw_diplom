@@ -7,12 +7,13 @@ from pytest import fixture
 from data.file_name_data import FILENAME_API_PERSON_ID
 from sql_requests.sql import SQLRequests
 
+
 """
 Настройка вывода логов
 """
 logging.basicConfig(
     level=logging.DEBUG,
-    filename="./helper/mylog.log",
+    filename="utils/mylog.log",
     filemode="w",
     encoding="utf8",
     format="%(asctime)s - %(levelname)s [%(module)s.%(funcName)s: %(lineno)d] - %(message)s",

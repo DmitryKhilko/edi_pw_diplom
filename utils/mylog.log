@@ -1,0 +1,180 @@
+17.06.2023 12:06:00 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начать тест "api_Вход в приложение" для роли "Администратор ИБ"
+17.06.2023 12:06:00 - DEBUG [login_service.login_by_role: 58] - Приступить к созданию CSRF-токена
+17.06.2023 12:06:00 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:00 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+17.06.2023 12:06:00 - DEBUG [login_service.login_by_role: 61] - Отобразить успешно созданный CSRF-токен "ZG8fx6j87PIuAVhDM71Ebkfo3IFHksQc"
+17.06.2023 12:06:00 - DEBUG [login_service.login_by_role: 64] - Приступить к авторизации
+17.06.2023 12:06:00 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:00 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6464
+17.06.2023 12:06:00 - DEBUG [login_service.login_by_role: 77] - Успешно авторизовались под логином "smirnov"
+17.06.2023 12:06:00 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончить тест "api_Вход в приложение" для роли "Администратор ИБ"
+17.06.2023 12:06:00 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начать тест "api_Вход в приложение" для роли "Администратор ИС"
+17.06.2023 12:06:00 - DEBUG [login_service.login_by_role: 58] - Приступить к созданию CSRF-токена
+17.06.2023 12:06:00 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:01 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+17.06.2023 12:06:01 - DEBUG [login_service.login_by_role: 61] - Отобразить успешно созданный CSRF-токен "BHaRRc3DitPO2fAttBd5dBXHCqSvjKtw"
+17.06.2023 12:06:01 - DEBUG [login_service.login_by_role: 64] - Приступить к авторизации
+17.06.2023 12:06:01 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:01 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 8370
+17.06.2023 12:06:01 - DEBUG [login_service.login_by_role: 77] - Успешно авторизовались под логином "admin_is_1"
+17.06.2023 12:06:01 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончить тест "api_Вход в приложение" для роли "Администратор ИС"
+17.06.2023 12:06:01 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начать тест "api_Вход в приложение" для роли "Администратор СХ"
+17.06.2023 12:06:01 - DEBUG [login_service.login_by_role: 58] - Приступить к созданию CSRF-токена
+17.06.2023 12:06:01 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:01 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+17.06.2023 12:06:01 - DEBUG [login_service.login_by_role: 61] - Отобразить успешно созданный CSRF-токен "RCrKg9yLmwWy4cGlzHnKi2eQtmh4UGD3"
+17.06.2023 12:06:01 - DEBUG [login_service.login_by_role: 64] - Приступить к авторизации
+17.06.2023 12:06:01 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:02 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6184
+17.06.2023 12:06:02 - DEBUG [login_service.login_by_role: 77] - Успешно авторизовались под логином "admin_sh"
+17.06.2023 12:06:02 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончить тест "api_Вход в приложение" для роли "Администратор СХ"
+17.06.2023 12:06:02 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начать тест "api_Вход в приложение" для роли "Пользователь СХ"
+17.06.2023 12:06:02 - DEBUG [login_service.login_by_role: 58] - Приступить к созданию CSRF-токена
+17.06.2023 12:06:02 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:02 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+17.06.2023 12:06:02 - DEBUG [login_service.login_by_role: 61] - Отобразить успешно созданный CSRF-токен "MuaZyenFdLsHfDRyr6SQkX3luY1SY9Zf"
+17.06.2023 12:06:02 - DEBUG [login_service.login_by_role: 64] - Приступить к авторизации
+17.06.2023 12:06:02 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:03 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 6099
+17.06.2023 12:06:03 - DEBUG [login_service.login_by_role: 77] - Успешно авторизовались под логином "user_sh_pl"
+17.06.2023 12:06:03 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончить тест "api_Вход в приложение" для роли "Пользователь СХ"
+17.06.2023 12:06:03 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начать тест "api_Вход в приложение" для роли "Администратор МНС"
+17.06.2023 12:06:03 - DEBUG [login_service.login_by_role: 58] - Приступить к созданию CSRF-токена
+17.06.2023 12:06:03 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:03 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+17.06.2023 12:06:03 - DEBUG [login_service.login_by_role: 61] - Отобразить успешно созданный CSRF-токен "pBtACXF29tHeNRhyJJVNrF2aonHoErGu"
+17.06.2023 12:06:03 - DEBUG [login_service.login_by_role: 64] - Приступить к авторизации
+17.06.2023 12:06:03 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:04 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 5622
+17.06.2023 12:06:04 - DEBUG [login_service.login_by_role: 77] - Успешно авторизовались под логином "admin_mns"
+17.06.2023 12:06:04 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончить тест "api_Вход в приложение" для роли "Администратор МНС"
+17.06.2023 12:06:04 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начать тест "api_Вход в приложение" для роли "Областной администратор МНС"
+17.06.2023 12:06:04 - DEBUG [login_service.login_by_role: 58] - Приступить к созданию CSRF-токена
+17.06.2023 12:06:04 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:04 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+17.06.2023 12:06:04 - DEBUG [login_service.login_by_role: 61] - Отобразить успешно созданный CSRF-токен "wcfHQIzrDgS6P14XNlxuLPymU0oEhjcj"
+17.06.2023 12:06:04 - DEBUG [login_service.login_by_role: 64] - Приступить к авторизации
+17.06.2023 12:06:04 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:05 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 5856
+17.06.2023 12:06:05 - DEBUG [login_service.login_by_role: 77] - Успешно авторизовались под логином "obladmin_mns"
+17.06.2023 12:06:05 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончить тест "api_Вход в приложение" для роли "Областной администратор МНС"
+17.06.2023 12:06:05 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начать тест "api_Вход в приложение" для роли "Районный администратор МНС"
+17.06.2023 12:06:05 - DEBUG [login_service.login_by_role: 58] - Приступить к созданию CSRF-токена
+17.06.2023 12:06:05 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:05 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+17.06.2023 12:06:05 - DEBUG [login_service.login_by_role: 61] - Отобразить успешно созданный CSRF-токен "HBGK5ebBAkT3oUYZKvLnJkS784Edljpk"
+17.06.2023 12:06:05 - DEBUG [login_service.login_by_role: 64] - Приступить к авторизации
+17.06.2023 12:06:05 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:06 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 5889
+17.06.2023 12:06:06 - DEBUG [login_service.login_by_role: 77] - Успешно авторизовались под логином "rayadmin_mns"
+17.06.2023 12:06:06 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончить тест "api_Вход в приложение" для роли "Районный администратор МНС"
+17.06.2023 12:06:06 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начать тест "api_Вход в приложение" для роли "Пользователь МНС"
+17.06.2023 12:06:06 - DEBUG [login_service.login_by_role: 58] - Приступить к созданию CSRF-токена
+17.06.2023 12:06:06 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:06 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+17.06.2023 12:06:06 - DEBUG [login_service.login_by_role: 61] - Отобразить успешно созданный CSRF-токен "CMVeOzunNM2pi41NfAr9jDES8Syybexl"
+17.06.2023 12:06:06 - DEBUG [login_service.login_by_role: 64] - Приступить к авторизации
+17.06.2023 12:06:06 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:06 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 5761
+17.06.2023 12:06:06 - DEBUG [login_service.login_by_role: 77] - Успешно авторизовались под логином "user_mns"
+17.06.2023 12:06:06 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончить тест "api_Вход в приложение" для роли "Пользователь МНС"
+17.06.2023 12:06:06 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начать тест "api_Вход в приложение" для роли "Администратор ГТК"
+17.06.2023 12:06:06 - DEBUG [login_service.login_by_role: 58] - Приступить к созданию CSRF-токена
+17.06.2023 12:06:06 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:06 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+17.06.2023 12:06:06 - DEBUG [login_service.login_by_role: 61] - Отобразить успешно созданный CSRF-токен "R95PJeG29gMBKK8eKBemDoACIILdP9nS"
+17.06.2023 12:06:06 - DEBUG [login_service.login_by_role: 64] - Приступить к авторизации
+17.06.2023 12:06:06 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:07 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 5596
+17.06.2023 12:06:07 - DEBUG [login_service.login_by_role: 77] - Успешно авторизовались под логином "admin_gtk"
+17.06.2023 12:06:07 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончить тест "api_Вход в приложение" для роли "Администратор ГТК"
+17.06.2023 12:06:07 - DEBUG [test_api_login.test_api_can_login_by_role: 25] - Начать тест "api_Вход в приложение" для роли "Пользователь ГТК"
+17.06.2023 12:06:07 - DEBUG [login_service.login_by_role: 58] - Приступить к созданию CSRF-токена
+17.06.2023 12:06:07 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:07 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+17.06.2023 12:06:07 - DEBUG [login_service.login_by_role: 61] - Отобразить успешно созданный CSRF-токен "2EDuu9FWfXPiRaxHchI0iCQK3W5FwYaf"
+17.06.2023 12:06:07 - DEBUG [login_service.login_by_role: 64] - Приступить к авторизации
+17.06.2023 12:06:07 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:08 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 200 5684
+17.06.2023 12:06:08 - DEBUG [login_service.login_by_role: 77] - Успешно авторизовались под логином "user_gtk"
+17.06.2023 12:06:08 - DEBUG [test_api_login.test_api_can_login_by_role: 27] - Окончить тест "api_Вход в приложение" для роли "Пользователь ГТК"
+17.06.2023 12:06:08 - DEBUG [test_api_login.test_api_can_not_login: 37] - Начать теста "api_Невозможность входа в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+17.06.2023 12:06:08 - DEBUG [login_service.can_not_login: 97] - Приступить к созданию CSRF-токена
+17.06.2023 12:06:08 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:08 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+17.06.2023 12:06:08 - DEBUG [login_service.can_not_login: 100] - Отобразить успешно созданный CSRF-токен "buRjPsmLfTenE2oVdet3ggZHXk02BAKq"
+17.06.2023 12:06:08 - DEBUG [login_service.can_not_login: 103] - Приступить к авторизации
+17.06.2023 12:06:08 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:09 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 117
+17.06.2023 12:06:09 - DEBUG [login_service.can_not_login: 114] - Авторизация не произведена под логином "smirnov" и паролем "invalid_password"
+17.06.2023 12:06:09 - DEBUG [test_api_login.test_api_can_not_login: 40] - Окончить теста "api_Невозможность входа в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+17.06.2023 12:06:09 - DEBUG [test_api_login.test_api_can_not_login: 37] - Начать теста "api_Невозможность входа в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+17.06.2023 12:06:09 - DEBUG [login_service.can_not_login: 97] - Приступить к созданию CSRF-токена
+17.06.2023 12:06:09 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:09 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+17.06.2023 12:06:09 - DEBUG [login_service.can_not_login: 100] - Отобразить успешно созданный CSRF-токен "pFnpDcIePOjzpgBJ5aXL3KUGvoK2AoPh"
+17.06.2023 12:06:09 - DEBUG [login_service.can_not_login: 103] - Приступить к авторизации
+17.06.2023 12:06:09 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:09 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 55
+17.06.2023 12:06:09 - DEBUG [login_service.can_not_login: 114] - Авторизация не произведена под логином "smirnov" и паролем ""
+17.06.2023 12:06:09 - DEBUG [test_api_login.test_api_can_not_login: 40] - Окончить теста "api_Невозможность входа в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+17.06.2023 12:06:09 - DEBUG [test_api_login.test_api_can_not_login: 37] - Начать теста "api_Невозможность входа в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+17.06.2023 12:06:09 - DEBUG [login_service.can_not_login: 97] - Приступить к созданию CSRF-токена
+17.06.2023 12:06:09 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:09 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+17.06.2023 12:06:09 - DEBUG [login_service.can_not_login: 100] - Отобразить успешно созданный CSRF-токен "yaItxjo4i2O9KPJYY7V5ZkuxzaYzOhhK"
+17.06.2023 12:06:09 - DEBUG [login_service.can_not_login: 103] - Приступить к авторизации
+17.06.2023 12:06:09 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:10 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 117
+17.06.2023 12:06:10 - DEBUG [login_service.can_not_login: 114] - Авторизация не произведена под логином "invalid_login" и паролем "invalid_password"
+17.06.2023 12:06:10 - DEBUG [test_api_login.test_api_can_not_login: 40] - Окончить теста "api_Невозможность входа в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+17.06.2023 12:06:10 - DEBUG [test_api_login.test_api_can_not_login: 37] - Начать теста "api_Невозможность входа в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+17.06.2023 12:06:10 - DEBUG [login_service.can_not_login: 97] - Приступить к созданию CSRF-токена
+17.06.2023 12:06:10 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:10 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+17.06.2023 12:06:10 - DEBUG [login_service.can_not_login: 100] - Отобразить успешно созданный CSRF-токен "bWxFy0IJQy8F3FoFyQzcgroszaL8yJad"
+17.06.2023 12:06:10 - DEBUG [login_service.can_not_login: 103] - Приступить к авторизации
+17.06.2023 12:06:10 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:10 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 55
+17.06.2023 12:06:10 - DEBUG [login_service.can_not_login: 114] - Авторизация не произведена под логином "invalid_login" и паролем ""
+17.06.2023 12:06:10 - DEBUG [test_api_login.test_api_can_not_login: 40] - Окончить теста "api_Невозможность входа в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+17.06.2023 12:06:10 - DEBUG [test_api_login.test_api_can_not_login: 37] - Начать теста "api_Невозможность входа в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+17.06.2023 12:06:10 - DEBUG [login_service.can_not_login: 97] - Приступить к созданию CSRF-токена
+17.06.2023 12:06:10 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:10 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+17.06.2023 12:06:10 - DEBUG [login_service.can_not_login: 100] - Отобразить успешно созданный CSRF-токен "nJwmI06CNIWGKPIKPKApOK5ujlIS3zsr"
+17.06.2023 12:06:10 - DEBUG [login_service.can_not_login: 103] - Приступить к авторизации
+17.06.2023 12:06:10 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:10 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 117
+17.06.2023 12:06:10 - DEBUG [login_service.can_not_login: 114] - Авторизация не произведена под логином "invalid_login" и паролем "smirnovP@assw0rd"
+17.06.2023 12:06:10 - DEBUG [test_api_login.test_api_can_not_login: 40] - Окончить теста "api_Невозможность входа в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+17.06.2023 12:06:11 - DEBUG [test_api_login.test_api_can_not_login: 37] - Начать теста "api_Невозможность входа в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+17.06.2023 12:06:11 - DEBUG [login_service.can_not_login: 97] - Приступить к созданию CSRF-токена
+17.06.2023 12:06:11 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:11 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+17.06.2023 12:06:11 - DEBUG [login_service.can_not_login: 100] - Отобразить успешно созданный CSRF-токен "KeP6mKe3WiRoCY6FMf2yX97At78QfAnq"
+17.06.2023 12:06:11 - DEBUG [login_service.can_not_login: 103] - Приступить к авторизации
+17.06.2023 12:06:11 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:11 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 55
+17.06.2023 12:06:11 - DEBUG [login_service.can_not_login: 114] - Авторизация не произведена под логином "" и паролем ""
+17.06.2023 12:06:11 - DEBUG [test_api_login.test_api_can_not_login: 40] - Окончить теста "api_Невозможность входа в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+17.06.2023 12:06:11 - DEBUG [test_api_login.test_api_can_not_login: 37] - Начать теста "api_Невозможность входа в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+17.06.2023 12:06:11 - DEBUG [login_service.can_not_login: 97] - Приступить к созданию CSRF-токена
+17.06.2023 12:06:11 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:11 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+17.06.2023 12:06:11 - DEBUG [login_service.can_not_login: 100] - Отобразить успешно созданный CSRF-токен "2zKVeYvnRlB6ICupW9FSP5VMZ2WXCDUL"
+17.06.2023 12:06:11 - DEBUG [login_service.can_not_login: 103] - Приступить к авторизации
+17.06.2023 12:06:11 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:11 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 55
+17.06.2023 12:06:11 - DEBUG [login_service.can_not_login: 114] - Авторизация не произведена под логином "" и паролем "smirnovP@assw0rd"
+17.06.2023 12:06:11 - DEBUG [test_api_login.test_api_can_not_login: 40] - Окончить теста "api_Невозможность входа в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+17.06.2023 12:06:11 - DEBUG [test_api_login.test_api_can_not_login: 37] - Начать теста "api_Невозможность входа в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
+17.06.2023 12:06:11 - DEBUG [login_service.can_not_login: 97] - Приступить к созданию CSRF-токена
+17.06.2023 12:06:11 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:11 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "GET /api/v1/set-csrf HTTP/1.1" 200 49
+17.06.2023 12:06:11 - DEBUG [login_service.can_not_login: 100] - Отобразить успешно созданный CSRF-токен "mqV3RapA3KV2gzsSm6i8Pg1CroIekvXU"
+17.06.2023 12:06:11 - DEBUG [login_service.can_not_login: 103] - Приступить к авторизации
+17.06.2023 12:06:11 - DEBUG [connectionpool._new_conn: 1048] - Starting new HTTPS connection (1): enode02.ivcmf.by:443
+17.06.2023 12:06:11 - DEBUG [connectionpool._make_request: 546] - https://enode02.ivcmf.by:443 "POST /api/v1/auth/login HTTP/1.1" 403 55
+17.06.2023 12:06:11 - DEBUG [login_service.can_not_login: 114] - Авторизация не произведена под логином "" и паролем "invalid_password"
+17.06.2023 12:06:11 - DEBUG [test_api_login.test_api_can_not_login: 40] - Окончить теста "api_Невозможность входа в приложение (невалидные значения логина и пароля)" под ролью "Администратор ИБ"
