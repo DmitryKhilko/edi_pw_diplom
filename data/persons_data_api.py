@@ -576,7 +576,7 @@ test_data_api_can_not_create_person_invalid_param = (
 user (учетные данные пользователя), parameter_description (описание набора параметров для allure.step), 
 data (значения параметров физ.лица), expected_result (ожидаемый ответ сервера).
 """
-test_data_api_can_not_add_person_valid_param_out_of_limits = (
+test_data_api_can_not_create_person_valid_param_out_of_limits = (
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
                  'Сделать попытку создания физического лица со значением параметра first_name, состоящего из валидных '
                  'символов длиной меньше min',
@@ -726,8 +726,54 @@ test_data_api_can_not_add_person_valid_param_out_of_limits = (
                   f.text('person_card_id', '>max', 'valid')),
                  (400, 'Bad Request', {'card_id': ['Убедитесь, что это значение содержит не более 40 символов.']}),
                  marks=pytest.mark.critical_path),
+)
+
+"""
+Тестовые данные для параметризованных api-тестов. 
+Данные предназначены для проверки отказа в создании физического лица под ролями, которым разрешено создание 
+физического лица, но для создания физического лица используется комбинации с валидными значениями параметров, 
+которые вышли за нижнюю или верхнюю границы. 
+Структура кортежа: 
+user (учетные данные пользователя), parameter_description (описание набора параметров для allure.step), 
+data (значения параметров физ.лица), expected_result (ожидаемый ответ сервера).
+"""
+test_data_api_can_not_create_person_invalid_param_out_of_limits = (
+    pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
+                 'Сделать попытку создания физического лица со значением параметра first_name, состоящего из '
+                 'не валидных символов длиной меньше min',
+                 (f.text('*person_first_name', '<min', 'invalid'),
+                  f.text('*person_last_name', 'n', 'valid'),
+                  f.text('person_patronymic', 'n', 'valid'),
+                  f.drop_down_list('person_sex', 'n', 'valid'),
+                  f.date('person_birthday', 'n', 'valid'),
+                  f.text('person_phone', 'n', 'valid'),
+                  f.text('*person_email', 'n', 'valid'),
+                  f.text('person_key_id', 'n', 'valid'),
+                  f.text('person_card_id', 'n', 'valid')),
+                 (400, 'Bad Request',
+                  {'first_name': ['Убедитесь, что это значение содержит от 2 до 50 символов.',
+                                  'Имя должно содержать только буквы кириллицы, пробел и знак дефиса.']}),
+                 marks=pytest.mark.critical_path),
+
+    pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
+                 'Сделать попытку создания физического лица со значением параметра first_name, состоящего из '
+                 'не валидных символов длиной больше max',
+                 (f.text('*person_first_name', '>max', 'invalid'),
+                  f.text('*person_last_name', 'n', 'valid'),
+                  f.text('person_patronymic', 'n', 'valid'),
+                  f.drop_down_list('person_sex', 'n', 'valid'),
+                  f.date('person_birthday', 'n', 'valid'),
+                  f.text('person_phone', 'n', 'valid'),
+                  f.text('*person_email', 'n', 'valid'),
+                  f.text('person_key_id', 'n', 'valid'),
+                  f.text('person_card_id', 'n', 'valid')),
+                 (400, 'Bad Request',
+                  {'first_name': ['Убедитесь, что это значение содержит от 2 до 50 символов.',
+                                  'Имя должно содержать только буквы кириллицы, пробел и знак дефиса.']}),
+                 marks=pytest.mark.critical_path),
 
 )
+
 
 
 

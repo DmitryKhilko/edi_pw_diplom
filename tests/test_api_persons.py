@@ -112,8 +112,8 @@ class TestAPICreatePerson:
     )
     @allure.id("1368")
     @allure.title('Отказ в создании физ.лица (у роли есть права; не валидные значения параметров внутри границ)')
-    def test_api_can_not_add_person_invalid_param_aib(self, user, parameter_description, data, expected_result,
-                                                      sql_delete_person):
+    def test_api_can_not_create_person_invalid_param_aib(self, user, parameter_description, data, expected_result,
+                                                         sql_delete_person):
         logging.debug(f'Начать тест "Отказ в создании физ.лица (у роли есть права; не валидные значения параметров '
                       f'внутри границ)"')
         csrftoken, sessionid = LoginService.login(user, user[0])
@@ -123,7 +123,7 @@ class TestAPICreatePerson:
                       f'внутри границ)"')
 
     @mark.parametrize('user, parameter_description, data, expected_result',
-                      test_data_api_can_not_add_person_valid_param_out_of_limits)
+                      test_data_api_can_not_create_person_valid_param_out_of_limits)
     @allure.description(
         'Проверка отказа в создании физического лица с помощью API-запроса (POST) для ролей пользователей, '
         'которым разрешено создавать физическое лицо, при использовании комбинаций значений параметров, состоящих '
@@ -131,8 +131,8 @@ class TestAPICreatePerson:
     )
     @allure.id("1369")
     @allure.title('Отказ в создании физ.лица (у роли есть права; валидные значения параметров вне границ)')
-    def test_api_can_not_add_person_valid_param_out_of_limits(self, user, parameter_description, data, expected_result,
-                                                              sql_delete_person):
+    def test_api_can_not_create_person_valid_param_out_of_limits(self, user, parameter_description, data,
+                                                                 expected_result, sql_delete_person):
         logging.debug(f'Начать тест "Отказ в создании физ.лица (у роли есть права; валидные значения '
                       f'параметров вне границ)"')
         csrftoken, sessionid = LoginService.login(user, user[0])
@@ -141,27 +141,23 @@ class TestAPICreatePerson:
         logging.debug(f'Окончить тест "Отказ в создании физ.лица (у роли есть права; валидные значения '
                       f'параметров вне границ)"')
 
+    @mark.parametrize('user, parameter_description, data, expected_result',
+                      test_data_api_can_not_create_person_invalid_param_out_of_limits)
+    @allure.description(
+        'Проверка возможности создания физического лица с помощью API-запроса (POST) для ролей пользователей, '
+        'которым разрешено создание физического лица, при использовании комбинаций значений параметров, состоящих '
+        'из не валидных символов (значений), которые вышли за нижнюю или верхнюю границу параметра'
+    )
+    @allure.id("1367")
+    @allure.title('Отказ в создании физ.лица (у роли есть права; не валидные значения параметров вне границ)')
+    def test_api_can_create_person_valid_param_at_limits(self, user, parameter_description, data, expected_result,
+                                                         sql_delete_person):
+        logging.debug(f'Начать тест "Отказ в создании физ.лица (у роли есть права; не валидные значения параметров '
+                      f'вне границ)" под ролью "{user[0]}"')
+        csrftoken, sessionid = LoginService.login(user, user[0])
+        PersonsService.can_not_create_person_invalid_param_out_of_limits(csrftoken, sessionid, data,
+                                                                         parameter_description, expected_result)
+        logging.debug(f'Окончить тест "Отказ в создании физ.лица (у роли есть права; не валидные значения параметров '
+                      f'вне границ)" под ролью "{user[0]}"')
 
 
-
-
-
-#
-#     # @mark.parametrize('user, data, message', test_data_can_add_person_valid_param_at_limits)
-#     # @allure.description(
-#     #     'Проверка возможности создания физического лица с помощью API-запроса (POST) для ролей пользователей, '
-#     #     'которым разрешено создание физического лица. Для создания физического лица используются комбинации '
-#     #     'валидных значений параметров, которые по длине находятся на нижней (а так же нижняя + 1) и верхней '
-#     #     '( а так же верхняя - 1) границах значений параметра'
-#     # )
-#     # @allure.id("1367")
-#     # @allure.title('api_Создание физ.лица (у роли есть права; валидные значения параметров на границах)')
-#     # def test_api_can_add_person_valid_param_at_limits(self, user, data, message, sql_delete_person):
-#     #     logging.debug(f'Начать тест "api_Создание физ.лица (у роли есть права; валидные значения параметров на '
-#     #                   f'границах)" под ролью "{user[0]}"')
-#     #     csrftoken, sessionid = LoginService.login(user, user[0])
-#     #     PersonsService.can_add_person_valid_param(csrftoken, sessionid, data, message)
-#     #     logging.debug(f'Окончить тест "api_Создание физ.лица (у роли есть права; валидные значения параметров на '
-#     #                   f'границах)" под ролью "{user[0]}"')
-#     #
-#     #
