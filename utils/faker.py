@@ -320,8 +320,8 @@ class Fake:
                 valid_set_2 = 'ЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ'
                 valid_set_3 = '-'
                 #TODO Восстановить пробел, сейчас баг - отклонение от требований - не допускает пробела
-                # valid_set_4 = ' '
-                valid_set_4 = ''
+                valid_set_4 = ' '
+                # valid_set_4 = ''
                 invalid_set_1 = 'qwertyuiopasdfghjklzxcvbnm'
                 invalid_set_2 = 'QWERTYUIOPASDFGHJKLZXCVBNM'
                 invalid_set_3 = '`~!@#$%^&*()_+{}|”:?><=[]\’;/.,'
