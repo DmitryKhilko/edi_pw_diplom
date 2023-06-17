@@ -52,7 +52,7 @@ class TestAPICreatePerson:
     @mark.parametrize('user, parameter_description, data, expected_result', test_data_api_can_create_person_valid_param)
     @allure.description(
         'Проверка возможности создания физического лица с помощью API-запроса (POST) для ролей пользователей, '
-        'которым разрешено создание физического лица . Для создания физического лица используются комбинации '
+        'которым разрешено создание физического лица. Для создания физического лица используются комбинации '
         'валидных значений параметров'
     )
     @allure.id("1361")
@@ -69,8 +69,8 @@ class TestAPICreatePerson:
     @mark.parametrize('user, parameter_description, data, expected_result',
                       test_data_api_can_not_create_person_valid_param)
     @allure.description(
-        'Проверка отказа в создании физического лица с помощью API-запроса (POST) для пользователей '
-        'с ролями, которым запрещено создание физического лица. Для попытки создания физического лица '
+        'Проверка отказа в создании физического лица с помощью API-запроса (POST) для ролей пользователей, '
+        'которым запрещено создание физического лица. Для попытки создания физического лица '
         'используются комбинации валидных значений параметров'
     )
     @allure.id("1356")
@@ -84,6 +84,27 @@ class TestAPICreatePerson:
                                                          expected_result)
         logging.debug(f'Окончить тест "api_Отказ в создании физ.лица (у роли нет прав; валидные значения параметров)" '
                       f'под ролью "{user[0]}"')
+
+    @mark.parametrize('user, parameter_description, data, expected_result',
+                      test_data_api_can_not_create_person_empty_param_required)
+    @allure.description(
+        'Проверка отказа в создании физического лица с помощью API-запроса (POST) для ролей пользователей, '
+        'которым разрешено создавать физическое лицо, при использовании пустых значений обязательных для '
+        'заполнения параметров'
+    )
+    @allure.id("1363")
+    @allure.title('Отказ в создании физ.лица (у роли есть права; пустые значения обязательных параметров)')
+    def test_api_can_not_create_person_empty_param_required(self, user, parameter_description, data, expected_result,
+                                                            sql_delete_person):
+        logging.debug(f'Начать тест "Отказ в создании физ.лица (у роли есть права; пустые значения '
+                      f'обязательных параметров)"')
+        csrftoken, sessionid = LoginService.login(user, user[0])
+        PersonsService.can_not_create_person_empty_param_required(csrftoken, sessionid, parameter_description, data,
+                                                                  expected_result)
+        logging.debug(f'Окончить тест "Отказ в создании физ.лица (у роли есть права; пустые значения '
+                      f'обязательных параметров"')
+
+
 
 
 

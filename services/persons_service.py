@@ -135,7 +135,8 @@ class PersonsService(BaseService):
             logging.debug(f'Физическое лицо не создано, так как недостаточно прав для создания физического лица')
 
     @staticmethod
-    def can_not_create_person_empty_param_required(csrftoken: str, sessionid: str, data: tuple, expected_result: tuple):
+    def can_not_create_person_empty_param_required(csrftoken: str, sessionid: str, parameter_description: str,
+                                                   data: tuple, expected_result: tuple):
 
         """
         Метод проверки невозможности создания с помощью post-запроса
@@ -145,12 +146,14 @@ class PersonsService(BaseService):
 
         :param csrftoken: CSRF-токен, передаваемый в запрос
         :param sessionid: сгенерированный идентификатор сессии
+        :param parameter_description: описание набора параметров из набора тестовых данных
         :param data: набор значений параметров для создания физического лица
         :param expected_result: ожидаемый ответ сервера
         """
 
-        with allure.step('Создать физическое лицо'):
-            logging.debug(f'Приступить к добавлению физ. лица с пустыми значениями параметров')
+        with allure.step(f'{parameter_description}'):  # создать физическое лицо с пустыми значениями параметров
+            logging.debug(f'Приступить к добавлению физ. лица с пустыми значениями '
+                          f'обязательных для заполнения параметров')
             status_code, reason, result = BaseService.add_person(csrftoken, sessionid, data)
 
         with allure.step('Ожидаемый результат: не создано физическое лицо из-за пустых обязательных параметров'):

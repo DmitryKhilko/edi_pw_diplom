@@ -219,7 +219,7 @@ data (значения параметров физ.лица), expected_result (�
 """
 test_data_api_can_not_create_person_valid_param = (
     pytest.param((ROLE_NAME_ASH, LOGIN_ASH, PASSWORD_ASH, EMAIL_ACCOUNT_ASH),
-                 'Создать физическое лицо с валидными значениями параметров (внутри границ)',
+                 'Сделать попытку создания физического лица с валидными значениями параметров (внутри границ)',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -233,7 +233,7 @@ test_data_api_can_not_create_person_valid_param = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_PSH, LOGIN_PSH, PASSWORD_PSH, EMAIL_ACCOUNT_PSH),
-                 'Создать физическое лицо с валидными значениями параметров (внутри границ)',
+                 'Сделать попытку создания физического лица с валидными значениями параметров (внутри границ)',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -247,7 +247,7 @@ test_data_api_can_not_create_person_valid_param = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AMNS, LOGIN_AMNS, PASSWORD_AMNS, EMAIL_ACCOUNT_AMNS),
-                 'Создать физическое лицо с валидными значениями параметров (внутри границ)',
+                 'Сделать попытку создания физического лица с валидными значениями параметров (внутри границ)',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -261,7 +261,7 @@ test_data_api_can_not_create_person_valid_param = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_OAMNS, LOGIN_OAMNS, PASSWORD_OAMNS, EMAIL_ACCOUNT_OAMNS),
-                 'Создать физическое лицо с валидными значениями параметров (внутри границ)',
+                 'Сделать попытку создания физического лица с валидными значениями параметров (внутри границ)',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -275,7 +275,7 @@ test_data_api_can_not_create_person_valid_param = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_RAMNS, LOGIN_RAMNS, PASSWORD_RAMNS, EMAIL_ACCOUNT_RAMNS),
-                 'Создать физическое лицо с валидными значениями параметров (внутри границ)',
+                 'Сделать попытку создания физического лица с валидными значениями параметров (внутри границ)',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -289,7 +289,7 @@ test_data_api_can_not_create_person_valid_param = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_PMNS, LOGIN_PMNS, PASSWORD_PMNS, EMAIL_ACCOUNT_PMNS),
-                 'Создать физическое лицо с валидными значениями параметров (внутри границ)',
+                 'Сделать попытку создания физического лица с валидными значениями параметров (внутри границ)',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -303,7 +303,7 @@ test_data_api_can_not_create_person_valid_param = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AGTK, LOGIN_AGTK, PASSWORD_AGTK, EMAIL_ACCOUNT_AGTK),
-                 'Создать физическое лицо с валидными значениями параметров (внутри границ)',
+                 'Сделать попытку создания физического лица с валидными значениями параметров (внутри границ)',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -317,7 +317,7 @@ test_data_api_can_not_create_person_valid_param = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_PGTK, LOGIN_PGTK, PASSWORD_PGTK, EMAIL_ACCOUNT_PGTK),
-                 'Создать физическое лицо с валидными значениями параметров (внутри границ)',
+                 'Сделать попытку создания физического лица с валидными значениями параметров (внутри границ)',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -330,6 +330,111 @@ test_data_api_can_not_create_person_valid_param = (
                  (403, 'Forbidden', {'detail': 'У вас недостаточно прав для выполнения данного действия.'}),
                  marks=pytest.mark.critical_path),
 )
+
+"""
+Тестовые данные для параметризованных api-тестов. 
+Данные предназначены для проверки отказа в создании физического лица под ролями, которым разрешено создание физического
+лица, но для создания физического лица используется комбинации с пустыми значениями обязательных для заполнения 
+параметров: фамилия, имя, email. 
+Структура кортежа: 
+user (учетные данные пользователя), parameter_description (описание набора параметров для allure.step), 
+data (значения параметров физ.лица), expected_result (ожидаемый ответ сервера).
+"""
+test_data_api_can_not_create_person_empty_param_required = (
+    pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
+                 'Сделать попытку создания физического лица с пустыми значениям имени',
+                 (f.text('*person_first_name', '', 'valid'),
+                  f.text('*person_last_name', 'n', 'valid'),
+                  f.text('person_patronymic', 'n', 'valid'),
+                  f.drop_down_list('person_sex', 'n', 'valid'),
+                  f.date('person_birthday', 'n', 'valid'),
+                  f.text('person_phone', 'n', 'valid'),
+                  f.text('*person_email', 'n', 'valid'),
+                  f.text('person_key_id', 'n', 'valid'),
+                  f.text('person_card_id', 'n', 'valid')),
+                 (400, 'Bad Request', {'first_name': ['Это поле не может быть пустым.']}),
+                 marks=pytest.mark.critical_path),
+
+    pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
+                 'Сделать попытку создания физического лица с пустыми значением фамилии',
+                 (f.text('*person_first_name', 'n', 'valid'),
+                  f.text('*person_last_name', '', 'valid'),
+                  f.text('person_patronymic', 'n', 'valid'),
+                  f.drop_down_list('person_sex', 'n', 'valid'),
+                  f.date('person_birthday', 'n', 'valid'),
+                  f.text('person_phone', 'n', 'valid'),
+                  f.text('*person_email', 'n', 'valid'),
+                  f.text('person_key_id', 'n', 'valid'),
+                  f.text('person_card_id', 'n', 'valid')),
+                 (400, 'Bad Request', {'last_name': ['Это поле не может быть пустым.']}),
+                 marks=pytest.mark.critical_path),
+
+    pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
+                 'Сделать попытку создания физического лица с пустыми значением email',
+                 (f.text('*person_first_name', 'n', 'valid'),
+                  f.text('*person_last_name', 'n', 'valid'),
+                  f.text('person_patronymic', 'n', 'valid'),
+                  f.drop_down_list('person_sex', 'n', 'valid'),
+                  f.date('person_birthday', 'n', 'valid'),
+                  f.text('person_phone', 'n', 'valid'),
+                  f.text('*person_email', '', 'valid'),
+                  f.text('person_key_id', 'n', 'valid'),
+                  f.text('person_card_id', 'n', 'valid')),
+                 (400, 'Bad Request', {'email': ['Вы не можете создать физическое лицо с пустым email.']}),
+                 marks=pytest.mark.critical_path),
+
+    pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
+                 'Сделать попытку создания физического лица с пустыми значениями фамилии, имени, email',
+                 (f.text('*person_first_name', '', 'valid'),
+                  f.text('*person_last_name', '', 'valid'),
+                  f.text('person_patronymic', 'n', 'valid'),
+                  f.drop_down_list('person_sex', 'n', 'valid'),
+                  f.date('person_birthday', 'n', 'valid'),
+                  f.text('person_phone', 'n', 'valid'),
+                  f.text('*person_email', '', 'valid'),
+                  f.text('person_key_id', 'n', 'valid'),
+                  f.text('person_card_id', 'n', 'valid')),
+                 (400, 'Bad Request', {'first_name': ['Это поле не может быть пустым.'],
+                                       'last_name': ['Это поле не может быть пустым.'],
+                                       'email': ['Вы не можете создать физическое лицо с пустым email.']}),
+                 marks=pytest.mark.critical_path),
+)
+
+
+
+# (('Администратор ИБ', LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
+#  (f.first_name(0, False, ''), f.last_name(10, True, ''), f.patronymic(10, True, ''), f.sex(True, ''),
+#   f.date(True, ''), f.phone(13, True, ''), f.email(20, True, ''), f.key_id(40, True, ''), f.card_id(40, True, '')),
+#  (400, 'Bad Request', {'first_name': ['Это поле не может быть пустым.']})),
+# (('Администратор ИБ', LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
+#  (f.first_name(10, True, ''), f.last_name(0, False, ''), f.patronymic(10, True, ''), f.sex(True, ''),
+#   f.date(True, ''), f.phone(13, True, ''), f.email(20, True, ''), f.key_id(40, True, ''), f.card_id(40, True, '')),
+#  (400, 'Bad Request', {'last_name': ['Это поле не может быть пустым.']})),
+# (('Администратор ИБ', LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
+#  (f.first_name(10, True, ''), f.last_name(10, True, ''), f.patronymic(10, True, ''), f.sex(True, ''),
+#   f.date(True, ''), f.phone(13, True, ''), f.email(0, False, ''), f.key_id(40, True, ''), f.card_id(40, True, '')),
+#  (400, 'Bad Request', {'email': ['Вы не можете создать физическое лицо с пустым email.']})),
+# (('Администратор ИБ', LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
+#  (f.first_name(0, False, ''), f.last_name(0, False, ''), f.patronymic(10, True, ''), f.sex(True, ''),
+#   f.date(True, ''), f.phone(13, True, ''), f.email(0, False, ''), f.key_id(40, True, ''), f.card_id(40, True, '')),
+#  (400, 'Bad Request', {'first_name': ['Это поле не может быть пустым.'],
+#                        'last_name': ['Это поле не может быть пустым.'],
+#                        'email': ['Вы не можете создать физическое лицо с пустым email.']})),
+# (('Администратор ИБ', LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
+#  (f.first_name(0, False, ''), f.last_name(0, False, ''), f.patronymic(10, True, ''), f.sex(True, ''),
+#   f.date(True, ''), f.phone(13, True, ''), f.email(20, True, ''), f.key_id(40, True, ''), f.card_id(40, True, '')),
+#  (400, 'Bad Request', {'first_name': ['Это поле не может быть пустым.'],
+#                        'last_name': ['Это поле не может быть пустым.']})),
+# (('Администратор ИБ', LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
+#  (f.first_name(10, True, ''), f.last_name(0, False, ''), f.patronymic(10, True, ''), f.sex(True, ''),
+#   f.date(True, ''), f.phone(13, True, ''), f.email(0, False, ''), f.key_id(40, True, ''), f.card_id(40, True, '')),
+#  (400, 'Bad Request', {'last_name': ['Это поле не может быть пустым.'],
+#                        'email': ['Вы не можете создать физическое лицо с пустым email.']})),
+# (('Администратор ИБ', LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
+#  (f.first_name(0, False, ''), f.last_name(10, True, ''), f.patronymic(10, True, ''), f.sex(True, ''),
+#   f.date(True, ''), f.phone(13, True, ''), f.email(0, False, ''), f.key_id(40, True, ''), f.card_id(40, True, '')),
+#  (400, 'Bad Request', {'first_name': ['Это поле не может быть пустым.'],
+#                        'email': ['Вы не можете создать физическое лицо с пустым email.']})),
 
 
 # Данные предназначены для параметризованных api-тестов по созданию физического лица для ролей
