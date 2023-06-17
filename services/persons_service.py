@@ -61,7 +61,8 @@ class PersonsService(BaseService):
             logging.debug(f'Список физических лиц не получен')
 
     @staticmethod
-    def can_create_person_valid_param(csrftoken: str, sessionid: str, data: tuple, expected_result: tuple):
+    def can_create_person_valid_param(csrftoken: str, sessionid: str, parameter_description: str, data: tuple,
+                                      expected_result: tuple):
 
         """
         Метод создания с помощью post-запроса физического лица для
@@ -71,10 +72,11 @@ class PersonsService(BaseService):
         :param csrftoken: CSRF-токен, передаваемый в запрос
         :param sessionid: сгенерированный идентификатор сессии
         :param data: набор значений параметров для создания физического лица
+        :param parameter_description: описание набора параметров из набора тестовых данных
         :param expected_result: ожидаемый ответ сервера
         """
 
-        with allure.step('Создать физическое лицо'):
+        with allure.step(f'{parameter_description}'):  # создать физическое лицо с валидными значениями параметров
             logging.debug(f'Приступить к созданию физ. лица с валидными параметрами')
             status_code, reason, result = BaseService.add_person(csrftoken, sessionid, data)
 
