@@ -38,7 +38,7 @@ class TestAPIGetPersons:
     def test_api_can_not_qet_persons(self, user, expected_result):
         logging.debug(f'Начать тест "Отказ в получении списка физ.лиц (у роли нет прав)" под ролью "{user[0]}"')
         csrftoken, sessionid = LoginService.login(user, user[0])
-        PersonsService.can_not_get_persons(csrftoken, sessionid, expected_result)
+        PersonsService.can_not_get_persons(csrftoken, sessionid, expected_result, user[0])
         logging.debug(f'Окончить тест "Отказ в получении списка физ.лиц (у роли нет прав)" под ролью "{user[0]}"')
 
 

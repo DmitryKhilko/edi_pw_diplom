@@ -33,7 +33,7 @@ class PersonsService(BaseService):
             logging.debug(f'Список физических лиц успешно получен')
 
     @staticmethod
-    def can_not_get_persons(csrftoken: str, sessionid: str, expected_result: tuple):
+    def can_not_get_persons(csrftoken: str, sessionid: str, expected_result: tuple, user_role: str):
 
         """
         Метод, подтверждающий невозможность получения списка физических
@@ -43,6 +43,8 @@ class PersonsService(BaseService):
         :param csrftoken: CSRF-токен, передаваемый в запрос
         :param sessionid: сгенерированный идентификатор сессии
         :param expected_result: ожидаемый ответ сервера
+        :param user_role: роль пользователя, под которой была попытка получить список физ.лиц
+
         """
 
         with allure.step('Получить список физических лиц'):
@@ -53,8 +55,8 @@ class PersonsService(BaseService):
             print(f"Ожидаемый status_code: '{expected_result[0]}', '{expected_result[1]}'")
             print(f"Фактический status_code: '{status_code}', '{reason}'")
             print(f"Фактический response.json(): {result}'")
-            assert status_code == expected_result[0], 'Возможно есть доступ к списку физических лиц ' \
-                                                      'для недопустимой роли'
+            assert status_code == expected_result[0], f"Возможно есть доступ к списку физических лиц ' \
+                                                      'для роли '{user_role}'"
             assert result == expected_result[2], 'Сообщение не соответствует ожидаемому'
             logging.debug(f'Список физических лиц не получен')
 
