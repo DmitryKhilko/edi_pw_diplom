@@ -1424,7 +1424,7 @@ class Fake:
                 if param_value == ' n ' and validation == 'valid':
                     result = ' ' + random.choice(valid_set) + ' '
 
-                if validation == 'invalid':
+                if param_value == 'n' and validation == 'invalid':
                     result = random.choice(invalid_set)
 
         return result

@@ -121,7 +121,7 @@ class PersonsService(BaseService):
         """
 
         with allure.step(f'{parameter_description}'):  # создать физическое лицо с валидными значениями параметров
-            logging.debug(f'Приступить к добавлению физ. лица с валидными значениями параметров')
+            logging.debug(f'Приступить к созданию физ. лица с валидными значениями параметров')
             status_code, reason, result = BaseService.add_person(csrftoken, sessionid, data)
 
         with allure.step('Ожидаемый результат: недостаточно прав для создания физического лица'):
@@ -152,11 +152,12 @@ class PersonsService(BaseService):
         """
 
         with allure.step(f'{parameter_description}'):  # создать физическое лицо с пустыми значениями параметров
-            logging.debug(f'Приступить к добавлению физ. лица с пустыми значениями '
+            logging.debug(f'Приступить к созданию физ. лица с пустыми значениями '
                           f'обязательных для заполнения параметров')
             status_code, reason, result = BaseService.add_person(csrftoken, sessionid, data)
 
-        with allure.step('Ожидаемый результат: не создано физическое лицо из-за пустых обязательных параметров'):
+        with allure.step('Ожидаемый результат: не создано физическое лицо из-за пустых обязательных '
+                         'для заполнения параметров'):
             print(f'Ожидаемый status_code: "{expected_result[0]}", "{expected_result[1]}"')
             print(f'Фактический status_code: "{status_code}", "{reason}"')
             print(f'Ожидаемый response.json(): {expected_result[2]}')
@@ -167,22 +168,24 @@ class PersonsService(BaseService):
             logging.debug(f'Физическое лицо не создано из-за пустых значений обязательных параметров')
 
     @staticmethod
-    def can_not_create_person_invalid_param(csrftoken: str, sessionid: str, data: tuple, expected_result: tuple):
+    def can_not_create_person_invalid_param(csrftoken: str, sessionid: str, parameter_description: str, data: tuple,
+                                            expected_result: tuple):
 
         """
         Метод проверки невозможности создания с помощью post-запроса
         физического лица под ролью, которой разрешено создавать физическое
-        лицо, с невалидными значениями параметров, которые не выходят за
+        лицо, с не валидными значениями параметров, которые не выходят за
         допустимые пределы (вниз или вверх)
 
         :param csrftoken: CSRF-токен, передаваемый в запрос
         :param sessionid: сгенерированный идентификатор сессии
+        :param parameter_description: описание набора параметров из набора тестовых данных
         :param data: набор значений параметров для создания физического лица
         :param expected_result: ожидаемый ответ сервера
         """
 
-        with allure.step('Создать физическое лицо'):
-            logging.debug(f'Приступить к добавлению физ. лица с невалидными значениями параметров')
+        with allure.step(f'{parameter_description}'):  # создать физическое лицо с не валидными значениями параметров
+            logging.debug(f'Приступить к созданию физ. лица с невалидными значениями параметров внутри границ')
             status_code, reason, result = BaseService.add_person(csrftoken, sessionid, data)
 
         with allure.step('Ожидаемый результат: не создано физическое лицо из-за невалидных значений параметров'):
