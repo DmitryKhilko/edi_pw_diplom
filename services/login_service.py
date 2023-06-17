@@ -8,6 +8,7 @@ from services.base_service import BaseService
 class LoginService(BaseService):
     @staticmethod
     def login(user: tuple, user_role: str, expected_set_csrf_code=200, expected_login_code=200):
+
         """
         Метод авторизации: с помощью get-запроса создается CSRF-токен,
         далее с помощью post-запроса происходит вход в приложение по
@@ -40,6 +41,7 @@ class LoginService(BaseService):
 
     @staticmethod
     def login_by_role(user: tuple, expected_result: tuple, user_role: str, expected_set_csrf_code=200):
+
         """
         Метод проверки успешности входа в приложение под разными ролями приложения:
         с помощью get-запроса создается CSRF-токен, далее с помощью post-запроса
@@ -65,12 +67,12 @@ class LoginService(BaseService):
                 csrftoken, sessionid, status_code, reason, result = BaseService.authorization(csrftoken, user)
 
         with allure.step('Ожидаемый результат: пользователь успешно вошёл в приложение'):
-            print(f"Ожидаемый status_code: '{expected_result[0]}', '{expected_result[1]}'")
-            print(f"Фактический status_code: '{status_code}', '{reason}'")
-            print(f"Ожидаемая роль: '{user[0]}'")
-            print(f"Фактическая роль: '{result['user']['role']['name']}'")
-            print(f"Ожидаемый email: '{user[3]}'")
-            print(f"Фактический email: '{result['user']['email']}'")
+            print(f'Ожидаемый status_code: "{expected_result[0]}", "{expected_result[1]}"')
+            print(f'Фактический status_code: "{status_code}", "{reason}"')
+            print(f'Ожидаемая роль: "{user[0]}"')
+            print(f'Фактическая роль: "{result["user"]["role"]["name"]}"')
+            print(f'Ожидаемый email: "{user[3]}"')
+            print(f'Фактический email: "{result["user"]["email"]}"')
             assert status_code == expected_result[0], 'Авторизация с помощью логина и пароля неуспешна'
             assert result['user']['role']['name'] == user[0], 'Фактическая и ожидаемая роль учетной записи не совпали'
             assert result['user']['email'] == user[3], 'Фактический и ожидаемый email учетной записи не совпали'
@@ -78,6 +80,7 @@ class LoginService(BaseService):
 
     @staticmethod
     def can_not_login(user: tuple, expected_result: tuple, user_role: str, expected_set_csrf_code=200):
+
         """
         Метод проверки невозможности входа в приложение при невалидных, пустых
         логине и (или) пароле: с помощью get-запроса создается CSRF-токен,
@@ -104,10 +107,10 @@ class LoginService(BaseService):
                 csrftoken, sessionid, status_code, reason, result = BaseService.authorization(csrftoken, user)
 
         with allure.step('Ожидаемый результат: пользователь не смог войти в приложение'):
-            print(f"Ожидаемый status_code: '{expected_result[0]}', '{expected_result[1]}'")
-            print(f"Фактический status_code: '{status_code}', '{reason}'")
-            print(f"Ожидаемый response.json(): {expected_result[2]}'")
-            print(f"Фактический response.json(): {result}'")
+            print(f'Ожидаемый status_code: "{expected_result[0]}", "{expected_result[1]}"')
+            print(f'Фактический status_code: "{status_code}", "{reason}"')
+            print(f'Ожидаемый response.json(): {expected_result[2]}')
+            print(f'Фактический response.json(): {result}')
             assert status_code == expected_result[0], 'Возможно авторизация прошла успешно при использовании ' \
                                                       'невалидных логина и пароля'
             assert result == expected_result[2], 'Сообщение не соответствует ожидаемому'

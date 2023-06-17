@@ -10,7 +10,7 @@ f = Fake()
 Данные предназначены для проверки получения списка физических лиц под ролями, которым разрешено получение списка. 
 Структура кортежа: user (учетные данные пользователя), expected_result (ожидаемый ответ сервера).
 """
-test_data_can_get_persons_api = (
+test_data_api_can_read_persons = (
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
                  (200, 'OK'),
                  marks=pytest.mark.critical_path, id="Получение списка физ.лиц под АИБ"),
@@ -25,7 +25,7 @@ test_data_can_get_persons_api = (
 Данные предназначены для проверки получения списка физических лиц под ролями, которым запрещено получение списка. 
 Структура кортежа: user (учетные данные пользователя), expected_result (ожидаемый ответ сервера).
 """
-test_data_can_not_get_persons_api = (
+test_data_api_can_not_read_persons = (
     pytest.param((ROLE_NAME_ASH, LOGIN_ASH, PASSWORD_ASH, EMAIL_ACCOUNT_ASH),
                  (403, 'Forbidden', {'detail': 'У вас недостаточно прав для выполнения данного действия.'}),
                  marks=pytest.mark.critical_path, id="Отказ в получении списка физ.лиц под АСХ"),
@@ -59,13 +59,15 @@ test_data_can_not_get_persons_api = (
                  marks=pytest.mark.critical_path, id="Отказ в получении списка физ.лиц под ПГТК"),
 )
 
-# Данные предназначены для параметризованных api-тестов по созданию физического лица для
-# ролей пользователей, которым разрешено создание физического лица с помощью API-запроса.
-# Для создания физического лица используются комбинации валидных значений параметров внутри
-# нижней и верхней границы значений параметров. Структура кортежа:
-# users (учетные данные пользователя), data (параметры физического лица), message (ответ сервера)
-test_data_can_add_person_valid_param_inside_limits = (
-    pytest.param(('Администратор ИБ', LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
+"""
+Тестовые данные для параметризованных api-тестов. 
+Данные предназначены для проверки создания физического лица под ролями, которым разрешено создание физического лица.
+Для создания физического лица используются комбинации валидных значений параметров. 
+Структура кортежа: 
+user (учетные данные пользователя), data (значения параметров физ.лица), expected_result (ожидаемый ответ сервера).
+"""
+test_data_api_can_create_person_valid_param = (
+    pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -77,9 +79,9 @@ test_data_can_add_person_valid_param_inside_limits = (
                   f.text('person_card_id', 'n', 'valid')),
                  (201, 'Created'),
                  marks=pytest.mark.critical_path,
-                 id="Создание физ.лица с валидными значениями параметров внутри границ под АИБ"),
+                 id="Создание физ.лица с валидными значениями параметров под АИБ"),
 
-    pytest.param(('Администратор ИС', LOGIN_AIS, PASSWORD_AIS, EMAIL_ACCOUNT_AIS),
+    pytest.param((ROLE_NAME_AIS, LOGIN_AIS, PASSWORD_AIS, EMAIL_ACCOUNT_AIS),
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -91,7 +93,7 @@ test_data_can_add_person_valid_param_inside_limits = (
                   f.text('person_card_id', 'n', 'valid')),
                  (201, 'Created'),
                  marks=pytest.mark.critical_path,
-                 id="Создание физ.лица с валидными значениями параметров внутри границ под АИС"),
+                 id="Создание физ.лица с валидными значениями параметров под АИС"),
 )
 
 # Данные предназначены для параметризованных api-тестов по созданию физического лица для ролей

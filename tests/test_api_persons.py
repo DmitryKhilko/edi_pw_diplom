@@ -15,56 +15,55 @@ from services.persons_service import PersonsService
 @allure.link('https://ivc-adsp.ivcmf.by/DefaultCollection/ISEB/_wiki/wikis/ISEB.wiki/32/'
              '%D0%9C%D0%B0%D1%82%D1%80%D0%B8%D1%86%D0%B0-%D1%80%D0%BE%D0%BB%D0%B5%D0%B9', '', 'Матрица ролей')
 class TestAPIGetPersons:
-    @mark.parametrize('user, expected_result', test_data_can_get_persons_api)
+    @mark.parametrize('user, expected_result', test_data_api_can_read_persons)
     @allure.description(
         'Проверка возможности получения списка физических лиц с помощью API-запроса (GET) '
         'для ролей пользователей, которым разрешено получать и просматривать данный список'
     )
     @allure.id("1362")
     @allure.title('Получение списка физ.лиц (у роли есть права)')
-    def test_api_can_qet_persons(self, user, expected_result):
+    def test_api_can_read_persons(self, user, expected_result):
         logging.debug(f'Начать тест "Получение списка физ.лиц (у роли есть права)" под ролью "{user[0]}"')
         csrftoken, sessionid = LoginService.login(user, user[0])
-        PersonsService.can_get_persons(csrftoken, sessionid, expected_result)
+        PersonsService.can_read_persons(csrftoken, sessionid, expected_result)
         logging.debug(f'Окончить тест "Получение списка физ.лиц (у роли есть права)" под ролью "{user[0]}"')
 
-    @mark.parametrize('user, expected_result', test_data_can_not_get_persons_api)
+    @mark.parametrize('user, expected_result', test_data_api_can_not_read_persons)
     @allure.description(
         'Проверка отказа в получении списка физических лиц с помощью API-запроса (GET) '
         'для ролей пользователей, которым запрещено получать и просматривать данный список'
     )
     @allure.id("1355")
     @allure.title('Отказ в получении списка физ.лиц (у роли нет прав)')
-    def test_api_can_not_qet_persons(self, user, expected_result):
+    def test_api_can_not_read_persons(self, user, expected_result):
         logging.debug(f'Начать тест "Отказ в получении списка физ.лиц (у роли нет прав)" под ролью "{user[0]}"')
         csrftoken, sessionid = LoginService.login(user, user[0])
-        PersonsService.can_not_get_persons(csrftoken, sessionid, expected_result, user[0])
+        PersonsService.can_not_read_persons(csrftoken, sessionid, expected_result, user[0])
         logging.debug(f'Окончить тест "Отказ в получении списка физ.лиц (у роли нет прав)" под ролью "{user[0]}"')
 
 
-# @allure.label('owner', 'khilko')
-# @allure.label('layer', 'api')
-# @allure.label('module', 'Физические лица')
-# @allure.feature('Создание физического лица')
-# @allure.link('https://ivc-adsp.ivcmf.by/DefaultCollection/ISEB/_wiki/wikis/ISEB.wiki/32/'
-#              '%D0%9C%D0%B0%D1%82%D1%80%D0%B8%D1%86%D0%B0-%D1%80%D0%BE%D0%BB%D0%B5%D0%B9', '', 'Матрица ролей')
-# class TestAPICreatePerson:
-#     @mark.parametrize('user, data, message', test_data_can_add_person_valid_param_inside_limits)
-#     @allure.description(
-#         'Проверка возможности создания физического лица с помощью API-запроса (POST) для ролей пользователей, '
-#         'которым разрешено создание физического лица . Для создания физического лица используются комбинации '
-#         'валидных значений параметров, которые по длине находятся внутри нижней и верхней границы значений '
-#         'параметра'
-#     )
-#     @allure.id("1361")
-#     @allure.title('api_Создание физ.лица (у роли есть права; валидные значения параметров внутри границ)')
-#     def test_api_can_add_person_valid_param_inside_limits(self, user, data, message, sql_delete_person):
-#         logging.debug(f'Начать тест "api_Создание физ.лица (у роли есть права; валидные значения параметров внутри '
-#                       f'границ)" под ролью "{user[0]}"')
-#         csrftoken, sessionid = LoginService.login(user, user[0])
-#         PersonsService.can_add_person_valid_param(csrftoken, sessionid, data, message)
-#         logging.debug(f'Окончить тест "api_Создание физ.лица (у роли есть права; валидные значения параметров внутри '
-#                       f'границ)" под ролью "{user[0]}"')
+@allure.label('owner', 'khilko')
+@allure.label('layer', 'api')
+@allure.label('module', 'Физические лица')
+@allure.feature('Создание физического лица')
+@allure.link('https://ivc-adsp.ivcmf.by/DefaultCollection/ISEB/_wiki/wikis/ISEB.wiki/32/'
+             '%D0%9C%D0%B0%D1%82%D1%80%D0%B8%D1%86%D0%B0-%D1%80%D0%BE%D0%BB%D0%B5%D0%B9', '', 'Матрица ролей')
+class TestAPICreatePerson:
+    @mark.parametrize('user, data, expected_result', test_data_api_can_create_person_valid_param)
+    @allure.description(
+        'Проверка возможности создания физического лица с помощью API-запроса (POST) для ролей пользователей, '
+        'которым разрешено создание физического лица . Для создания физического лица используются комбинации '
+        'валидных значений параметров'
+    )
+    @allure.id("1361")
+    @allure.title('Создание физ.лица (у роли есть права; валидные значения параметров)')
+    def test_api_can_create_person_valid_param(self, user, data, expected_result, sql_delete_person):
+        logging.debug(f'Начать тест "Создание физ.лица (у роли есть права; валидные значения параметров)" '
+                      f'под ролью "{user[0]}"')
+        csrftoken, sessionid = LoginService.login(user, user[0])
+        PersonsService.can_create_person_valid_param(csrftoken, sessionid, data, expected_result)
+        logging.debug(f'Окончить тест "Создание физ.лица (у роли есть права; валидные значения параметров)" '
+                      f'под ролью "{user[0]}"')
 #
 #     # @mark.parametrize('user, data, message', test_data_can_add_person_valid_param_at_limits)
 #     # @allure.description(
