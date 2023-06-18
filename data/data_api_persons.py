@@ -395,7 +395,7 @@ test_data_api_can_not_create_person_empty_param_required = (
                   f.text('person_key_id', 'n', 'valid'),
                   f.text('person_card_id', 'n', 'valid')),
                  # TODO Некорректное сообщение об ошибке. Оптимально - "Это поле не может быть пустым."
-                 (400, 'Bad Request', {'sex': ['Значения  нет среди допустимых вариантов']}),
+                 (400, 'Bad Request', {'sex': ['Значения  нет среди допустимых вариантов.']}),
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
