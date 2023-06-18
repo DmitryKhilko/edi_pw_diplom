@@ -320,8 +320,8 @@ class Fake:
                 valid_set_2 = 'ЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ'
                 valid_set_3 = '-'
                 # TODO Пробел в имени, отчестве вызывает ошибку. Это отклонение от требований
-                valid_set_4 = ' '
-                # valid_set_4 = ''
+                # valid_set_4 = ' '
+                valid_set_4 = ''
                 invalid_set_1 = 'qwertyuiopasdfghjklzxcvbnm'
                 invalid_set_2 = 'QWERTYUIOPASDFGHJKLZXCVBNM'
                 invalid_set_3 = '`~!@#$%^&*()_+{}|”:?><=[]\’;/.,'
