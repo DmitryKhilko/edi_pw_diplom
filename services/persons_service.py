@@ -54,7 +54,7 @@ class PersonsService(BaseService):
             logging.debug(f'Приступить к получению списка физических лиц')
             status_code, reason, result = BaseService.get_persons(csrftoken, sessionid)
 
-        with allure.step('Ожидаемый результат: недостаточно прав для получения списка физических лиц'):
+        with allure.step('Ожидаемый результат: у пользователя недостаточно прав для получения списка физических лиц'):
             print(f'Ожидаемый status_code: "{expected_result[0]}", "{expected_result[1]}"')
             print(f'Фактический status_code: "{status_code}", "{reason}"')
             print(f'Фактический response.json(): {result}')
@@ -83,11 +83,11 @@ class PersonsService(BaseService):
             logging.debug(f'Приступить к созданию физ. лица с валидными параметрами')
             status_code, reason, result = BaseService.add_person(csrftoken, sessionid, data)
 
-        with allure.step('Ожидаемый результат: создано физическое лицо'):
+        with allure.step('Ожидаемый результат: физическое лицо создано'):
             print(f'Ожидаемый status_code: "{expected_result[0]}", "{expected_result[1]}"')
             print(f'Фактический status_code: "{status_code}", "{reason}"')
             print(f'Фактический response.json(): {result}')
-            assert status_code == expected_result[0], 'Не создано физическое лицо'
+            assert status_code == expected_result[0], 'Физическое лицо не создано'
             fio = (data[1].strip() + ' ' + data[0].strip() + ' ' + data[2].strip())
             # Привожу к нижнему регистру, так как при записи в БД система только первые буквы делает большими
             assert result['full_name'].lower() == fio.lower(), 'Фактическое и ожидаемое ФИО физического лица ' \
@@ -127,7 +127,7 @@ class PersonsService(BaseService):
             logging.debug(f'Приступить к созданию физ. лица с валидными значениями параметров')
             status_code, reason, result = BaseService.add_person(csrftoken, sessionid, data)
 
-        with allure.step('Ожидаемый результат: недостаточно прав для создания физического лица'):
+        with allure.step('Ожидаемый результат: у пользователя недостаточно прав для создания физического лица'):
             print(f'Ожидаемый status_code: "{expected_result[0]}", "{expected_result[1]}"')
             print(f'Фактический status_code: "{status_code}", "{reason}"')
             print(f'Ожидаемый response.json(): {expected_result[2]}')
@@ -159,7 +159,7 @@ class PersonsService(BaseService):
                           f'обязательных для заполнения параметров')
             status_code, reason, result = BaseService.add_person(csrftoken, sessionid, data)
 
-        with allure.step('Ожидаемый результат: не создано физическое лицо из-за пустых обязательных '
+        with allure.step('Ожидаемый результат: физическое лицо не создано из-за пустых обязательных '
                          'для заполнения параметров'):
             print(f'Ожидаемый status_code: "{expected_result[0]}", "{expected_result[1]}"')
             print(f'Фактический status_code: "{status_code}", "{reason}"')
@@ -191,7 +191,7 @@ class PersonsService(BaseService):
             logging.debug(f'Приступить к созданию физ. лица с невалидными значениями параметров внутри границ')
             status_code, reason, result = BaseService.add_person(csrftoken, sessionid, data)
 
-        with allure.step('Ожидаемый результат: не создано физическое лицо из-за невалидных значений параметров'):
+        with allure.step('Ожидаемый результат: физическое лицо не создано из-за невалидных значений параметров'):
             print(f'Ожидаемый status_code: "{expected_result[0]}", "{expected_result[1]}"')
             print(f'Фактический status_code: "{status_code}", "{reason}"')
             print(f'Ожидаемый response.json(): {expected_result[2]}')
@@ -223,7 +223,7 @@ class PersonsService(BaseService):
                           f'за допустимые границы')
             status_code, reason, result = BaseService.add_person(csrftoken, sessionid, data)
 
-        with allure.step('Ожидаемый результат: не создано физическое лицо из-за валидных значений параметров, '
+        with allure.step('Ожидаемый результат: физическое лицо не создано из-за валидных значений параметров, '
                          'вышедших за допустимые границы'):
             print(f'Ожидаемый status_code: "{expected_result[0]}", "{expected_result[1]}"')
             print(f'Фактический status_code: "{status_code}", "{reason}"')
@@ -257,7 +257,7 @@ class PersonsService(BaseService):
                           f'за допустимые границы')
             status_code, reason, result = BaseService.add_person(csrftoken, sessionid, data)
 
-        with allure.step('Ожидаемый результат: не создано физическое лицо из-за не валидных значений параметров, '
+        with allure.step('Ожидаемый результат: физическое лицо не создано из-за не валидных значений параметров, '
                          'вышедших за допустимые границы'):
             print(f'Ожидаемый status_code: "{expected_result[0]}", "{expected_result[1]}"')
             print(f'Фактический status_code: "{status_code}", "{reason}"')

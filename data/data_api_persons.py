@@ -233,7 +233,7 @@ data (значения параметров физ.лица), expected_result (�
 """
 test_data_api_can_not_create_person_valid_param = (
     pytest.param((ROLE_NAME_ASH, LOGIN_ASH, PASSWORD_ASH, EMAIL_ACCOUNT_ASH),
-                 'Сделать попытку создания физического лица с валидными значениями параметров (внутри границ)',
+                 'Создать физическое лицо с валидными значениями параметров (внутри границ)',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -247,7 +247,7 @@ test_data_api_can_not_create_person_valid_param = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_PSH, LOGIN_PSH, PASSWORD_PSH, EMAIL_ACCOUNT_PSH),
-                 'Сделать попытку создания физического лица с валидными значениями параметров (внутри границ)',
+                 'Создать физическое лицо с валидными значениями параметров (внутри границ)',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -261,7 +261,7 @@ test_data_api_can_not_create_person_valid_param = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AMNS, LOGIN_AMNS, PASSWORD_AMNS, EMAIL_ACCOUNT_AMNS),
-                 'Сделать попытку создания физического лица с валидными значениями параметров (внутри границ)',
+                 'Создать физическое лицо с валидными значениями параметров (внутри границ)',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -275,7 +275,7 @@ test_data_api_can_not_create_person_valid_param = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_OAMNS, LOGIN_OAMNS, PASSWORD_OAMNS, EMAIL_ACCOUNT_OAMNS),
-                 'Сделать попытку создания физического лица с валидными значениями параметров (внутри границ)',
+                 'Создать физическое лицо с валидными значениями параметров (внутри границ)',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -289,7 +289,7 @@ test_data_api_can_not_create_person_valid_param = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_RAMNS, LOGIN_RAMNS, PASSWORD_RAMNS, EMAIL_ACCOUNT_RAMNS),
-                 'Сделать попытку создания физического лица с валидными значениями параметров (внутри границ)',
+                 'Создать физическое лицо с валидными значениями параметров (внутри границ)',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -303,7 +303,7 @@ test_data_api_can_not_create_person_valid_param = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_PMNS, LOGIN_PMNS, PASSWORD_PMNS, EMAIL_ACCOUNT_PMNS),
-                 'Сделать попытку создания физического лица с валидными значениями параметров (внутри границ)',
+                 'Создать физическое лицо с валидными значениями параметров (внутри границ)',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -317,7 +317,7 @@ test_data_api_can_not_create_person_valid_param = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AGTK, LOGIN_AGTK, PASSWORD_AGTK, EMAIL_ACCOUNT_AGTK),
-                 'Сделать попытку создания физического лица с валидными значениями параметров (внутри границ)',
+                 'Создать физическое лицо с валидными значениями параметров (внутри границ)',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -331,7 +331,7 @@ test_data_api_can_not_create_person_valid_param = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_PGTK, LOGIN_PGTK, PASSWORD_PGTK, EMAIL_ACCOUNT_PGTK),
-                 'Сделать попытку создания физического лица с валидными значениями параметров (внутри границ)',
+                 'Создать физическое лицо с валидными значениями параметров (внутри границ)',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -356,7 +356,7 @@ data (значения параметров физ.лица), expected_result (�
 """
 test_data_api_can_not_create_person_empty_param_required = (
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица с пустыми значением поля first_name',
+                 'Создать физическое лицо с пустыми значением поля first_name',
                  (f.text('*person_first_name', '', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -370,7 +370,7 @@ test_data_api_can_not_create_person_empty_param_required = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица с пустыми значением last_name',
+                 'Создать физическое лицо с пустыми значением last_name',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', '', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -384,7 +384,7 @@ test_data_api_can_not_create_person_empty_param_required = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица с пустыми значением email',
+                 'Создать физическое лицо с пустыми значением email',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -398,7 +398,7 @@ test_data_api_can_not_create_person_empty_param_required = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица с пустыми значениями first_name, last_name, email',
+                 'Создать физическое лицо с пустыми значениями first_name, last_name, email',
                  (f.text('*person_first_name', '', 'valid'),
                   f.text('*person_last_name', '', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -424,8 +424,7 @@ data (значения параметров физ.лица), expected_result (�
 """
 test_data_api_can_not_create_person_invalid_param = (
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица с не валидным значением параметра first_name, '
-                 'находящемся внутри границ',
+                 'Создать физическое лицо с не валидным значением параметра first_name, находящемся внутри границ',
                  (f.text('*person_first_name', 'n', 'invalid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -440,8 +439,7 @@ test_data_api_can_not_create_person_invalid_param = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица с не валидным значением параметра last_name, '
-                 'находящемся внутри границ',
+                 'Создать физическое лицо с не валидным значением параметра last_name, находящемся внутри границ',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'invalid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -455,8 +453,7 @@ test_data_api_can_not_create_person_invalid_param = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица с не валидным значением параметра patronymic, '
-                 'находящемся внутри границ',
+                 'Создать физическое лицо с не валидным значением параметра patronymic, находящемся внутри границ',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'invalid'),
@@ -471,8 +468,7 @@ test_data_api_can_not_create_person_invalid_param = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица с не валидным значением параметра sex, '
-                 'находящемся внутри границ',
+                 'Создать физическое лицо с не валидным значением параметра sex, находящемся внутри границ',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -486,8 +482,7 @@ test_data_api_can_not_create_person_invalid_param = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица с не валидным значением параметра birth_date, '
-                 'находящемся внутри границ',
+                 'Создать физическое лицо с не валидным значением параметра birth_date, находящемся внутри границ',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -502,8 +497,7 @@ test_data_api_can_not_create_person_invalid_param = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица с не валидным значением параметра birth_date, '
-                 'находящемся внутри границ',
+                 'Создать физическое лицо с не валидным значением параметра birth_date, находящемся внутри границ',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -518,8 +512,7 @@ test_data_api_can_not_create_person_invalid_param = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица с не валидным значением параметра phone, '
-                 'находящемся внутри границ',
+                 'Создать физическое лицо с не валидным значением параметра phone, находящемся внутри границ',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -534,8 +527,7 @@ test_data_api_can_not_create_person_invalid_param = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица с не валидным значением параметра email, '
-                 'находящемся внутри границ',
+                 'Создать физическое лицо с не валидным значением параметра email, находящемся внутри границ',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -549,8 +541,7 @@ test_data_api_can_not_create_person_invalid_param = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица с не валидным значением параметра key_id, '
-                 'находящемся внутри границ',
+                 'Создать физическое лицо с не валидным значением параметра key_id, находящемся внутри границ',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -565,8 +556,7 @@ test_data_api_can_not_create_person_invalid_param = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица с не валидным значением параметра card_id, '
-                 'находящемся внутри границ',
+                 'Создать физическое лицо с не валидным значением параметра card_id, находящемся внутри границ',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
                   f.text('person_patronymic', 'n', 'valid'),
@@ -592,7 +582,7 @@ data (значения параметров физ.лица), expected_result (�
 """
 test_data_api_can_not_create_person_valid_param_out_of_limits = (
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица со значением параметра first_name, состоящего из валидных '
+                 'Создать физическое лицо со значением параметра first_name, состоящего из валидных '
                  'символов длиной меньше min',
                  (f.text('*person_first_name', '<min', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
@@ -607,7 +597,7 @@ test_data_api_can_not_create_person_valid_param_out_of_limits = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица со значением параметра first_name, состоящего из валидных '
+                 'Создать физическое лицо со значением параметра first_name, состоящего из валидных '
                  'символов длиной больше max',
                  (f.text('*person_first_name', '>max', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
@@ -622,7 +612,7 @@ test_data_api_can_not_create_person_valid_param_out_of_limits = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица со значением параметра last_name, состоящего из валидных '
+                 'Создать физическое лицо со значением параметра last_name, состоящего из валидных '
                  'символов длиной меньше min',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', '<min', 'valid'),
@@ -637,7 +627,7 @@ test_data_api_can_not_create_person_valid_param_out_of_limits = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица со значением параметра last_name, состоящего из валидных '
+                 'Создать физическое лицо со значением параметра last_name, состоящего из валидных '
                  'символов длиной больше max',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', '>max', 'valid'),
@@ -652,7 +642,7 @@ test_data_api_can_not_create_person_valid_param_out_of_limits = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица со значением параметра patronymic, состоящего из валидных '
+                 'Создать физическое лицо со значением параметра patronymic, состоящего из валидных '
                  'символов длиной меньше min',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
@@ -667,7 +657,7 @@ test_data_api_can_not_create_person_valid_param_out_of_limits = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица со значением параметра patronymic, состоящего из валидных '
+                 'Создать физическое лицо со значением параметра patronymic, состоящего из валидных '
                  'символов длиной больше max',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
@@ -682,7 +672,7 @@ test_data_api_can_not_create_person_valid_param_out_of_limits = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица со значением параметра phone, состоящего из валидных '
+                 'Создать физическое лицо со значением параметра phone, состоящего из валидных '
                  'символов длиной больше max',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
@@ -697,7 +687,7 @@ test_data_api_can_not_create_person_valid_param_out_of_limits = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица со значением параметра email, состоящего из валидных '
+                 'Создать физическое лицо со значением параметра email, состоящего из валидных '
                  'символов длиной больше max',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
@@ -712,7 +702,7 @@ test_data_api_can_not_create_person_valid_param_out_of_limits = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица со значением параметра key_id, состоящего из валидных '
+                 'Создать физическое лицо со значением параметра key_id, состоящего из валидных '
                  'символов длиной больше max',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
@@ -727,7 +717,7 @@ test_data_api_can_not_create_person_valid_param_out_of_limits = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица со значением параметра card_id, состоящего из валидных '
+                 'Создать физическое лицо со значением параметра card_id, состоящего из валидных '
                  'символов длиной больше max',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
@@ -753,7 +743,7 @@ data (значения параметров физ.лица), expected_result (�
 """
 test_data_api_can_not_create_person_invalid_param_out_of_limits = (
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица со значением параметра first_name, состоящего из '
+                 'Создать физическое лицо со значением параметра first_name, состоящего из '
                  'не валидных символов длиной меньше min',
                  (f.text('*person_first_name', '<min', 'invalid'),
                   f.text('*person_last_name', 'n', 'valid'),
@@ -770,7 +760,7 @@ test_data_api_can_not_create_person_invalid_param_out_of_limits = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица со значением параметра first_name, состоящего из '
+                 'Создать физическое лицо со значением параметра first_name, состоящего из '
                  'не валидных символов длиной больше max',
                  (f.text('*person_first_name', '>max', 'invalid'),
                   f.text('*person_last_name', 'n', 'valid'),
@@ -787,7 +777,7 @@ test_data_api_can_not_create_person_invalid_param_out_of_limits = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица со значением параметра last_name, состоящего из '
+                 'Создать физическое лицо со значением параметра last_name, состоящего из '
                  'не валидных символов длиной меньше min',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', '<min', 'invalid'),
@@ -805,7 +795,7 @@ test_data_api_can_not_create_person_invalid_param_out_of_limits = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица со значением параметра last_name, состоящего из '
+                 'Создать физическое лицо со значением параметра last_name, состоящего из '
                  'не валидных символов длиной больше max',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', '>max', 'invalid'),
@@ -823,7 +813,7 @@ test_data_api_can_not_create_person_invalid_param_out_of_limits = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица со значением параметра patronymic, состоящего из '
+                 'Создать физическое лицо со значением параметра patronymic, состоящего из '
                  'не валидных символов длиной меньше min',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
@@ -840,7 +830,7 @@ test_data_api_can_not_create_person_invalid_param_out_of_limits = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица со значением параметра patronymic, состоящего из '
+                 'Создать физическое лицо со значением параметра patronymic, состоящего из '
                  'не валидных символов длиной больше max',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
@@ -857,7 +847,7 @@ test_data_api_can_not_create_person_invalid_param_out_of_limits = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица со значением параметра phone, состоящего из не валидных '
+                 'Создать физическое лицо со значением параметра phone, состоящего из не валидных '
                  'символов длиной больше max',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
@@ -874,7 +864,7 @@ test_data_api_can_not_create_person_invalid_param_out_of_limits = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица со значением параметра email, состоящего из не валидных '
+                 'Создать физическое лицо со значением параметра email, состоящего из не валидных '
                  'символов длиной больше max',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
@@ -890,7 +880,7 @@ test_data_api_can_not_create_person_invalid_param_out_of_limits = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица со значением параметра key_id, состоящего из не валидных '
+                 'Создать физическое лицо со значением параметра key_id, состоящего из не валидных '
                  'символов длиной больше max',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
@@ -907,7 +897,7 @@ test_data_api_can_not_create_person_invalid_param_out_of_limits = (
                  marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
-                 'Сделать попытку создания физического лица со значением параметра card_id, состоящего из не валидных '
+                 'Создать физическое лицо со значением параметра card_id, состоящего из не валидных '
                  'символов длиной больше max',
                  (f.text('*person_first_name', 'n', 'valid'),
                   f.text('*person_last_name', 'n', 'valid'),
