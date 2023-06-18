@@ -113,6 +113,3 @@ class BaseService:
             logging.debug(f'id физ.лица успешно записан в файл')
 
         return status_code, reason, result
-
-
-

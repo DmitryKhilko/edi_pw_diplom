@@ -34,9 +34,12 @@ def sql_delete_person():
 
 @fixture()
 def web_app():
+    """
+    Фикстура для запуска и закрытия ui-автотестов
+    """
     with sync_playwright() as playwright:
         with allure.step(f'Открыть браузер'):
-            browser = playwright.chromium.launch(headless=False)
+            browser = playwright.chromium.launch(headless=True)
             context = browser.new_context(viewport={'width': 1920, 'height': 1080})
             # context = browser.new_context()
             page = context.new_page()
