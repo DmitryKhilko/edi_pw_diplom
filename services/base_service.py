@@ -3,7 +3,7 @@ import logging
 
 import requests
 
-from data.file_name_data import FILENAME_API_PERSON_ID
+from data.data_file_name import FILENAME_API_PERSON_ID
 from data.url_data import PERSONS_GET_END_POINT, PERSON_CREATE_END_POINT, CSRF_END_POINT, LOGIN_END_POINT
 from utils.files import FilesWork
 from settings import BASE_URL

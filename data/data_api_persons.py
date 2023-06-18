@@ -8,55 +8,69 @@ f = Fake()
 """
 Тестовые данные для параметризованных api-тестов. 
 Данные предназначены для проверки получения списка физических лиц под ролями, которым разрешено получение списка. 
-Структура кортежа: user (учетные данные пользователя), expected_result (ожидаемый ответ сервера).
+Структура кортежа: 
+user (учетные данные пользователя), parameter_description (описание набора параметров для allure.step), 
+expected_result (ожидаемый ответ сервера).
 """
 test_data_api_can_read_persons = (
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
+                 f'Получить список физических лиц под ролью "{ROLE_NAME_AIB}"',
                  (200, 'OK'),
-                 marks=pytest.mark.smoke, id="Получение списка физ.лиц под АИБ"),
+                 marks=pytest.mark.smoke),
 
     pytest.param((ROLE_NAME_AIS, LOGIN_AIS, PASSWORD_AIS, EMAIL_ACCOUNT_AIS),
+                 f'Получить список физических лиц под ролью "{ROLE_NAME_AIS}"',
                  (200, 'OK'),
-                 marks=pytest.mark.smoke, id="Получение списка физ.лиц под АИС"),
+                 marks=pytest.mark.smoke),
 )
 
 """
 Тестовые данные для параметризованных api-тестов. 
 Данные предназначены для проверки получения списка физических лиц под ролями, которым запрещено получение списка. 
-Структура кортежа: user (учетные данные пользователя), expected_result (ожидаемый ответ сервера).
+Структура кортежа: 
+user (учетные данные пользователя), parameter_description (описание набора параметров для allure.step), 
+expected_result (ожидаемый ответ сервера).
 """
 test_data_api_can_not_read_persons = (
     pytest.param((ROLE_NAME_ASH, LOGIN_ASH, PASSWORD_ASH, EMAIL_ACCOUNT_ASH),
+                 f'Получить список физических лиц под ролью "{ROLE_NAME_ASH}"',
                  (403, 'Forbidden', {'detail': 'У вас недостаточно прав для выполнения данного действия.'}),
-                 marks=pytest.mark.critical_path, id="Отказ в получении списка физ.лиц под АСХ"),
+                 marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_PSH, LOGIN_PSH, PASSWORD_PSH, EMAIL_ACCOUNT_PSH),
+                 f'Получить список физических лиц под ролью "{ROLE_NAME_PSH}"',
                  (403, 'Forbidden', {'detail': 'У вас недостаточно прав для выполнения данного действия.'}),
-                 marks=pytest.mark.critical_path, id="Отказ в получении списка физ.лиц под ПСХ"),
+                 marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AMNS, LOGIN_AMNS, PASSWORD_AMNS, EMAIL_ACCOUNT_AMNS),
+                 f'Получить список физических лиц под ролью "{ROLE_NAME_AMNS}"',
                  (403, 'Forbidden', {'detail': 'У вас недостаточно прав для выполнения данного действия.'}),
-                 marks=pytest.mark.critical_path, id="Отказ в получении списка физ.лиц под АМНС"),
+                 marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_OAMNS, LOGIN_OAMNS, PASSWORD_OAMNS, EMAIL_ACCOUNT_OAMNS),
+                 f'Получить список физических лиц под ролью "{ROLE_NAME_OAMNS}"',
                  (403, 'Forbidden', {'detail': 'У вас недостаточно прав для выполнения данного действия.'}),
-                 marks=pytest.mark.critical_path, id="Отказ в получении списка физ.лиц под ОАМНС"),
+                 marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_RAMNS, LOGIN_RAMNS, PASSWORD_RAMNS, EMAIL_ACCOUNT_RAMNS),
+                 f'Получить список физических лиц под ролью "{ROLE_NAME_RAMNS}"',
                  (403, 'Forbidden', {'detail': 'У вас недостаточно прав для выполнения данного действия.'}),
-                 marks=pytest.mark.critical_path, id="Отказ в получении списка физ.лиц под РАМНС"),
+                 marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_PMNS, LOGIN_PMNS, PASSWORD_PMNS, EMAIL_ACCOUNT_PMNS),
+                 f'Получить список физических лиц под ролью "{ROLE_NAME_PMNS}"',
                  (403, 'Forbidden', {'detail': 'У вас недостаточно прав для выполнения данного действия.'}),
-                 marks=pytest.mark.critical_path, id="Отказ в получении списка физ.лиц под ПМНС"),
+                 marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_AGTK, LOGIN_AGTK, PASSWORD_AGTK, EMAIL_ACCOUNT_AGTK),
+                 f'Получить список физических лиц под ролью "{ROLE_NAME_AGTK}"',
                  (403, 'Forbidden', {'detail': 'У вас недостаточно прав для выполнения данного действия.'}),
-                 marks=pytest.mark.critical_path, id="Отказ в получении списка физ.лиц под АГТК"),
+                 marks=pytest.mark.critical_path),
 
     pytest.param((ROLE_NAME_PGTK, LOGIN_PGTK, PASSWORD_PGTK, EMAIL_ACCOUNT_PGTK),
+                 f'Получить список физических лиц под ролью "{ROLE_NAME_PGTK}"',
                  (403, 'Forbidden', {'detail': 'У вас недостаточно прав для выполнения данного действия.'}),
-                 marks=pytest.mark.critical_path, id="Отказ в получении списка физ.лиц под ПГТК"),
+                 marks=pytest.mark.critical_path),
 )
 
 """
@@ -770,6 +784,143 @@ test_data_api_can_not_create_person_invalid_param_out_of_limits = (
                  (400, 'Bad Request',
                   {'first_name': ['Убедитесь, что это значение содержит от 2 до 50 символов.',
                                   'Имя должно содержать только буквы кириллицы, пробел и знак дефиса.']}),
+                 marks=pytest.mark.critical_path),
+
+    pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
+                 'Сделать попытку создания физического лица со значением параметра last_name, состоящего из '
+                 'не валидных символов длиной меньше min',
+                 (f.text('*person_first_name', 'n', 'valid'),
+                  f.text('*person_last_name', '<min', 'invalid'),
+                  f.text('person_patronymic', 'n', 'valid'),
+                  f.drop_down_list('person_sex', 'n', 'valid'),
+                  f.date('person_birthday', 'n', 'valid'),
+                  f.text('person_phone', 'n', 'valid'),
+                  f.text('*person_email', 'n', 'valid'),
+                  f.text('person_key_id', 'n', 'valid'),
+                  f.text('person_card_id', 'n', 'valid')),
+                 (400, 'Bad Request',
+                  {'last_name': ['Убедитесь, что это значение содержит от 2 до 50 символов.',
+                                 'Фамилия не должна содержать пробелов.',
+                                 'Фамилия должна содержать только буквы кириллицы и знак дефиса.']}),
+                 marks=pytest.mark.critical_path),
+
+    pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
+                 'Сделать попытку создания физического лица со значением параметра last_name, состоящего из '
+                 'не валидных символов длиной больше max',
+                 (f.text('*person_first_name', 'n', 'valid'),
+                  f.text('*person_last_name', '>max', 'invalid'),
+                  f.text('person_patronymic', 'n', 'valid'),
+                  f.drop_down_list('person_sex', 'n', 'valid'),
+                  f.date('person_birthday', 'n', 'valid'),
+                  f.text('person_phone', 'n', 'valid'),
+                  f.text('*person_email', 'n', 'valid'),
+                  f.text('person_key_id', 'n', 'valid'),
+                  f.text('person_card_id', 'n', 'valid')),
+                 (400, 'Bad Request',
+                  {'last_name': ['Убедитесь, что это значение содержит от 2 до 50 символов.',
+                                 'Фамилия не должна содержать пробелов.',
+                                 'Фамилия должна содержать только буквы кириллицы и знак дефиса.']}),
+                 marks=pytest.mark.critical_path),
+
+    pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
+                 'Сделать попытку создания физического лица со значением параметра patronymic, состоящего из '
+                 'не валидных символов длиной меньше min',
+                 (f.text('*person_first_name', 'n', 'valid'),
+                  f.text('*person_last_name', 'n', 'valid'),
+                  f.text('person_patronymic', '<min', 'invalid'),
+                  f.drop_down_list('person_sex', 'n', 'valid'),
+                  f.date('person_birthday', 'n', 'valid'),
+                  f.text('person_phone', 'n', 'valid'),
+                  f.text('*person_email', 'n', 'valid'),
+                  f.text('person_key_id', 'n', 'valid'),
+                  f.text('person_card_id', 'n', 'valid')),
+                 (400, 'Bad Request',
+                  {'patronymic': ['Убедитесь, что это значение содержит от 2 до 50 символов.',
+                                  'Отчество должно содержать только буквы кириллицы, пробел и знак дефиса.']}),
+                 marks=pytest.mark.critical_path),
+
+    pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
+                 'Сделать попытку создания физического лица со значением параметра patronymic, состоящего из '
+                 'не валидных символов длиной больше max',
+                 (f.text('*person_first_name', 'n', 'valid'),
+                  f.text('*person_last_name', 'n', 'valid'),
+                  f.text('person_patronymic', '>max', 'invalid'),
+                  f.drop_down_list('person_sex', 'n', 'valid'),
+                  f.date('person_birthday', 'n', 'valid'),
+                  f.text('person_phone', 'n', 'valid'),
+                  f.text('*person_email', 'n', 'valid'),
+                  f.text('person_key_id', 'n', 'valid'),
+                  f.text('person_card_id', 'n', 'valid')),
+                 (400, 'Bad Request',
+                  {'patronymic': ['Убедитесь, что это значение содержит от 2 до 50 символов.',
+                                  'Отчество должно содержать только буквы кириллицы, пробел и знак дефиса.']}),
+                 marks=pytest.mark.critical_path),
+
+    pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
+                 'Сделать попытку создания физического лица со значением параметра phone, состоящего из не валидных '
+                 'символов длиной больше max',
+                 (f.text('*person_first_name', 'n', 'valid'),
+                  f.text('*person_last_name', 'n', 'valid'),
+                  f.text('person_patronymic', 'n', 'valid'),
+                  f.drop_down_list('person_sex', 'n', 'valid'),
+                  f.date('person_birthday', 'n', 'valid'),
+                  f.text('person_phone', '>max', 'invalid'),
+                  f.text('*person_email', 'n', 'valid'),
+                  f.text('person_key_id', 'n', 'valid'),
+                  f.text('person_card_id', 'n', 'valid')),
+                 (400, 'Bad Request', {'phone': ['Убедитесь, что это значение содержит не более 13 символов.',
+                                                 'Телефон может содержать до 12 цифр без пробелов; '
+                                                 'допускается символ «+» в начале строки.']}),
+                 marks=pytest.mark.critical_path),
+
+    pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
+                 'Сделать попытку создания физического лица со значением параметра email, состоящего из не валидных '
+                 'символов длиной больше max',
+                 (f.text('*person_first_name', 'n', 'valid'),
+                  f.text('*person_last_name', 'n', 'valid'),
+                  f.text('person_patronymic', 'n', 'valid'),
+                  f.drop_down_list('person_sex', 'n', 'valid'),
+                  f.date('person_birthday', 'n', 'valid'),
+                  f.text('person_phone', 'n', 'valid'),
+                  f.text('*person_email', '>max', 'invalid'),
+                  f.text('person_key_id', 'n', 'valid'),
+                  f.text('person_card_id', 'n', 'valid')),
+                 (400, 'Bad Request', {'email': ['Убедитесь, что это значение содержит не более 254 символов.',
+                                                 'Введите правильный адрес электронной почты.']}),
+                 marks=pytest.mark.critical_path),
+
+    pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
+                 'Сделать попытку создания физического лица со значением параметра key_id, состоящего из не валидных '
+                 'символов длиной больше max',
+                 (f.text('*person_first_name', 'n', 'valid'),
+                  f.text('*person_last_name', 'n', 'valid'),
+                  f.text('person_patronymic', 'n', 'valid'),
+                  f.drop_down_list('person_sex', 'n', 'valid'),
+                  f.date('person_birthday', 'n', 'valid'),
+                  f.text('person_phone', 'n', 'valid'),
+                  f.text('*person_email', 'n', 'valid'),
+                  f.text('person_key_id', '>max', 'invalid'),
+                  f.text('person_card_id', 'n', 'valid')),
+                 (400, 'Bad Request',
+                  {'key_id': ['Убедитесь, что это значение содержит не более 40 символов.',
+                              'Идентификатор ключа должен содержать только латинские буквы и цифры']}),
+                 marks=pytest.mark.critical_path),
+
+    pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
+                 'Сделать попытку создания физического лица со значением параметра card_id, состоящего из не валидных '
+                 'символов длиной больше max',
+                 (f.text('*person_first_name', 'n', 'valid'),
+                  f.text('*person_last_name', 'n', 'valid'),
+                  f.text('person_patronymic', 'n', 'valid'),
+                  f.drop_down_list('person_sex', 'n', 'valid'),
+                  f.date('person_birthday', 'n', 'valid'),
+                  f.text('person_phone', 'n', 'valid'),
+                  f.text('*person_email', 'n', 'valid'),
+                  f.text('person_key_id', 'n', 'valid'),
+                  f.text('person_card_id', '>max', 'invalid')),
+                 (400, 'Bad Request',
+                  {'card_id': ['Убедитесь, что это значение содержит не более 40 символов.',
+                               'Идентификатор ID карты должен содержать только латинские буквы и цифры']}),
                  marks=pytest.mark.critical_path),
 
 )

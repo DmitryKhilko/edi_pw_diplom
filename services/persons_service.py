@@ -9,7 +9,7 @@ from sql_requests.sql import SQLRequests
 class PersonsService(BaseService):
 
     @staticmethod
-    def can_read_persons(csrftoken: str, sessionid: str, expected_result: tuple):
+    def can_read_persons(csrftoken: str, sessionid: str, parameter_description: str, expected_result: tuple):
 
         """
         Метод получения с помощью get-запроса списка физических лиц
@@ -17,10 +17,11 @@ class PersonsService(BaseService):
 
         :param csrftoken: CSRF-токен, передаваемый в запрос
         :param sessionid: сгенерированный идентификатор сессии
+        :param parameter_description: описание набора параметров из набора тестовых данных для allure.step
         :param expected_result: ожидаемый ответ сервера
        """
 
-        with allure.step('Получить список физических лиц'):
+        with allure.step(f'{parameter_description}'):  # Получить список физических лиц под ролью
             logging.debug(f'Приступить к получению списка физических лиц')
             status_code, reason, result = BaseService.get_persons(csrftoken, sessionid)
 
@@ -33,7 +34,8 @@ class PersonsService(BaseService):
             logging.debug(f'Список физических лиц успешно получен')
 
     @staticmethod
-    def can_not_read_persons(csrftoken: str, sessionid: str, expected_result: tuple, user_role: str):
+    def can_not_read_persons(csrftoken: str, sessionid: str, parameter_description: str, expected_result: tuple,
+                             user_role: str):
 
         """
         Метод, подтверждающий невозможность получения списка физических
@@ -42,12 +44,13 @@ class PersonsService(BaseService):
 
         :param csrftoken: CSRF-токен, передаваемый в запрос
         :param sessionid: сгенерированный идентификатор сессии
+        :param parameter_description: описание набора параметров из набора тестовых данных для allure.step
         :param expected_result: ожидаемый ответ сервера
         :param user_role: роль пользователя, под которой была попытка получить список физ.лиц
 
         """
 
-        with allure.step('Получить список физических лиц'):
+        with allure.step(f'{parameter_description}'):  # Получить список физических лиц под ролью
             logging.debug(f'Приступить к получению списка физических лиц')
             status_code, reason, result = BaseService.get_persons(csrftoken, sessionid)
 
@@ -71,7 +74,7 @@ class PersonsService(BaseService):
 
         :param csrftoken: CSRF-токен, передаваемый в запрос
         :param sessionid: сгенерированный идентификатор сессии
-        :param parameter_description: описание набора параметров из набора тестовых данных
+        :param parameter_description: описание набора параметров из набора тестовых данных для allure.step
         :param data: набор значений параметров для создания физического лица
         :param expected_result: ожидаемый ответ сервера
         """
@@ -115,7 +118,7 @@ class PersonsService(BaseService):
 
         :param csrftoken: CSRF-токен, передаваемый в запрос
         :param sessionid: сгенерированный идентификатор сессии
-        :param parameter_description: описание набора параметров из набора тестовых данных
+        :param parameter_description: описание набора параметров из набора тестовых данных для allure.step
         :param data: набор значений параметров для создания физического лица
         :param expected_result: ожидаемый ответ сервера
         """
@@ -146,7 +149,7 @@ class PersonsService(BaseService):
 
         :param csrftoken: CSRF-токен, передаваемый в запрос
         :param sessionid: сгенерированный идентификатор сессии
-        :param parameter_description: описание набора параметров из набора тестовых данных
+        :param parameter_description: описание набора параметров из набора тестовых данных для allure.step
         :param data: набор значений параметров для создания физического лица
         :param expected_result: ожидаемый ответ сервера
         """
@@ -179,7 +182,7 @@ class PersonsService(BaseService):
 
         :param csrftoken: CSRF-токен, передаваемый в запрос
         :param sessionid: сгенерированный идентификатор сессии
-        :param parameter_description: описание набора параметров из набора тестовых данных
+        :param parameter_description: описание набора параметров из набора тестовых данных для allure.step
         :param data: набор значений параметров для создания физического лица
         :param expected_result: ожидаемый ответ сервера
         """
@@ -210,7 +213,7 @@ class PersonsService(BaseService):
 
         :param csrftoken: CSRF-токен, передаваемый в запрос
         :param sessionid: сгенерированный идентификатор сессии
-        :param parameter_description: описание набора параметров из набора тестовых данных
+        :param parameter_description: описание набора параметров из набора тестовых данных для allure.step
         :param data: набор значений параметров для создания физического лица
         :param expected_result: ожидаемый ответ сервера
         """
@@ -244,7 +247,7 @@ class PersonsService(BaseService):
 
         :param csrftoken: CSRF-токен, передаваемый в запрос
         :param sessionid: сгенерированный идентификатор сессии
-        :param parameter_description: описание набора параметров из набора тестовых данных
+        :param parameter_description: описание набора параметров из набора тестовых данных для allure.step
         :param data: набор значений параметров для создания физического лица
         :param expected_result: ожидаемый ответ сервера
         """

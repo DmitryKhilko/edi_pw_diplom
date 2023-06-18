@@ -4,7 +4,7 @@ import allure
 from playwright.sync_api import sync_playwright
 from pytest import fixture
 
-from data.file_name_data import FILENAME_API_PERSON_ID
+from data.data_file_name import FILENAME_API_PERSON_ID
 from sql_requests.sql import SQLRequests
 
 
@@ -23,6 +23,10 @@ logging.basicConfig(
 
 @fixture(scope='function', autouse=False)
 def sql_delete_person():
+    """
+    Фикстура для удаления физического лица по окончании теста,
+    связанного с физическими лицами
+    """
     yield
     with allure.step('Удалить физическое лицо из базы данных, в случае его создания'):
         SQLRequests.db_delete_row(FILENAME_API_PERSON_ID)

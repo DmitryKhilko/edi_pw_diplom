@@ -24,7 +24,7 @@ class LoginService(BaseService):
         :return: csrftoken, sessionid для передачи в иные запросы
         """
 
-        with allure.step(f'Войти в приложении под ролью "{user_role}"'):
+        with allure.step(f'Войти в приложении под ролью "{user_role}" с валидными логином и паролем'):
             with allure.step(f'Создать CSRF-токен'):
                 logging.debug(f'Приступить к созданию CSRF-токена')
                 csrftoken, status_code = BaseService.get_csrftoken()
@@ -40,7 +40,7 @@ class LoginService(BaseService):
                 return csrftoken, sessionid
 
     @staticmethod
-    def login_by_role(user: tuple, expected_result: tuple, user_role: str, expected_set_csrf_code=200):
+    def login_by_role(user: tuple, parameter_description: str, expected_result: tuple, expected_set_csrf_code=200):
 
         """
         Метод проверки успешности входа в приложение под разными ролями приложения:
@@ -50,12 +50,12 @@ class LoginService(BaseService):
         являются вход в приложение
 
         :param user: кортеж, содержащий логин, пароль, email_account пользователя
+        :param parameter_description: описание набора параметров из набора тестовых данных для allure.step
         :param expected_result: ожидаемый ответ сервера
-        :param user_role: роль пользователя для отображения в allure.steps
         :param expected_set_csrf_code: ожидаемый код ответа при успешном создании CSRF-токена
         """
 
-        with allure.step(f'Войти в приложении под ролью "{user_role}"'):
+        with allure.step(f'{parameter_description}'):  # войти в приложение под ролью
             with allure.step(f'Создать CSRF-токен'):
                 logging.debug(f'Приступить к созданию CSRF-токена')
                 csrftoken, status_code = BaseService.get_csrftoken()
@@ -79,7 +79,7 @@ class LoginService(BaseService):
             logging.debug(f'Успешно авторизовались под логином "{user[1]}"')
 
     @staticmethod
-    def can_not_login(user: tuple, expected_result: tuple, user_role: str, expected_set_csrf_code=200):
+    def can_not_login(user: tuple, parameter_description: str, expected_result: tuple, expected_set_csrf_code=200):
 
         """
         Метод проверки невозможности входа в приложение при невалидных, пустых
@@ -90,12 +90,12 @@ class LoginService(BaseService):
         в приложение
 
         :param user: кортеж, содержащий логин, пароль, email_account пользователя
+        :param parameter_description: описание набора параметров из набора тестовых данных для allure.step
         :param expected_result: ожидаемый ответ сервера
-        :param user_role: роль пользователя для отображения в allure.steps
         :param expected_set_csrf_code: ожидаемый код ответа при успешном создании CSRF-токена
         """
 
-        with allure.step(f'Войти в приложении под ролью "{user_role}"'):
+        with allure.step(f'{parameter_description}'):  # войти в приложение под ролью
             with allure.step(f'Создать CSRF-токен'):
                 logging.debug(f'Приступить к созданию CSRF-токена')
                 csrftoken, status_code = BaseService.get_csrftoken()
