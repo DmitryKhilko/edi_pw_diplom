@@ -990,5 +990,20 @@ test_data_api_can_not_create_person_invalid_param_out_of_limits = (
                   {'card_id': ['Убедитесь, что это значение содержит не более 40 символов.',
                                'Идентификатор ID карты должен содержать только латинские буквы и цифры']}),
                  marks=pytest.mark.critical_path),
-
 )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
