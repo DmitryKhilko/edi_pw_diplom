@@ -19,8 +19,8 @@ FIELD_PHONE = ('Телефон', '//input[@name = "phone"]')
 FIELD_EMAIL = ('E-mail', '//input[@name = "email"]')
 FIELD_CARD_ID = ('Идентификатор ID карты', '//input[@name = "card_id"]')
 FIELD_KEY_ID = ('Идентификатор ключа', '//input[@name = "key_id"]')
-BUTTON_SAVE = ('СОХРАНИТЬ', '//button[text() = "Сохранить"]')
-BUTTON_CANCEL = ('ОТМЕНИТЬ', '//button[text() = "Отменить"]')
+BUTTON_SAVE = ('Сохранить', '//button[text() = "Сохранить"]')
+BUTTON_CANCEL = ('Отменить', '//button[text() = "Отменить"]')
 
 """
 Тестовые данные для параметризованных api-тестов. 

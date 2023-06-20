@@ -8,7 +8,7 @@ from settings import *
 """
 FIELD_LOGIN = ('Логин', '//input[@name = "login"]')
 FIELD_PASSWORD = ('Пароль', '//input[@name = "password"]')
-BUTTON_LOGIN = ('ВОЙТИ', '//button[text() = "Войти"]')
+BUTTON_LOGIN = ('Войти', '//button[text() = "Войти"]')
 
 """
 Тестовые данные для параметризованных ui-тестов. 
