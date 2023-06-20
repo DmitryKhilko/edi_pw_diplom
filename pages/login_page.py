@@ -1,4 +1,5 @@
 import allure
+from allure_commons.types import AttachmentType
 from playwright.sync_api import expect
 
 from pages.base_page import BasePage
@@ -17,7 +18,6 @@ class Login(BasePage):
         """
         self.goto_with_allure_step(BASE_URL + LOGIN_PAGE_URL)
 
-    @allure.step('Войти в приложение')
     def login(self, user: tuple):
         """
         Метод входа в приложение, содержащий только один allure.step,
@@ -25,10 +25,11 @@ class Login(BasePage):
 
         :param user: кортеж, содержащий логин, пароль, email_account пользователя
         """
-        self.navigate()
-        self.text_field_fill(FIELD_LOGIN[1], user[1])
-        self.text_field_fill(FIELD_PASSWORD[1], user[2])
-        self.button_click(BUTTON_LOGIN[1])
+        with allure.step(f'Войти в приложении под ролью "{user[0]}" с валидными логином и паролем'):
+            self.navigate()
+            self.text_field_fill(FIELD_LOGIN[1], user[1])
+            self.text_field_fill(FIELD_PASSWORD[1], user[2])
+            self.button_click(BUTTON_LOGIN[1])
 
     def login_by_role(self, user: tuple, parameter_description: str):
         """
@@ -60,3 +61,14 @@ class Login(BasePage):
             expect(self.page.get_by_text(expected_result[0], exact=True)).to_be_visible()
             expect(self.page.get_by_role('button', name=expected_result[1])).to_be_visible()
             expect(self.page.get_by_role('paragraph').filter(has_text=expected_result[2])).to_be_visible()
+
+    def check_message(self, expected_result: tuple):
+        """
+        Метод проверки отображения ожидаемых сообщений на странице:
+        об ошибке или информационных.
+
+        :param expected_result: ожидаемый результат
+        """
+        with allure.step(f'Ожидаемый результат: отобразилось сообщение "{expected_result[1]}"'):
+            expect(self.page.get_by_text(expected_result[1])).to_be_visible()
+            allure.attach(self.page.screenshot(type='png'), name='screenshot', attachment_type=AttachmentType.PNG)

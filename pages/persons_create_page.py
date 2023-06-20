@@ -1,82 +1,105 @@
+import logging
+
 import allure
 from playwright.sync_api import expect
 
+from data.data_file_name import FILENAME_UI_PERSON_ID
 from data.data_ui_persons import *
-from data.url_data import BASE_URL, PERSONS_PAGE_URL
+from data.url_data import PERSONS_PAGE_URL
+from settings import BASE_URL
 from pages.base_page import BasePage
+from sql_requests.persons_sql import SQLRequests
+from utils.files import FilesWork
 
 
 class Persons(BasePage):
 
     def navigate(self):
-        with allure.step(f'Перейти на страницу "Физические лица": {BASE_URL + PERSONS_PAGE_URL}'):
+        with allure.step(f'Перейти на страницу {BASE_URL + PERSONS_PAGE_URL}'):
             self.page.get_by_role("link", name="Физические лица").click()
-            return self
 
     @allure.step('Ожидаемый результат: перешли на страницу "Физические лица"')
     def check_goto_persons(self):
         expect(self.page.get_by_role("link", name="Физические лица").nth(1)).to_be_visible()
-        return self
 
     @allure.step('Нажать кнопку "Добавить"')
-    def opening_form_add_person(self):
+    def opening_form_create_person(self):
         self.page.get_by_role("button", name="Добавить").click()
-        return self
 
     @allure.step('Ожидаемый результат: форма добавления физического лица открыта')
-    def check_opening_form_add_person(self):
+    def check_opening_form_create_person(self):
         expect(self.page.get_by_role("link", name="Физические лица").nth(1)).to_be_visible()
         expect(self.page.get_by_role("link", name="Добавить")).to_be_visible()
-        return self
 
-    @allure.step('Добавить физическое лицо"')
-    def add_person(self, p03_first_name: str, p04_patronymic: str, p05_last_name: str, p06_birthday: str, p07_sex: str, p08_phone: str, p09_email: str, p10_card_id: str, p11_key_id: str):
-        self.text_field_fill_with_allure_step(FIRST_NAME[0], FIRST_NAME[1], p03_first_name)
-        self.text_field_fill_with_allure_step(PATRONYMIC[0], PATRONYMIC[1], p04_patronymic)
-        self.text_field_fill_with_allure_step(LAST_NAME[0], LAST_NAME[1], p05_last_name)
-        self.text_field_fill_with_allure_step(BIRTHDAY[0], BIRTHDAY[1], p06_birthday)
-        if p07_sex == 'Женский':  # по умолчанию выбрано значение "Мужской", поэтому если нужен пол "Мужской", то ничего не делаем
-            # TODO Сделать отдельный метод в base_page или в persons_page, так же добавить allure.step
-            self.page.locator(SEX[1]).click()
-            self.page.locator(SEX[2]).click()
-        self.text_field_fill_with_allure_step(PHONE[0], PHONE[1], p08_phone)
-        self.text_field_fill_with_allure_step(EMAIL[0], EMAIL[1], p09_email)
-        self.text_field_fill_with_allure_step(CARD_ID[0], CARD_ID[1], p10_card_id)
-        self.text_field_fill_with_allure_step(KEY_ID[0], KEY_ID[1], p11_key_id)
-        self.button_click_with_allure_step(BUTTON_SAVE[0], BUTTON_SAVE[1])
-        # self.button_click_with_allure_step(BUTTON_CANCEL[0], BUTTON_CANCEL[1])
-        return self
+    def cancel_create_person(self, parameter_description: str, data: tuple):
+        """
+        Метод, проверяющий нажатие кнопки "ОТМЕНИТЬ" на форме создания физического лица:
+        заполнить форму валидными значениями обязательных для заполнения параметров и
+        нажать кнопку "ОТМЕНА". При этом физическое лицо не должно быть создано.
+
+        :param parameter_description: описание набора параметров из набора тестовых данных для allure.step
+        :param data: набор значений параметров для создания физического лица
+        """
+        with allure.step(f'{parameter_description}'):  # создать физическое лицо с валидными значениями параметров
+            self.text_field_fill_with_allure_step(FIELD_FIRST_NAME[0], FIELD_FIRST_NAME[1], data[0])
+            self.text_field_fill_with_allure_step(FIELD_PATRONYMIC[0], FIELD_PATRONYMIC[1], data[1])
+            self.text_field_fill_with_allure_step(FIELD_LAST_NAME[0], FIELD_LAST_NAME[1], data[2])
+            self.text_field_fill_with_allure_step(FIELD_EMAIL[0], FIELD_EMAIL[1], data[3])
+            self.button_click_with_allure_step(BUTTON_CANCEL[0], BUTTON_CANCEL[1])
+
+    def check_not_created_in_table_person(self, data: tuple):
+        with allure.step(f'Ожидаемое результат: отменено создание физического лица'):
+            expect(self.page.locator(f'//*[@data-rowindex = 0]//*[contains(text(), '
+                                     f'"{data[3].lower()}")]')).not_to_be_visible()
+
+    def create_person(self, parameter_description: str, data: tuple):
+        """
+        Метод создания с помощью графического интерфейса физического лица для
+        ролей приложения, которым разрешено создание физического лица
+        с валидными значениями параметров.
+
+        :param parameter_description: описание набора параметров из набора тестовых данных для allure.step
+        :param data: набор значений параметров для создания физического лица
+        """
+        with allure.step(f'{parameter_description}'):  # создать физическое лицо с валидными значениями параметров
+            self.text_field_fill_with_allure_step(FIELD_FIRST_NAME[0], FIELD_FIRST_NAME[1], data[0])
+            self.text_field_fill_with_allure_step(FIELD_PATRONYMIC[0], FIELD_PATRONYMIC[1], data[1])
+            self.text_field_fill_with_allure_step(FIELD_LAST_NAME[0], FIELD_LAST_NAME[1], data[2])
+            # по умолчанию выбрано значение "Мужской", поэтому если нужен пол "Мужской", то ничего не делаем
+            if data[3] == 'Женский':
+                # TODO Сделать отдельный метод в base_page или в persons_page, так же добавить allure.step
+                with allure.step(f'Выбрать в раскрывающемся списке "{DROP_DOWN_LIST_SEX[0]}" значение: {data[3]}'):
+                    self.page.locator(DROP_DOWN_LIST_SEX[1]).click()
+                    self.page.locator(DROP_DOWN_LIST_SEX[2]).click()
+            self.text_field_fill_with_allure_step(FIELD_BIRTHDAY[0], FIELD_BIRTHDAY[1], data[4])
+            self.text_field_fill_with_allure_step(FIELD_PHONE[0], FIELD_PHONE[1], data[5])
+            self.text_field_fill_with_allure_step(FIELD_EMAIL[0], FIELD_EMAIL[1], data[6])
+            self.text_field_fill_with_allure_step(FIELD_CARD_ID[0], FIELD_CARD_ID[1], data[7])
+            self.text_field_fill_with_allure_step(FIELD_KEY_ID[0], FIELD_KEY_ID[1], data[8])
+            self.button_click_with_allure_step(BUTTON_SAVE[0], BUTTON_SAVE[1])
 
     # TODO Сделать базовый метод без allure.step, так как allure.step будет оригинальный для каждой таблицы
-    def to_be_visible_in_table_add_person(self, param: str):
-        with allure.step(f'Ожидаемое результат: в первой строке таблицы отображается email "{param}" вновь добавленного физического лица'):
-            expect(self.page.locator(f'//*[@data-rowindex = 0]//*[contains(text(), "{param}")]')).to_be_visible()
-            return self
+    def check_visible_in_table_created_person(self, data: tuple):
+        with allure.step(f'Ожидаемое результат: в первой строке таблицы отображается email "{data[6].lower()}" '
+                         f'вновь добавленного физического лица'):
+            expect(self.page.locator(f'//*[@data-rowindex = 0]//*[contains(text(), '
+                                     f'"{data[6].lower()}")]')).to_be_visible()
 
-
-
-
-
- # page.locator("input[name=\"first_name\"]").click()
- #    page.locator("input[name=\"first_name\"]").fill("123")
- #    page.locator("input[name=\"first_name\"]").press("Tab")
- #    page.locator("input[name=\"patronymic\"]").fill("123")
- #    page.locator("input[name=\"patronymic\"]").press("Tab")
- #    page.locator("input[name=\"last_name\"]").fill("123")
- #    page.locator("input[name=\"last_name\"]").press("Tab")
- #    page.get_by_placeholder("дд.мм.гггг").fill("11.02.1973")
- #    page.get_by_placeholder("дд.мм.гггг").press("Enter")
- #    page.get_by_placeholder("дд.мм.гггг").press("Tab")
- #    page.get_by_role("button", name="Choose date, selected date is 11 февр. 1973 г.").press("Tab")
- #    page.get_by_role("button", name="Мужской").press("Enter")
- #    page.get_by_role("option", name="Мужской").press("ArrowDown")
- #    page.get_by_role("option", name="Женский").press("Enter")
- #    page.get_by_role("button", name="Женский").press("Tab")
- #    page.locator("input[name=\"phone\"]").fill("123")
- #    page.locator("input[name=\"phone\"]").press("Tab")
- #    page.locator("input[name=\"email\"]").fill("123@123.ru")
- #    page.locator("input[name=\"email\"]").press("Tab")
- #    page.locator("input[name=\"card_id\"]").fill("123")
- #    page.locator("input[name=\"card_id\"]").press("Tab")
- #    page.locator("input[name=\"key_id\"]").fill("123")
- #    page.get_by_role("button", name="Отменить").click()
+    @staticmethod
+    def check_create_person_in_db(email: str):
+        with allure.step('Ожидаемый результат: физическое лицо добавлено в БД'):
+            logging.debug(f'Приступить к поиску добавленного физ. лица в БД')
+            db_rowcount, db_person_id, db_fio, db_email = SQLRequests.db_select_row_ui(email)
+            print(f'Фактическое ФИО из БД: "{db_fio}"')
+            print(f'Фактический email из БД: "{db_email}"')
+            assert db_rowcount == 1, 'Физическое лицо в базу данных не добавлено'
+            # Привожу к нижнему регистру, так как при записи в БД система только первые буквы делает большими
+            assert db_email == email.lower(), 'Фактический из БД и ожидаемый email физического лица не совпали'
+            logging.debug(f'Физическое лицо c id="{db_person_id}" успешно добавлено в БД')
+            # Если создалась запись физического лица в базе данных, записываем personal_id в файл
+            # для последующего удаления физического лица из БД
+            if db_rowcount == 1:
+                logging.debug(f'В базе данных создано физическое лицо с id="{db_person_id}"')
+                logging.debug(f'Приступить к записи id физ.лица в файл')
+                FilesWork.write_file(FILENAME_UI_PERSON_ID, db_person_id)
+                logging.debug(f'id физ.лица успешно записан в файл')

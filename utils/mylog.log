@@ -1,89 +1,71 @@
-18.06.2023 23:45:52 - DEBUG [proactor_events.__init__: 633] - Using proactor: IocpProactor
-18.06.2023 23:45:54 - DEBUG [test_ui_login.test_ui_can_login_by_role: 23] - Начать тест "Вход в приложение (валидные значения логина и пароля)" для роли "Администратор ИБ"
-18.06.2023 23:45:54 - DEBUG [base_page.goto_with_allure_step: 65] - Перейти на страницу: https://enode02.ivcmf.by/login
-18.06.2023 23:45:56 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "login"]"
-18.06.2023 23:45:56 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "smirnov"
-18.06.2023 23:45:56 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "password"]"
-18.06.2023 23:45:56 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "smirnov_P@assw0rd"
-18.06.2023 23:45:56 - DEBUG [base_page.button_click_with_allure_step: 116] - Нажать кнопку с локатором "//button[text() = "Войти"]"
-18.06.2023 23:45:58 - DEBUG [test_ui_login.test_ui_can_login_by_role: 28] - Окончить тест "Вход в приложение (валидные значения логина и пароля)" для роли "Администратор ИБ"
-18.06.2023 23:45:58 - DEBUG [proactor_events.__init__: 633] - Using proactor: IocpProactor
-18.06.2023 23:46:01 - DEBUG [test_ui_login.test_ui_can_login_by_role: 23] - Начать тест "Вход в приложение (валидные значения логина и пароля)" для роли "Администратор ИС"
-18.06.2023 23:46:01 - DEBUG [base_page.goto_with_allure_step: 65] - Перейти на страницу: https://enode02.ivcmf.by/login
-18.06.2023 23:46:02 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "login"]"
-18.06.2023 23:46:03 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "admin_is_1"
-18.06.2023 23:46:03 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "password"]"
-18.06.2023 23:46:03 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "admin_is_1P@assw0rd"
-18.06.2023 23:46:03 - DEBUG [base_page.button_click_with_allure_step: 116] - Нажать кнопку с локатором "//button[text() = "Войти"]"
-18.06.2023 23:46:04 - DEBUG [test_ui_login.test_ui_can_login_by_role: 28] - Окончить тест "Вход в приложение (валидные значения логина и пароля)" для роли "Администратор ИС"
-18.06.2023 23:46:05 - DEBUG [proactor_events.__init__: 633] - Using proactor: IocpProactor
-18.06.2023 23:46:09 - DEBUG [test_ui_login.test_ui_can_login_by_role: 23] - Начать тест "Вход в приложение (валидные значения логина и пароля)" для роли "Администратор СХ"
-18.06.2023 23:46:09 - DEBUG [base_page.goto_with_allure_step: 65] - Перейти на страницу: https://enode02.ivcmf.by/login
-18.06.2023 23:46:10 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "login"]"
-18.06.2023 23:46:10 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "admin_sh"
-18.06.2023 23:46:10 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "password"]"
-18.06.2023 23:46:10 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "admin_shP@assw0rd"
-18.06.2023 23:46:10 - DEBUG [base_page.button_click_with_allure_step: 116] - Нажать кнопку с локатором "//button[text() = "Войти"]"
-18.06.2023 23:46:12 - DEBUG [test_ui_login.test_ui_can_login_by_role: 28] - Окончить тест "Вход в приложение (валидные значения логина и пароля)" для роли "Администратор СХ"
-18.06.2023 23:46:13 - DEBUG [proactor_events.__init__: 633] - Using proactor: IocpProactor
-18.06.2023 23:46:15 - DEBUG [test_ui_login.test_ui_can_login_by_role: 23] - Начать тест "Вход в приложение (валидные значения логина и пароля)" для роли "Пользователь СХ"
-18.06.2023 23:46:15 - DEBUG [base_page.goto_with_allure_step: 65] - Перейти на страницу: https://enode02.ivcmf.by/login
-18.06.2023 23:46:17 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "login"]"
-18.06.2023 23:46:17 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "user_sh_pl"
-18.06.2023 23:46:17 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "password"]"
-18.06.2023 23:46:18 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "user_sh_plP@assw0rd"
-18.06.2023 23:46:18 - DEBUG [base_page.button_click_with_allure_step: 116] - Нажать кнопку с локатором "//button[text() = "Войти"]"
-18.06.2023 23:46:19 - DEBUG [test_ui_login.test_ui_can_login_by_role: 28] - Окончить тест "Вход в приложение (валидные значения логина и пароля)" для роли "Пользователь СХ"
-18.06.2023 23:46:21 - DEBUG [proactor_events.__init__: 633] - Using proactor: IocpProactor
-18.06.2023 23:46:23 - DEBUG [test_ui_login.test_ui_can_login_by_role: 23] - Начать тест "Вход в приложение (валидные значения логина и пароля)" для роли "Администратор МНС"
-18.06.2023 23:46:23 - DEBUG [base_page.goto_with_allure_step: 65] - Перейти на страницу: https://enode02.ivcmf.by/login
-18.06.2023 23:46:24 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "login"]"
-18.06.2023 23:46:25 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "admin_mns"
-18.06.2023 23:46:25 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "password"]"
-18.06.2023 23:46:25 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "admin_mnsP@assw0rd"
-18.06.2023 23:46:25 - DEBUG [base_page.button_click_with_allure_step: 116] - Нажать кнопку с локатором "//button[text() = "Войти"]"
-18.06.2023 23:46:26 - DEBUG [test_ui_login.test_ui_can_login_by_role: 28] - Окончить тест "Вход в приложение (валидные значения логина и пароля)" для роли "Администратор МНС"
-18.06.2023 23:46:27 - DEBUG [proactor_events.__init__: 633] - Using proactor: IocpProactor
-18.06.2023 23:46:30 - DEBUG [test_ui_login.test_ui_can_login_by_role: 23] - Начать тест "Вход в приложение (валидные значения логина и пароля)" для роли "Областной администратор МНС"
-18.06.2023 23:46:30 - DEBUG [base_page.goto_with_allure_step: 65] - Перейти на страницу: https://enode02.ivcmf.by/login
-18.06.2023 23:46:32 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "login"]"
-18.06.2023 23:46:32 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "obladmin_mns"
-18.06.2023 23:46:32 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "password"]"
-18.06.2023 23:46:32 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "obladmin_mnsP@assw0rd"
-18.06.2023 23:46:32 - DEBUG [base_page.button_click_with_allure_step: 116] - Нажать кнопку с локатором "//button[text() = "Войти"]"
-18.06.2023 23:46:34 - DEBUG [test_ui_login.test_ui_can_login_by_role: 28] - Окончить тест "Вход в приложение (валидные значения логина и пароля)" для роли "Областной администратор МНС"
-18.06.2023 23:46:35 - DEBUG [proactor_events.__init__: 633] - Using proactor: IocpProactor
-18.06.2023 23:46:38 - DEBUG [test_ui_login.test_ui_can_login_by_role: 23] - Начать тест "Вход в приложение (валидные значения логина и пароля)" для роли "Районный администратор МНС"
-18.06.2023 23:46:38 - DEBUG [base_page.goto_with_allure_step: 65] - Перейти на страницу: https://enode02.ivcmf.by/login
-18.06.2023 23:46:40 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "login"]"
-18.06.2023 23:46:40 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "rayadmin_mns"
-18.06.2023 23:46:40 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "password"]"
-18.06.2023 23:46:40 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "rayadmin_mnsP@assw0rd"
-18.06.2023 23:46:40 - DEBUG [base_page.button_click_with_allure_step: 116] - Нажать кнопку с локатором "//button[text() = "Войти"]"
-18.06.2023 23:46:42 - DEBUG [test_ui_login.test_ui_can_login_by_role: 28] - Окончить тест "Вход в приложение (валидные значения логина и пароля)" для роли "Районный администратор МНС"
-18.06.2023 23:46:43 - DEBUG [proactor_events.__init__: 633] - Using proactor: IocpProactor
-18.06.2023 23:46:46 - DEBUG [test_ui_login.test_ui_can_login_by_role: 23] - Начать тест "Вход в приложение (валидные значения логина и пароля)" для роли "Пользователь МНС"
-18.06.2023 23:46:46 - DEBUG [base_page.goto_with_allure_step: 65] - Перейти на страницу: https://enode02.ivcmf.by/login
-18.06.2023 23:46:48 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "login"]"
-18.06.2023 23:46:48 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "user_mns"
-18.06.2023 23:46:48 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "password"]"
-18.06.2023 23:46:48 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "user_mnsP@assw0rd"
-18.06.2023 23:46:48 - DEBUG [base_page.button_click_with_allure_step: 116] - Нажать кнопку с локатором "//button[text() = "Войти"]"
-18.06.2023 23:46:50 - DEBUG [test_ui_login.test_ui_can_login_by_role: 28] - Окончить тест "Вход в приложение (валидные значения логина и пароля)" для роли "Пользователь МНС"
-18.06.2023 23:46:51 - DEBUG [proactor_events.__init__: 633] - Using proactor: IocpProactor
-18.06.2023 23:46:54 - DEBUG [test_ui_login.test_ui_can_login_by_role: 23] - Начать тест "Вход в приложение (валидные значения логина и пароля)" для роли "Администратор ГТК"
-18.06.2023 23:46:54 - DEBUG [base_page.goto_with_allure_step: 65] - Перейти на страницу: https://enode02.ivcmf.by/login
-18.06.2023 23:46:55 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "login"]"
-18.06.2023 23:46:56 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "admin_gtk"
-18.06.2023 23:46:56 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "password"]"
-18.06.2023 23:46:56 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "admin_gtkP@assw0rd"
-18.06.2023 23:46:56 - DEBUG [base_page.button_click_with_allure_step: 116] - Нажать кнопку с локатором "//button[text() = "Войти"]"
-18.06.2023 23:47:02 - DEBUG [proactor_events.__init__: 633] - Using proactor: IocpProactor
-18.06.2023 23:47:06 - DEBUG [test_ui_login.test_ui_can_login_by_role: 23] - Начать тест "Вход в приложение (валидные значения логина и пароля)" для роли "Пользователь ГТК"
-18.06.2023 23:47:06 - DEBUG [base_page.goto_with_allure_step: 65] - Перейти на страницу: https://enode02.ivcmf.by/login
-18.06.2023 23:47:07 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "login"]"
-18.06.2023 23:47:08 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "user_gtk"
-18.06.2023 23:47:08 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "password"]"
-18.06.2023 23:47:08 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "user_gtkP@assw0rd"
-18.06.2023 23:47:08 - DEBUG [base_page.button_click_with_allure_step: 116] - Нажать кнопку с локатором "//button[text() = "Войти"]"
-18.06.2023 23:47:09 - DEBUG [test_ui_login.test_ui_can_login_by_role: 28] - Окончить тест "Вход в приложение (валидные значения логина и пароля)" для роли "Пользователь ГТК"
+20.06.2023 23:45:28 - DEBUG [proactor_events.__init__: 633] - Using proactor: IocpProactor
+20.06.2023 23:45:30 - DEBUG [test_ui_persons.test_ui_cancel_create_person_valid_param: 29] - Начать тест "Отмена создания физ.лица (у роли есть права; валидные значения параметров)" под ролью "Администратор ИБ"
+20.06.2023 23:45:30 - DEBUG [base_page.goto_with_allure_step: 65] - Перейти на страницу: https://enode02.ivcmf.by/login
+20.06.2023 23:45:33 - DEBUG [base_page.text_field_fill: 76] - Очистить текстовое поле с локатором "//input[@name = "login"]"
+20.06.2023 23:45:33 - DEBUG [base_page.text_field_fill: 78] - Ввести в текстовое поле с значение "smirnov"
+20.06.2023 23:45:33 - DEBUG [base_page.text_field_fill: 76] - Очистить текстовое поле с локатором "//input[@name = "password"]"
+20.06.2023 23:45:33 - DEBUG [base_page.text_field_fill: 78] - Ввести в текстовое поле с значение "smirnov_P@assw0rd"
+20.06.2023 23:45:33 - DEBUG [base_page.button_click: 104] - Нажать кнопку с локатором "//button[text() = "Войти"]"
+20.06.2023 23:45:35 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "first_name"]"
+20.06.2023 23:45:35 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "ЦОНЖДЪХбЗв-гИижхЩТрПБы"
+20.06.2023 23:45:36 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "patronymic"]"
+20.06.2023 23:45:36 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "ЩпЫЗВЭрнацИДыОъСЧоП-ЯАтЖТгХЙЪУЕе"
+20.06.2023 23:45:36 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "last_name"]"
+20.06.2023 23:45:36 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "-уГэЖОБЕднхкщЦчЬмШг"
+20.06.2023 23:45:36 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "email"]"
+20.06.2023 23:45:36 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "lrXgu5akvtc5XdBarBueCE9nS7w5gOk2Ki5Sk@8GEeM2Xp6sfeBBldAbHgxYli9RcCYppurxlhE.net"
+20.06.2023 23:45:36 - DEBUG [base_page.button_click_with_allure_step: 116] - Нажать кнопку с локатором "//button[text() = "Отменить"]"
+20.06.2023 23:45:36 - DEBUG [test_ui_persons.test_ui_cancel_create_person_valid_param: 40] - Окончить тест "Отмена создания физ.лица (у роли есть права; валидные значения параметров)" под ролью "Администратор ИБ"
+20.06.2023 23:45:36 - DEBUG [proactor_events.__init__: 633] - Using proactor: IocpProactor
+20.06.2023 23:45:38 - DEBUG [test_ui_persons.test_ui_cancel_create_person_valid_param: 29] - Начать тест "Отмена создания физ.лица (у роли есть права; валидные значения параметров)" под ролью "Администратор ИС"
+20.06.2023 23:45:38 - DEBUG [base_page.goto_with_allure_step: 65] - Перейти на страницу: https://enode02.ivcmf.by/login
+20.06.2023 23:45:39 - DEBUG [base_page.text_field_fill: 76] - Очистить текстовое поле с локатором "//input[@name = "login"]"
+20.06.2023 23:45:39 - DEBUG [base_page.text_field_fill: 78] - Ввести в текстовое поле с значение "admin_is_1"
+20.06.2023 23:45:39 - DEBUG [base_page.text_field_fill: 76] - Очистить текстовое поле с локатором "//input[@name = "password"]"
+20.06.2023 23:45:39 - DEBUG [base_page.text_field_fill: 78] - Ввести в текстовое поле с значение "admin_is_1P@assw0rd"
+20.06.2023 23:45:39 - DEBUG [base_page.button_click: 104] - Нажать кнопку с локатором "//button[text() = "Войти"]"
+20.06.2023 23:45:42 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "first_name"]"
+20.06.2023 23:45:42 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "ХЦНэЯпяхЖЫр-кЕЩсйВюИЧШДРЙПчБ"
+20.06.2023 23:45:42 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "patronymic"]"
+20.06.2023 23:45:42 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "д-КлБяЬьафВ"
+20.06.2023 23:45:42 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "last_name"]"
+20.06.2023 23:45:42 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "ЪАБаЦЙгльРебХшМцн-"
+20.06.2023 23:45:42 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "email"]"
+20.06.2023 23:45:42 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "mbPCRsAbIPUkEFzSFO0N1YYmLuoRW3UBQJ1oWjzpJYP3WX5Mmh9dCphT55Zd92CQAxJ8NuF12XzkDSdlAsVfY1cvuqgIgb8626PKW5tqjhfTks2ULaUbv25ET@HJgNlvo7CKOYLxSNehWVnM0PgUosf3wbubRJised3hymbvWRBeTn5T2z8VX487z.edu"
+20.06.2023 23:45:42 - DEBUG [base_page.button_click_with_allure_step: 116] - Нажать кнопку с локатором "//button[text() = "Отменить"]"
+20.06.2023 23:45:42 - DEBUG [test_ui_persons.test_ui_cancel_create_person_valid_param: 40] - Окончить тест "Отмена создания физ.лица (у роли есть права; валидные значения параметров)" под ролью "Администратор ИС"
+20.06.2023 23:45:42 - DEBUG [proactor_events.__init__: 633] - Using proactor: IocpProactor
+20.06.2023 23:45:44 - DEBUG [test_ui_persons.test_ui_can_create_person_valid_param: 52] - Начать тест "Создание физ.лица (у роли есть права; валидные значения параметров)" под ролью "Администратор ИБ"
+20.06.2023 23:45:44 - DEBUG [base_page.goto_with_allure_step: 65] - Перейти на страницу: https://enode02.ivcmf.by/login
+20.06.2023 23:45:45 - DEBUG [base_page.text_field_fill: 76] - Очистить текстовое поле с локатором "//input[@name = "login"]"
+20.06.2023 23:45:45 - DEBUG [base_page.text_field_fill: 78] - Ввести в текстовое поле с значение "smirnov"
+20.06.2023 23:45:45 - DEBUG [base_page.text_field_fill: 76] - Очистить текстовое поле с локатором "//input[@name = "password"]"
+20.06.2023 23:45:45 - DEBUG [base_page.text_field_fill: 78] - Ввести в текстовое поле с значение "smirnov_P@assw0rd"
+20.06.2023 23:45:46 - DEBUG [base_page.button_click: 104] - Нажать кнопку с локатором "//button[text() = "Войти"]"
+20.06.2023 23:45:48 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "first_name"]"
+20.06.2023 23:45:48 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "-к"
+20.06.2023 23:45:48 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "patronymic"]"
+20.06.2023 23:45:48 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "Л-"
+20.06.2023 23:45:48 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "last_name"]"
+20.06.2023 23:45:48 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "д-"
+20.06.2023 23:45:48 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@placeholder = "дд.мм.гггг"]"
+20.06.2023 23:45:48 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "01.01.0001"
+20.06.2023 23:45:48 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "phone"]"
+20.06.2023 23:45:48 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение ""
+20.06.2023 23:45:48 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "email"]"
+20.06.2023 23:45:48 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение "T@2.net"
+20.06.2023 23:45:49 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "card_id"]"
+20.06.2023 23:45:49 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение ""
+20.06.2023 23:45:49 - DEBUG [base_page.text_field_fill_with_allure_step: 92] - Очистить текстовое поле с локатором "//input[@name = "key_id"]"
+20.06.2023 23:45:49 - DEBUG [base_page.text_field_fill_with_allure_step: 94] - Ввести в текстовое поле с значение ""
+20.06.2023 23:45:49 - DEBUG [base_page.button_click_with_allure_step: 116] - Нажать кнопку с локатором "//button[text() = "Сохранить"]"
+20.06.2023 23:45:49 - DEBUG [persons_create_page.check_create_person_in_db: 92] - Приступить к поиску добавленного физ. лица в БД
+20.06.2023 23:45:49 - DEBUG [persons_create_page.check_create_person_in_db: 99] - Физическое лицо c id="bcb4a202a1b24144a1926ab88d751166" успешно добавлено в БД
+20.06.2023 23:45:49 - DEBUG [persons_create_page.check_create_person_in_db: 103] - В базе данных создано физическое лицо с id="bcb4a202a1b24144a1926ab88d751166"
+20.06.2023 23:45:49 - DEBUG [persons_create_page.check_create_person_in_db: 104] - Приступить к записи id физ.лица в файл
+20.06.2023 23:45:49 - DEBUG [persons_create_page.check_create_person_in_db: 106] - id физ.лица успешно записан в файл
+20.06.2023 23:45:49 - DEBUG [test_ui_persons.test_ui_can_create_person_valid_param: 65] - Окончить тест "Создание физ.лица (у роли есть права; валидные значения параметров)" под ролью "Администратор ИБ"
+20.06.2023 23:45:49 - DEBUG [persons_sql.db_delete_row: 109] - Приступить к удалению физ.лица из БД
+20.06.2023 23:45:50 - DEBUG [persons_sql.db_delete_row: 117] - Физ. лицо удалено из БД
+20.06.2023 23:45:50 - DEBUG [persons_sql.db_delete_row: 120] - Приступить к удалению файла "ui_person_id.txt"
+20.06.2023 23:45:50 - DEBUG [persons_sql.db_delete_row: 122] - Файл "ui_person_id.txt" удален

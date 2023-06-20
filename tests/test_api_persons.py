@@ -14,7 +14,7 @@ from services.persons_service import PersonsService
 @allure.feature('Список физических лиц')
 @allure.link('https://ivc-adsp.ivcmf.by/DefaultCollection/ISEB/_wiki/wikis/ISEB.wiki/32/'
              '%D0%9C%D0%B0%D1%82%D1%80%D0%B8%D1%86%D0%B0-%D1%80%D0%BE%D0%BB%D0%B5%D0%B9', '', 'Матрица ролей')
-class TestAPIGetPersons:
+class TestAPIReadPersons:
     @mark.parametrize('user, parameter_description, expected_result', test_data_api_can_read_persons)
     @allure.description(
         'Проверка возможности получения списка физических лиц с помощью API-запроса (GET) '

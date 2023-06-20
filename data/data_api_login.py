@@ -5,8 +5,10 @@ from settings import *
 """
 Тестовые данные для параметризованных api-тестов. 
 Тестовые данные предназначены для проверки входа в приложение под всеми ролями с валидными значениями логина и пароля. 
-Структура кортежа: user (учетные данные пользователя), parameter_description (описание набора параметров для 
-allure.step), expected_result (ожидаемый ответ сервера).
+Структура кортежа: 
+user (учетные данные пользователя), 
+parameter_description (описание набора параметров для allure.step), 
+expected_result (ожидаемый ответ сервера).
 """
 test_data_api_can_login = (
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
@@ -64,8 +66,10 @@ test_data_api_can_login = (
 Тестовые данные для параметризованных api-тестов. 
 Тестовые данные предназначены для проверки входа в приложение под ролью АИБ с не валидными, пустыми значениями 
 логина и (или) пароля. 
-Структура кортежа: user (учетные данные пользователя), parameter_description (описание набора параметров для 
-allure.step), expected_result (ожидаемый ответ сервера).
+Структура кортежа: 
+user (учетные данные пользователя), 
+parameter_description (описание набора параметров для allure.step), 
+expected_result (ожидаемый ответ сервера).
 """
 test_data_api_can_not_login = (
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, 'invalid_password', EMAIL_ACCOUNT_AIB),

@@ -8,13 +8,11 @@ class BaseSQL:
     @staticmethod
     def db_connection():
         """
-            Метод, осуществляющий подключение к БД приложения
-            с целью проверки записи в БД и удаления из БД
-            тестовых данных
+        Метод, осуществляющий подключение к БД приложения
+        с целью проверки записи в БД и удаления из БД
+        тестовых данных
 
-            Returns:
-            ------------------------
-            - connection: соединие с БД
+        :return connection: соединение с БД
         """
         connection = psycopg2.connect(
             database=DATABASE,
@@ -27,7 +25,7 @@ class BaseSQL:
     @staticmethod
     def db_disconnection(connection):
         """
-            Метод, разрывающий подключение
-            к БД приложения
+        Метод, разрывающий подключение
+        к БД приложения
         """
         connection.close()

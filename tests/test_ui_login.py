@@ -19,10 +19,27 @@ class TestUILogin:
     )
     @allure.id("1375")
     @allure.title('Вход в приложение (валидные значения логина и пароля)')
-    def test_ui_can_login_by_role(self, web_app, user, parameter_description, expected_result):
+    def test_ui_can_login_by_role(self, page, user, parameter_description, expected_result):
         logging.debug(f'Начать тест "Вход в приложение (валидные значения логина и пароля)" для роли "{user[0]}"')
-        login_page = Login(web_app)
+        login_page = Login(page)
         login_page.navigate()
         login_page.login_by_role(user, parameter_description)
         login_page.check_login(expected_result)
         logging.debug(f'Окончить тест "Вход в приложение (валидные значения логина и пароля)" для роли "{user[0]}"')
+
+    @mark.parametrize('user, parameter_description, expected_result', test_data_ui_can_not_login)
+    @allure.description(
+        'Проверка невозможности входа в приложение c использованием графического интерфейса '
+        'под ролью АИБ в случае использования комбинаций не валидных (пустых) значений логина и (или) пароля'
+    )
+    @allure.id("1376")
+    @allure.title('Невозможность входа в приложение (невалидные значения логина и пароля)')
+    def test_ui_can_not_login(self, page, user, parameter_description, expected_result):
+        logging.debug(f'Начать тест "Невозможность входа в приложение (невалидные значения логина и пароля)" '
+                      f'для роли "{user[0]}"')
+        login_page = Login(page)
+        login_page.navigate()
+        login_page.login_by_role(user, parameter_description)
+        login_page.check_message(expected_result)
+        logging.debug(f'Окончить тест "Невозможность входа в приложение (невалидные значения логина и пароля)" '
+                      f'для роли "{user[0]}"')

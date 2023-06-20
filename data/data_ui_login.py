@@ -8,13 +8,15 @@ from settings import *
 """
 FIELD_LOGIN = ('Логин', '//input[@name = "login"]')
 FIELD_PASSWORD = ('Пароль', '//input[@name = "password"]')
-BUTTON_LOGIN = ('Войти', '//button[text() = "Войти"]')
+BUTTON_LOGIN = ('ВОЙТИ', '//button[text() = "Войти"]')
 
 """
 Тестовые данные для параметризованных ui-тестов. 
 Тестовые данные предназначены для проверки входа в приложение под всеми ролями с валидными значениями логина и пароля. 
-Структура кортежа: user (учетные данные пользователя), parameter_description (описание набора параметров для 
-allure.step), expected_result (ожидаемый результат).
+Структура кортежа: 
+user (учетные данные пользователя), 
+parameter_description (описание набора параметров для allure.step), 
+expected_result (ожидаемый результат).
 """
 test_data_ui_can_login = (
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
@@ -68,3 +70,55 @@ test_data_ui_can_login = (
                  marks=pytest.mark.smoke),
 
 )
+
+"""
+Тестовые данные для параметризованных ui-тестов. 
+Тестовые данные предназначены для проверки входа в приложение под ролью АИБ с не валидными, пустыми значениями 
+логина и (или) пароля. 
+Структура кортежа: 
+user (учетные данные пользователя), 
+parameter_description (описание набора параметров для allure.step), 
+expected_result (ожидаемый результат). ('', 'Пожалуйста, укажите пароль') - '' пустой заголовок сообщения. 
+"""
+test_data_ui_can_not_login = (
+    pytest.param((ROLE_NAME_AIB, LOGIN_AIB, 'invalid_password', EMAIL_ACCOUNT_AIB),
+                 f'Войти в приложение под ролью "{ROLE_NAME_AIB}" с валидным логином и не валидным паролем',
+                 ('Ошибка', 'Не найдено активной учетной записи с указанными данными.'),
+                 marks=pytest.mark.critical_path),
+
+    pytest.param((ROLE_NAME_AIB, LOGIN_AIB, '', EMAIL_ACCOUNT_AIB),
+                 f'Войти в приложение под ролью "{ROLE_NAME_AIB}" с валидным логином и пустым паролем',
+                 ('', 'Пожалуйста, укажите пароль'),
+                 marks=pytest.mark.critical_path),
+
+    pytest.param((ROLE_NAME_AIB, 'invalid_login', 'invalid_password', EMAIL_ACCOUNT_AIB),
+                 f'Войти в приложение под ролью "{ROLE_NAME_AIB}" с не валидными логином и паролем',
+                 ('Ошибка', 'Не найдено активной учетной записи с указанными данными.'),
+                 marks=pytest.mark.critical_path),
+
+    pytest.param((ROLE_NAME_AIB, 'invalid_login', '', EMAIL_ACCOUNT_AIB),
+                 f'Войти в приложение под ролью "{ROLE_NAME_AIB}" с не валидным логином и пустым паролем',
+                 ('', 'Пожалуйста, укажите пароль'),
+                 marks=pytest.mark.critical_path),
+
+    pytest.param((ROLE_NAME_AIB, 'invalid_login', PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
+                 f'Войти в приложение под ролью "{ROLE_NAME_AIB}" с не валидным логином и валидным паролем',
+                 ('Ошибка', 'Не найдено активной учетной записи с указанными данными.'),
+                 marks=pytest.mark.critical_path),
+
+    pytest.param((ROLE_NAME_AIB, '', '', EMAIL_ACCOUNT_AIB),
+                 f'Войти в приложение под ролью "{ROLE_NAME_AIB}" с пустыми логином и паролем',
+                 ('', 'Пожалуйста, укажите логин'),
+                 marks=pytest.mark.critical_path),
+
+    pytest.param((ROLE_NAME_AIB, '', PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
+                 f'Войти в приложение под ролью "{ROLE_NAME_AIB}" с пустым логином и валидным паролем',
+                 ('', 'Пожалуйста, укажите логин'),
+                 marks=pytest.mark.critical_path),
+
+    pytest.param((ROLE_NAME_AIB, '', 'invalid_password', EMAIL_ACCOUNT_AIB),
+                 f'Войти в приложение под ролью "{ROLE_NAME_AIB}" с пустым логином и не валидным паролем',
+                 ('', 'Пожалуйста, укажите логин'),
+                 marks=pytest.mark.critical_path),
+)
+

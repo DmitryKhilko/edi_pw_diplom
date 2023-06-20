@@ -5,3 +5,4 @@
 person_id которого берет из данного файла
 """
 FILENAME_API_PERSON_ID = 'api_person_id.txt'
+FILENAME_UI_PERSON_ID = 'ui_person_id.txt'

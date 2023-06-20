@@ -8,8 +8,10 @@ f = Fake()
 """
 Тестовые данные для параметризованных api-тестов. 
 Данные предназначены для проверки получения списка физических лиц под ролями, которым разрешено получение списка. 
-Структура кортежа: user (учетные данные пользователя), parameter_description (описание набора параметров для 
-allure.step), expected_result (ожидаемый ответ сервера).
+Структура кортежа: 
+user (учетные данные пользователя), 
+parameter_description (описание набора параметров для allure.step), 
+expected_result (ожидаемый ответ сервера).
 """
 test_data_api_can_read_persons = (
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
@@ -75,8 +77,10 @@ test_data_api_can_not_read_persons = (
 Тестовые данные для параметризованных api-тестов. 
 Данные предназначены для проверки создания физического лица под ролями, которым разрешено создание физического лица.
 Для создания физического лица используются комбинации валидных значений параметров. 
-Структура кортежа: user (учетные данные пользователя), parameter_description (описание набора параметров для 
-allure.step), expected_result (ожидаемый ответ сервера).
+Структура кортежа: 
+user (учетные данные пользователя), 
+parameter_description (описание набора параметров для allure.step), 
+expected_result (ожидаемый ответ сервера).
 """
 test_data_api_can_create_person_valid_param = (
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
@@ -224,8 +228,10 @@ test_data_api_can_create_person_valid_param = (
 Тестовые данные для параметризованных api-тестов. 
 Данные предназначены для проверки отказа в создании физического лица под ролями, которым запрещено создание физического 
 лица. Для создания физического лица используются комбинации валидных значений параметров. 
-Структура кортежа: user (учетные данные пользователя), parameter_description (описание набора параметров для 
-allure.step), expected_result (ожидаемый ответ сервера).
+Структура кортежа: 
+user (учетные данные пользователя), 
+parameter_description (описание набора параметров для allure.step), 
+expected_result (ожидаемый ответ сервера).
 """
 test_data_api_can_not_create_person_valid_param = (
     pytest.param((ROLE_NAME_ASH, LOGIN_ASH, PASSWORD_ASH, EMAIL_ACCOUNT_ASH),
@@ -346,8 +352,10 @@ test_data_api_can_not_create_person_valid_param = (
 Данные предназначены для проверки отказа в создании физического лица под ролями, которым разрешено создание физического
 лица, но для создания физического лица используется комбинации с пустыми значениями обязательных для заполнения 
 параметров: фамилия, имя, email. 
-Структура кортежа: user (учетные данные пользователя), parameter_description (описание набора параметров для 
-allure.step), expected_result (ожидаемый ответ сервера).
+Структура кортежа: 
+user (учетные данные пользователя), 
+parameter_description (описание набора параметров для allure.step), 
+expected_result (ожидаемый ответ сервера).
 """
 test_data_api_can_not_create_person_empty_param_required = (
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
@@ -457,8 +465,10 @@ test_data_api_can_not_create_person_empty_param_required = (
 Тестовые данные для параметризованных api-тестов. 
 Данные предназначены для проверки отказа в создании физического лица под ролями, которым разрешено создание физического
 лица, но для создания физического лица используется комбинации с не валидными значениями параметров (внутри границ) 
-Структура кортежа: user (учетные данные пользователя), parameter_description (описание набора параметров для 
-allure.step), expected_result (ожидаемый ответ сервера).
+Структура кортежа: 
+user (учетные данные пользователя), 
+parameter_description (описание набора параметров для allure.step), 
+expected_result (ожидаемый ответ сервера).
 """
 test_data_api_can_not_create_person_invalid_param = (
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
@@ -656,8 +666,10 @@ test_data_api_can_not_create_person_invalid_param = (
 Данные предназначены для проверки отказа в создании физического лица под ролями, которым разрешено создание 
 физического лица, но для создания физического лица используется комбинации с валидными значениями параметров, 
 которые вышли за нижнюю или верхнюю границы. 
-Структура кортежа: user (учетные данные пользователя), parameter_description (описание набора параметров для 
-allure.step), expected_result (ожидаемый ответ сервера).
+Структура кортежа: 
+user (учетные данные пользователя), 
+parameter_description (описание набора параметров для allure.step), 
+expected_result (ожидаемый ответ сервера).
 """
 test_data_api_can_not_create_person_valid_param_out_of_limits = (
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
@@ -816,8 +828,10 @@ test_data_api_can_not_create_person_valid_param_out_of_limits = (
 Данные предназначены для проверки отказа в создании физического лица под ролями, которым разрешено создание 
 физического лица, но для создания физического лица используется комбинации с валидными значениями параметров, 
 которые вышли за нижнюю или верхнюю границы. 
-Структура кортежа: user (учетные данные пользователя), parameter_description (описание набора параметров для 
-allure.step), expected_result (ожидаемый ответ сервера).
+Структура кортежа: 
+user (учетные данные пользователя), 
+parameter_description (описание набора параметров для allure.step), 
+expected_result (ожидаемый ответ сервера).
 """
 test_data_api_can_not_create_person_invalid_param_out_of_limits = (
     pytest.param((ROLE_NAME_AIB, LOGIN_AIB, PASSWORD_AIB, EMAIL_ACCOUNT_AIB),
@@ -991,19 +1005,3 @@ test_data_api_can_not_create_person_invalid_param_out_of_limits = (
                                'Идентификатор ID карты должен содержать только латинские буквы и цифры']}),
                  marks=pytest.mark.critical_path),
 )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

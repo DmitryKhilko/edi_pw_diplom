@@ -3,7 +3,7 @@ import logging
 import allure
 
 from services.base_service import BaseService
-from sql_requests.sql import SQLRequests
+from sql_requests.persons_sql import SQLRequests
 
 
 class PersonsService(BaseService):
@@ -66,7 +66,6 @@ class PersonsService(BaseService):
     @staticmethod
     def can_create_person_valid_param(csrftoken: str, sessionid: str, parameter_description: str, data: tuple,
                                       expected_result: tuple):
-
         """
         Метод создания с помощью post-запроса физического лица для
         ролей приложения, которым разрешено создание физического лица
