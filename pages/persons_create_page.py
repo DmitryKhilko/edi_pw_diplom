@@ -1,6 +1,7 @@
 import logging
 
 import allure
+from allure_commons.types import AttachmentType
 from playwright.sync_api import expect
 
 from data.data_file_name import FILENAME_UI_PERSON_ID
@@ -21,6 +22,7 @@ class Persons(BasePage):
     @allure.step('Ожидаемый результат: перешли на страницу "Физические лица"')
     def check_goto_persons(self):
         expect(self.page.get_by_role("link", name="Физические лица").nth(1)).to_be_visible()
+        allure.attach(self.page.screenshot(type='png'), name='screenshot', attachment_type=AttachmentType.PNG)
 
     @allure.step('Нажать кнопку "Добавить"')
     def opening_form_create_person(self):
@@ -30,6 +32,7 @@ class Persons(BasePage):
     def check_opening_form_create_person(self):
         expect(self.page.get_by_role("link", name="Физические лица").nth(1)).to_be_visible()
         expect(self.page.get_by_role("link", name="Добавить")).to_be_visible()
+        allure.attach(self.page.screenshot(type='png'), name='screenshot', attachment_type=AttachmentType.PNG)
 
     def cancel_create_person(self, parameter_description: str, data: tuple):
         """
@@ -51,6 +54,7 @@ class Persons(BasePage):
         with allure.step(f'Ожидаемое результат: отменено создание физического лица'):
             expect(self.page.locator(f'//*[@data-rowindex = 0]//*[contains(text(), '
                                      f'"{data[3].lower()}")]')).not_to_be_visible()
+            allure.attach(self.page.screenshot(type='png'), name='screenshot', attachment_type=AttachmentType.PNG)
 
     def create_person(self, parameter_description: str, data: tuple):
         """
@@ -84,6 +88,7 @@ class Persons(BasePage):
                          f'вновь добавленного физического лица'):
             expect(self.page.locator(f'//*[@data-rowindex = 0]//*[contains(text(), '
                                      f'"{data[6].lower()}")]')).to_be_visible()
+            allure.attach(self.page.screenshot(type='png'), name='screenshot', attachment_type=AttachmentType.PNG)
 
     @staticmethod
     def check_create_person_in_db(email: str):

@@ -61,8 +61,8 @@ class BasePage:
 
         :param url: адрес страницы
         """
-        with allure.step(f'Перейти на страницу: {url}'):
-            logging.debug(f'Перейти на страницу: {url}')
+        with allure.step(f'Перейти на страницу {url}'):
+            logging.debug(f'Перейти на страницу {url}')
             self.page.goto(url)
 
     def text_field_fill(self, locator: str, value: str):

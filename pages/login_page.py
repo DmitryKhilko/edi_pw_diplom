@@ -61,6 +61,7 @@ class Login(BasePage):
             expect(self.page.get_by_text(expected_result[0], exact=True)).to_be_visible()
             expect(self.page.get_by_role('button', name=expected_result[1])).to_be_visible()
             expect(self.page.get_by_role('paragraph').filter(has_text=expected_result[2])).to_be_visible()
+            allure.attach(self.page.screenshot(type='png'), name='screenshot', attachment_type=AttachmentType.PNG)
 
     def check_message(self, expected_result: tuple):
         """
