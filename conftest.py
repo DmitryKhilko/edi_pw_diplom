@@ -20,6 +20,7 @@ logging.basicConfig(
     datefmt='%d.%m.%Y %H:%M:%S',
 )
 
+
 @fixture(scope='function', autouse=False)
 def sql_delete_person():
     """
