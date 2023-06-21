@@ -8,42 +8,6 @@ class BasePage:
     def __init__(self, page: Page):
         self.page = page
 
-    # @staticmethod
-    # def locator_label_by_xpath(label: str):
-    #     """
-    #     Базовый метод создания xpath-локатора, производящего
-    #     поиск веб-элемента (как правило, текстового поля ввода)
-    #     по частичному совпадению названия метки текстового поля.
-    #     Этот метод работает на странице login
-    #       Parameters:
-    #      ------------------------
-    #      label: искомый в xpath текст
-    #     """
-    #     return f'//label[contains(text(), "{label}")]'
-    #
-    # @staticmethod
-    # def locator_input_by_xpath(name_value: str):
-    #     """
-    #     Базовый метод создания xpath-локатора, производящего
-    #     поиск веб-элемента (как правило, текстового поля ввода)
-    #     по имени текстового поля
-    #       Parameters:
-    #      ------------------------
-    #      name_value: значение атрибута name в xpath
-    #     """
-    #     return f'//input[@name = \"{name_value}\")]'
-    #
-    # @staticmethod
-    # def locator_button_by_xpath(label: str):
-    #     """
-    #     Базовый метод создания xpath-локатора, производящего
-    #     поиск веб-элемента (кнопки) по названию на кнопке
-    #        Parameters:
-    #       ------------------------
-    #       label: искомый в xpath текст
-    #     """
-    #     return f'//button[text() = "{label}"]'
-
     def goto(self, url: str):
         """
         Базовый метод перехода на указанную страницу приложения,

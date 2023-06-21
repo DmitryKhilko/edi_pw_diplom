@@ -10,13 +10,20 @@ from data.data_ui_login import *
 
 class Login(BasePage):
 
-    def navigate(self):
+    def goto_login_page(self):
         """
-        Метод перехода на указанную страницу приложения,
-        содержащий allure.step для формирования детальных шагов
-        в тест-кейсах Allure TestOps
+        Метод перехода на страницу логина
         """
         self.goto_with_allure_step(BASE_URL + LOGIN_PAGE_URL)
+
+    def check_goto_login_page(self):
+        """
+        Метод проверки успешности перехода
+        на страницу логина
+        """
+        with allure.step(f'Ожидаемый результат: перешли на страницу логина'):
+            expect(self.page.get_by_label("Логин")).to_be_visible()
+            allure.attach(self.page.screenshot(type='png'), name='screenshot', attachment_type=AttachmentType.PNG)
 
     def login(self, user: tuple):
         """
@@ -26,18 +33,18 @@ class Login(BasePage):
         :param user: кортеж, содержащий логин, пароль, email_account пользователя
         """
         with allure.step(f'Войти в приложении под ролью "{user[0]}" с валидными логином и паролем'):
-            self.navigate()
+            self.goto_login_page()
             self.text_field_fill(FIELD_LOGIN[1], user[1])
             self.text_field_fill(FIELD_PASSWORD[1], user[2])
             self.button_click(BUTTON_LOGIN[1])
 
     def login_by_role(self, user: tuple, parameter_description: str):
         """
-        Метод входа в приложение, содержащий allure.step
+        Метод входа в приложение под определенной ролью, содержащий allure.step
         для формирования детальных шагов в тест-кейсах Allure TestOps
 
-        LOGIN[0]: название метки соответствующего поля ввода
-        LOGIN[1]: xpath-локатор соответствующего поля ввода
+        FIELD_LOGIN[0], FIELD_PASSWORD[0]: название метки соответствующего поля ввода
+        FIELD_LOGIN[1], FIELD_PASSWORD[1]: xpath-локатор соответствующего поля ввода
 
         :param user: кортеж, содержащий логин, пароль, email_account пользователя
         :param parameter_description: описание набора параметров из набора тестовых данных для allure.step
@@ -47,11 +54,11 @@ class Login(BasePage):
             self.text_field_fill_with_allure_step(FIELD_PASSWORD[0], FIELD_PASSWORD[1], user[2])
             self.button_click_with_allure_step(BUTTON_LOGIN[0], BUTTON_LOGIN[1])
 
-    # TODO Сделать: в base_page сделать универсальную функцию expect_to_be_visible, локаторы заменить на xpath
     def check_login(self, expected_result: tuple):
         """
-        Метод проверки ожидаемого результата после входа в приложение.
-        После входа на странице должны отображаться ФИО, роль и организация
+        Метод проверки успешности входа в приложение,
+        проверки ожидаемого результата после входа в приложение:
+        после входа на странице должны отображаться ФИО, роль и организация
         пользователя
 
         :param expected_result: ожидаемый результат

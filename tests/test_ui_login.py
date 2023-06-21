@@ -22,7 +22,8 @@ class TestUILogin:
     def test_ui_can_login_by_role(self, page, user, parameter_description, expected_result):
         logging.debug(f'Начать тест "Вход в приложение (валидные значения логина и пароля)" для роли "{user[0]}"')
         login_page = Login(page)
-        login_page.navigate()
+        login_page.goto_login_page()
+        login_page.check_goto_login_page()
         login_page.login_by_role(user, parameter_description)
         login_page.check_login(expected_result)
         logging.debug(f'Окончить тест "Вход в приложение (валидные значения логина и пароля)" для роли "{user[0]}"')
@@ -38,7 +39,8 @@ class TestUILogin:
         logging.debug(f'Начать тест "Невозможность входа в приложение (невалидные значения логина и пароля)" '
                       f'для роли "{user[0]}"')
         login_page = Login(page)
-        login_page.navigate()
+        login_page.goto_login_page()
+        login_page.check_goto_login_page()
         login_page.login_by_role(user, parameter_description)
         login_page.check_message(expected_result)
         logging.debug(f'Окончить тест "Невозможность входа в приложение (невалидные значения логина и пароля)" '
