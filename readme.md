@@ -18,10 +18,10 @@ pip3 install -r requirements.txt
 pytest -v --reruns 2 -n auto --alluredir=allure-reports
 
 Запуск выборочных автотестов с тегами smoke, critical_path, extended:
-pytest -v -m smoke --reruns 2 -n auto --alluredir=allure-reports
-pytest -v -m critical_path --reruns 2 -n auto --alluredir=allure-reports
-pytest -v -m extended  --reruns 2 -n auto --alluredir=allure-reports
-pytest -v -m 'not extended'  --reruns 2 -n auto --alluredir=allure-reports
+- pytest -v -m smoke --reruns 2 -n auto --alluredir=allure-reports
+- pytest -v -m critical_path --reruns 2 -n auto --alluredir=allure-reports
+- pytest -v -m extended  --reruns 2 -n auto --alluredir=allure-reports
+- pytest -v -m 'not extended'  --reruns 2 -n auto --alluredir=allure-reports
 
 ## Полезные гиперссылки
 - https://docs.pytest.org

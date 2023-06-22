@@ -50,7 +50,7 @@ def page():
     """
     with sync_playwright() as playwright:
         with allure.step(f'Открыть браузер'):
-            browser = playwright.chromium.launch(headless=True)
+            browser = playwright.chromium.launch(headless=False)
             context = browser.new_context(viewport={'width': 1920, 'height': 1080})
             # context = browser.new_context()
             page = context.new_page()
